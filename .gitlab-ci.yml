@@ -1,0 +1,73 @@
+# GitLab CI/CD Pipeline for Mobile ATQC Bootcamp
+# Executes linting, API contract verification, and cloud mobile test execution on BrowserStack
+
+stages:
+  - lint
+  - api_tests
+  - mobile_tests
+
+default:
+  image: python:3.11-slim
+  before_script:
+    - python -V
+    - pip install --upgrade pip
+    - pip install .
+
+# Cache dependencies across pipeline jobs to minimize build latency
+cache:
+  key:
+    files:
+      - pyproject.toml
+  paths:
+    - .cache/pip
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  # BrowserStack App Automate credentials and Application identifier
+  # Recommended to inject these via GitLab CI/CD Masked & Protected Variables
+  BROWSERSTACK_USERNAME: "$BROWSERSTACK_USERNAME"
+  BROWSERSTACK_ACCESS_KEY: "$BROWSERSTACK_ACCESS_KEY"
+  BROWSERSTACK_APP_ID: "$BROWSERSTACK_APP_ID"
+
+# Stage 1: Static code analysis & style conformity check
+lint:
+  stage: lint
+  script:
+    - ruff check .
+    - ruff format --check .
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+# Stage 2: Fast API and service layer integration tests
+api_tests:
+  stage: api_tests
+  script:
+    - pytest -m api --alluredir=allure-results/api
+  artifacts:
+    when: always
+    expire_in: 7 days
+    paths:
+      - allure-results/api
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+# Stage 3: Mobile UI automation on real devices via BrowserStack App Automate
+mobile_tests_browserstack:
+  stage: mobile_tests
+  script:
+    - pytest -m mobile --env=browserstack --alluredir=allure-results/mobile
+  artifacts:
+    when: always
+    expire_in: 14 days
+    paths:
+      - allure-results/mobile
+      - artifacts/
+      - logs/
+  rules:
+    # Trigger only when BrowserStack credentials are provided
+    - if: '$BROWSERSTACK_USERNAME != null && $BROWSERSTACK_ACCESS_KEY != null'
+      when: on_success
+    - when: manual
+      allow_failure: true
