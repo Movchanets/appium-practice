@@ -13,8 +13,7 @@ from pages.login_page import LoginPage
 @allure.title("Preserve form data across device orientation rotation")
 @pytest.mark.xfail(
     reason=(
-        "BUG: App is hardcoded to portrait mode in AndroidManifest.xml "
-        "(Orientation change ignored)"
+        "BUG: App is hardcoded to portrait mode in AndroidManifest.xml (Orientation change ignored)"
     ),
     strict=False,
 )

@@ -2,22 +2,22 @@
 
 from __future__ import annotations
 
-import pytest
 import allure
+import pytest
 
 from pages.login_page import LoginPage
-
 
 
 @pytest.mark.parametrize(
     "username, password",
     [
-        ("bod@example.com","10203040"),
-        ("visual@example.com","10203040"),
+        ("bod@example.com", "10203040"),
+        ("visual@example.com", "10203040"),
     ],
 )
-
-def test_issue_034_successful_login_with_valid_standard_user_credentials(login_page: LoginPage, username: str, password: str) -> None:
+def test_issue_034_successful_login_with_valid_standard_user_credentials(
+    login_page: LoginPage, username: str, password: str
+) -> None:
     """
     Steps
     1.Enter username in username field
