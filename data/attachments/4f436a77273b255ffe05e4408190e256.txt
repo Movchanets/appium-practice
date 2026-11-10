@@ -1,0 +1,100 @@
+1794335114906 [ALL] 11-10 18:25:14.630 20276 20309 I appium  : Clear command
+1794335114909 [ALL] 11-10 18:25:14.634 20276 20309 D UiObject2: Setting text to ''.
+1794335114914 [ALL] 11-10 18:25:14.639 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335114924 [ALL] 11-10 18:25:14.646 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002bb/value
+1794335114924 [ALL] 11-10 18:25:14.647 20276 20309 I appium  : SendKeysToElement command
+1794335115239 [ALL] 11-10 18:25:14.963   341  1669 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 19374016
+1794335115516 [ALL] 11-10 18:25:15.241 20276 20309 D UiObject2: Setting text to ''.
+1794335115527 [ALL] 11-10 18:25:15.249 20320 20347 D EGL_emulation: app_time_stats: avg=568.00ms min=549.69ms max=586.30ms count=2
+1794335115699 [ALL] 11-10 18:25:15.424   521  3394 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+1794335115898 [ALL] 11-10 18:25:15.623   831   831 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+1794335116031 [ALL] 11-10 18:25:15.755 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335116037 [ALL] 11-10 18:25:15.762 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element
+1794335116038 [ALL] 11-10 18:25:15.763 20276 20309 I appium  : FindElement command
+1794335116039 [ALL] 11-10 18:25:15.764 20276 20309 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/cityET'
+1794335116039 [ALL] 11-10 18:25:15.764 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335116555 [ALL] 11-10 18:25:16.279 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":{"ELEMENT":"00000000-0000-02c6-ffff-ffff000002c7","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-02c6-ffff-ffff000002c7"}}
+1794335116562 [ALL] 11-10 18:25:16.286 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002c7/attribute/displayed
+1794335116562 [ALL] 11-10 18:25:16.286 20276 20309 I appium  : GetElementAttribute command
+1794335116565 [ALL] 11-10 18:25:16.290 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"true"}
+1794335116571 [ALL] 11-10 18:25:16.296 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002c7/clear
+1794335116572 [ALL] 11-10 18:25:16.297 20276 20309 I appium  : Clear command
+1794335116575 [ALL] 11-10 18:25:16.300 20276 20309 D UiObject2: Setting text to ''.
+1794335116579 [ALL] 11-10 18:25:16.304 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335116586 [ALL] 11-10 18:25:16.311 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002c7/value
+1794335116588 [ALL] 11-10 18:25:16.312 20276 20309 I appium  : SendKeysToElement command
+1794335116605 [ALL] 11-10 18:25:16.327 20320 20347 D EGL_emulation: app_time_stats: avg=538.58ms min=526.99ms max=550.17ms count=2
+1794335117182 [ALL] 11-10 18:25:16.906 20276 20309 D UiObject2: Setting text to ''.
+1794335117695 [ALL] 11-10 18:25:17.418 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335117702 [ALL] 11-10 18:25:17.427 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element
+1794335117703 [ALL] 11-10 18:25:17.428 20276 20309 I appium  : FindElement command
+1794335117704 [ALL] 11-10 18:25:17.429 20276 20309 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/zipET'
+1794335117704 [ALL] 11-10 18:25:17.429 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335117722 [ALL] 11-10 18:25:17.444 20320 20347 D EGL_emulation: app_time_stats: avg=557.91ms min=527.53ms max=588.30ms count=2
+1794335118218 [ALL] 11-10 18:25:17.943 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":{"ELEMENT":"00000000-0000-02c6-ffff-ffff000002cc","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-02c6-ffff-ffff000002cc"}}
+1794335118226 [ALL] 11-10 18:25:17.951 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002cc/attribute/displayed
+1794335118227 [ALL] 11-10 18:25:17.952 20276 20309 I appium  : GetElementAttribute command
+1794335118231 [ALL] 11-10 18:25:17.956 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"true"}
+1794335118239 [ALL] 11-10 18:25:17.964 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002cc/clear
+1794335118240 [ALL] 11-10 18:25:17.965 20276 20309 I appium  : Clear command
+1794335118243 [ALL] 11-10 18:25:17.967 20276 20309 D UiObject2: Setting text to ''.
+1794335118247 [ALL] 11-10 18:25:17.972 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335118254 [ALL] 11-10 18:25:17.979 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002cc/value
+1794335118256 [ALL] 11-10 18:25:17.980 20276 20309 I appium  : SendKeysToElement command
+1794335118851 [ALL] 11-10 18:25:18.575 20276 20309 D UiObject2: Setting text to ''.
+1794335118861 [ALL] 11-10 18:25:18.583 20320 20347 D EGL_emulation: app_time_stats: avg=569.67ms min=550.72ms max=588.62ms count=2
+1794335118886 [ALL] 11-10 18:25:18.606   831   831 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+1794335118903 [ALL] 11-10 18:25:18.627   831   831 D StatusBarIconController: ignoring old pipeline callback because the new wifi icon is enabled
+1794335119036 [ALL] 11-10 18:25:18.760  1803  2677 I WorkerManager: dispose()
+1794335119036 [ALL] 11-10 18:25:18.760  1803  2677 W A       : Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+1794335119361 [ALL] 11-10 18:25:19.085 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335119430 [ALL] 11-10 18:25:19.155  1555  1555 W PlayCore: UID: [10143]  PID: [1555] SplitInstallInfoProvider : No metadata found in AndroidManifest.
+1794335119431 [ALL] 11-10 18:25:19.156  1555  1555 I Environment: Environment.isPackageInstalled():237 com.bitstrips.imoji is not installed
+1794335119468 [ALL] 11-10 18:25:19.192  1555  1555 I putmethod.latin: Explicit concurrent copying GC freed 151436(6303KB) AllocSpace objects, 16(1088KB) LOS objects, 49% free, 9159KB/17MB, paused 31us,15us total 20.282ms
+1794335119491 [ALL] 11-10 18:25:19.216 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element
+1794335119493 [ALL] 11-10 18:25:19.216 20276 20309 I appium  : FindElement command
+1794335119493 [ALL] 11-10 18:25:19.217 20276 20309 I appium  : method: 'accessibility id', selector: 'Saves user info for checkout'
+1794335119493 [ALL] 11-10 18:25:19.217 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335119890 [ALL] 11-10 18:25:19.614 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":{"ELEMENT":"00000000-0000-02c6-ffff-ffff000002db","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-02c6-ffff-ffff000002db"}}
+1794335119897 [ALL] 11-10 18:25:19.621 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002db/attribute/displayed
+1794335119897 [ALL] 11-10 18:25:19.622 20276 20309 I appium  : GetElementAttribute command
+1794335119901 [ALL] 11-10 18:25:19.626 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"true"}
+1794335119907 [ALL] 11-10 18:25:19.632 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002db/attribute/enabled
+1794335119908 [ALL] 11-10 18:25:19.633 20276 20309 I appium  : GetElementAttribute command
+1794335119911 [ALL] 11-10 18:25:19.636 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"true"}
+1794335119917 [ALL] 11-10 18:25:19.642 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002db/click
+1794335119918 [ALL] 11-10 18:25:19.643 20276 20309 I appium  : Click command
+1794335119949 [ALL] 11-10 18:25:19.673  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2051.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=978857, downTime=978857, deviceId=-1, source=0x1002, displayId=0, eventId=-220638571 }
+1794335119966 [ALL] 11-10 18:25:19.690  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=2051.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=978899, downTime=978857, deviceId=-1, source=0x1002, displayId=0, eventId=-707214106 }
+1794335119995 [ALL] 11-10 18:25:19.713 20276 20309 W GestureController: Gestures took longer than expected (67ms >> 16ms), device might be in a busy state.
+1794335119995 [ALL] 11-10 18:25:19.713 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335119995 [ALL] 11-10 18:25:19.716   397   412 D audioserver: FGS Logger Transaction failed
+1794335119995 [ALL] 11-10 18:25:19.717   397   412 D audioserver: -129
+1794335119998 [ALL] 11-10 18:25:19.720 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":null}
+1794335119998 [ALL] 11-10 18:25:19.721   397   499 D AudioFlinger: mixer(0x7ddb1e7e3930) throttle end: throttle time(30)
+1794335120013 [ALL] 11-10 18:25:19.737 20276 20309 I appium  : channel read: POST /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element
+1794335120014 [ALL] 11-10 18:25:19.739 20276 20309 I appium  : FindElement command
+1794335120016 [ALL] 11-10 18:25:19.740 20276 20309 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/countryErrorTV'
+1794335120016 [ALL] 11-10 18:25:19.741 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335120042 [ALL] 11-10 18:25:19.766   397   499 D AudioFlinger: mixer(0x7ddb1e7e3930) throttle end: throttle time(33)
+1794335120124 [ALL] 11-10 18:25:19.816 20320 20347 D EGL_emulation: app_time_stats: avg=616.57ms min=531.52ms max=701.62ms count=2
+1794335120188 [ALL] 11-10 18:25:19.908   397   499 D audioserver: FGS Logger Transaction failed
+1794335120188 [ALL] 11-10 18:25:19.908   397   499 D audioserver: -129
+1794335120649 [ALL] 11-10 18:25:20.373 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":{"ELEMENT":"00000000-0000-02c6-ffff-ffff000002d9","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-02c6-ffff-ffff000002d9"}}
+1794335120655 [ALL] 11-10 18:25:20.380 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/element/00000000-0000-02c6-ffff-ffff000002d9/text
+1794335120656 [ALL] 11-10 18:25:20.381 20276 20309 I appium  : GetText command
+1794335120660 [ALL] 11-10 18:25:20.384 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"Please provide your"}
+1794335120670 [ALL] 11-10 18:25:20.394 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/screenshot
+1794335120671 [ALL] 11-10 18:25:20.395 20276 20309 I appium  : CaptureScreenshot command
+1794335120672 [ALL] 11-10 18:25:20.397 20276 20309 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794335120672 [ALL] 11-10 18:25:20.397 20276 20309 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794335120719 [ALL] 11-10 18:25:20.443 20428 20428 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794335120719 [ALL] 11-10 18:25:20.443 20428 20428 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794335120732 [ALL] 11-10 18:25:20.454   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794335120733 [ALL] 11-10 18:25:20.455 20428 20432 I Gralloc4: mapper 4.x is not supported
+1794335120733 [ALL] 11-10 18:25:20.686     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794335120908 [ALL] 11-10 18:25:20.632 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N13fFRV/v/x98xkkkwqqRBIKHaa0lQUG7qioIgCgiKKvayrrquua9mfuOhadtXv2lfXtaGACrI2UEARUAQRUBRERSCUkEYICemT+f0BDJMwM5lyJ5MbX8/Hw8dj5pZzz6Rg7vue8zkWl8v…
+1794335120919 [ALL] 11-10 18:25:20.643 20276 20309 I appium  : channel read: GET /session/34c2c59c-f134-483c-9fc8-1680d2fb6231/source
+1794335120919 [ALL] 11-10 18:25:20.644 20276 20309 I appium  : Source command
+1794335120920 [ALL] 11-10 18:25:20.644 20276 20309 I appium  : Waiting up to 10000ms for the device to idle
+1794335121023 [ALL] 11-10 18:25:20.747 20276 20309 I appium  : AppiumResponse: {"sessionId":"34c2c59c-f134-483c-9fc8-1680d2fb6231","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

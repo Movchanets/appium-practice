@@ -1,0 +1,100 @@
+1794336085812 [ALL] 11-10 18:41:25.512  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-0629-ffff-ffff00000299/text
+1794336085813 [ALL] 11-10 18:41:25.513  7461  7496 I appium  : GetText command
+1794336085818 [ALL] 11-10 18:41:25.517  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"Sauce Labs Backpack (orange)"}
+1794336085824 [ALL] 11-10 18:41:25.523  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element
+1794336085825 [ALL] 11-10 18:41:25.524  7461  7496 I appium  : FindElement command
+1794336085826 [ALL] 11-10 18:41:25.526  7461  7496 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/titleTV', contextId: '00000000-0000-0629-ffff-ffff000002a2'
+1794336085828 [ALL] 11-10 18:41:25.528  7461  7496 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/titleTV\E'].
+1794336085832 [ALL] 11-10 18:41:25.531  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":{"ELEMENT":"00000000-0000-0629-ffff-ffff000002a4","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0629-ffff-ffff000002a4"}}
+1794336085838 [ALL] 11-10 18:41:25.537  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-0629-ffff-ffff000002a4/text
+1794336085839 [ALL] 11-10 18:41:25.538  7461  7496 I appium  : GetText command
+1794336085843 [ALL] 11-10 18:41:25.543  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"Sauce Labs Backpack (red)"}
+1794336085848 [ALL] 11-10 18:41:25.548  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element
+1794336085849 [ALL] 11-10 18:41:25.549  7461  7496 I appium  : FindElement command
+1794336085850 [ALL] 11-10 18:41:25.550  7461  7496 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/header'
+1794336085850 [ALL] 11-10 18:41:25.550  7461  7496 I appium  : Waiting up to 10000ms for the device to idle
+1794336085867 [ALL] 11-10 18:41:25.566  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":{"ELEMENT":"00000000-0000-0629-ffff-ffff00000012","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0629-ffff-ffff00000012"}}
+1794336085873 [ALL] 11-10 18:41:25.573  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element
+1794336085874 [ALL] 11-10 18:41:25.574  7461  7496 I appium  : FindElement command
+1794336085875 [ALL] 11-10 18:41:25.575  7461  7496 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/sortIV', contextId: '00000000-0000-0629-ffff-ffff00000012'
+1794336085877 [ALL] 11-10 18:41:25.577  7461  7496 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/sortIV\E'].
+1794336085881 [ALL] 11-10 18:41:25.580  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":{"ELEMENT":"00000000-0000-0629-ffff-ffff00000014","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0629-ffff-ffff00000014"}}
+1794336085887 [ALL] 11-10 18:41:25.586  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-0629-ffff-ffff00000014/attribute/displayed
+1794336085888 [ALL] 11-10 18:41:25.587  7461  7496 I appium  : GetElementAttribute command
+1794336085892 [ALL] 11-10 18:41:25.591  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336085897 [ALL] 11-10 18:41:25.597  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-0629-ffff-ffff00000014/attribute/enabled
+1794336085898 [ALL] 11-10 18:41:25.598  7461  7496 I appium  : GetElementAttribute command
+1794336085902 [ALL] 11-10 18:41:25.601  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336085908 [ALL] 11-10 18:41:25.607  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-0629-ffff-ffff00000014/click
+1794336085909 [ALL] 11-10 18:41:25.608  7461  7496 I appium  : Click command
+1794336085944 [ALL] 11-10 18:41:25.638  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=905.0, y[0]=193.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1944823, downTime=1944823, deviceId=-1, source=0x1002, displayId=0, eventId=-731673412 }
+1794336085951 [ALL] 11-10 18:41:25.648  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=905.0, y[0]=193.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1944856, downTime=1944823, deviceId=-1, source=0x1002, displayId=0, eventId=-214369210 }
+1794336085951 [ALL] 11-10 18:41:25.650   397   410 D audioserver: FGS Logger Transaction failed
+1794336085951 [ALL] 11-10 18:41:25.650   397   410 D audioserver: -129
+1794336085974 [ALL] 11-10 18:41:25.672  7461  7496 W GestureController: Gestures took longer than expected (60ms >> 16ms), device might be in a busy state.
+1794336085974 [ALL] 11-10 18:41:25.673  7461  7496 I appium  : Waiting up to 10000ms for the device to idle
+1794336085979 [ALL] 11-10 18:41:25.678  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":null}
+1794336085991 [ALL] 11-10 18:41:25.689  7505  7531 D EGL_emulation: app_time_stats: avg=821.65ms min=409.54ms max=1468.72ms count=3
+1794336086025 [ALL] 11-10 18:41:25.724   521  1866 D CoreBackPreview: Window{6556bb0 u0 com.saucelabs.mydemoapp.android/com.saucelabs.mydemoapp.android.view.activities.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@bb28d6b, mPriority=0, mIsAnimationCallback=false}
+1794336086034 [ALL] 11-10 18:41:25.731  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element
+1794336086038 [ALL] 11-10 18:41:25.733  7461  7496 I appium  : FindElement command
+1794336086038 [ALL] 11-10 18:41:25.735  7461  7496 I appium  : method: 'accessibility id', selector: 'Ascending order by name'
+1794336086038 [ALL] 11-10 18:41:25.735  7461  7496 I appium  : Waiting up to 10000ms for the device to idle
+1794336086178 [ALL] 11-10 18:41:25.874   397   499 D audioserver: FGS Logger Transaction failed
+1794336086178 [ALL] 11-10 18:41:25.874   397   499 D audioserver: -129
+1794336086314 [ALL] 11-10 18:41:26.013  1803  2677 I WorkerManager: dispose()
+1794336086314 [ALL] 11-10 18:41:26.013  1803  2677 W A       : Queue length for executor EventBus is now 11. Perhaps some tasks are too long, or the pool is too small.
+1794336086362 [ALL] 11-10 18:41:26.056   521  1866 I ImeTracker: com.saucelabs.mydemoapp.android:b8095b88: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+1794336086362 [ALL] 11-10 18:41:26.056   521  1866 I ImeTracker: com.saucelabs.mydemoapp.android:b8095b88: onCancelled at PHASE_SERVER_SHOULD_HIDE
+1794336086378 [ALL] 11-10 18:41:26.060  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+1794336086378 [ALL] 11-10 18:41:26.060  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+1794336086378 [ALL] 11-10 18:41:26.061  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.saucelabs.mydemoapp.android fieldId=0 fieldName=null extras=null}, false)
+1794336086378 [ALL] 11-10 18:41:26.061  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+1794336086378 [ALL] 11-10 18:41:26.061  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+1794336086870 [ALL] 11-10 18:41:26.569  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":{"ELEMENT":"00000000-0000-062b-ffff-ffff0000038e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-062b-ffff-ffff0000038e"}}
+1794336086877 [ALL] 11-10 18:41:26.576  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-062b-ffff-ffff0000038e/attribute/displayed
+1794336086878 [ALL] 11-10 18:41:26.577  7461  7496 I appium  : GetElementAttribute command
+1794336086882 [ALL] 11-10 18:41:26.581  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336086887 [ALL] 11-10 18:41:26.587  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-062b-ffff-ffff0000038e/attribute/displayed
+1794336086888 [ALL] 11-10 18:41:26.588  7461  7496 I appium  : GetElementAttribute command
+1794336086892 [ALL] 11-10 18:41:26.592  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336086898 [ALL] 11-10 18:41:26.598  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/back
+1794336086899 [ALL] 11-10 18:41:26.598  7461  7496 I appium  : PressBack command
+1794336086899 [ALL] 11-10 18:41:26.599  7461  7496 D UiDevice: Pressing back button.
+1794336086934 [ALL] 11-10 18:41:26.626  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onKeyDown():2444 Received KEYCODE_BACK. isAllViewsInvisible=false
+1794336086939 [ALL] 11-10 18:41:26.637   521   539 D AutofillManagerService: onBackKeyPressed()
+1794336087932 [ALL] 11-10 18:41:27.631   521   609 D ActivityManager: freezing 27765 com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+1794336087933 [ALL] 11-10 18:41:27.632   521   609 D ActivityManager: freezing 27807 com.android.chrome:privileged_process0
+1794336087934 [ALL] 11-10 18:41:27.633   521   609 D ActivityManager: freezing 3170 com.google.android.documentsui
+1794336087940 [ALL] 11-10 18:41:27.640   521   609 D ActivityManager: freezing 2629 com.android.chrome
+1794336087953 [ALL] 11-10 18:41:27.652  7461  7496 W InteractionController: Timed out waiting 1000ms for command and events.
+1794336087954 [ALL] 11-10 18:41:27.654  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":null}
+1794336087961 [ALL] 11-10 18:41:27.660  7461  7496 I appium  : channel read: POST /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element
+1794336087963 [ALL] 11-10 18:41:27.661  7461  7496 I appium  : FindElement command
+1794336087963 [ALL] 11-10 18:41:27.662  7461  7496 I appium  : method: 'accessibility id', selector: 'Ascending order by name'
+1794336087963 [ALL] 11-10 18:41:27.662  7461  7496 I appium  : Waiting up to 10000ms for the device to idle
+1794336087977 [ALL] 11-10 18:41:27.674  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":{"ELEMENT":"00000000-0000-062b-ffff-ffff0000038e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-062b-ffff-ffff0000038e"}}
+1794336087981 [ALL] 11-10 18:41:27.680  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-062b-ffff-ffff0000038e/attribute/displayed
+1794336087982 [ALL] 11-10 18:41:27.681  7461  7496 I appium  : GetElementAttribute command
+1794336087987 [ALL] 11-10 18:41:27.686  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336087992 [ALL] 11-10 18:41:27.692  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/element/00000000-0000-062b-ffff-ffff0000038e/attribute/displayed
+1794336087993 [ALL] 11-10 18:41:27.693  7461  7496 I appium  : GetElementAttribute command
+1794336087998 [ALL] 11-10 18:41:27.698  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"true"}
+1794336088007 [ALL] 11-10 18:41:27.706  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/screenshot
+1794336088007 [ALL] 11-10 18:41:27.707  7461  7496 I appium  : CaptureScreenshot command
+1794336088009 [ALL] 11-10 18:41:27.708  7461  7496 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794336088009 [ALL] 11-10 18:41:27.708  7461  7496 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794336088057 [ALL] 11-10 18:41:27.757  7575  7575 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794336088058 [ALL] 11-10 18:41:27.757  7575  7575 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794336088068 [ALL] 11-10 18:41:27.767   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794336088068 [ALL] 11-10 18:41:27.767  7575  7580 I Gralloc4: mapper 4.x is not supported
+1794336088070 [ALL] 11-10 18:41:28.000     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794336088090 [ALL] 11-10 18:41:27.786   521   609 D ActivityManager: freezing 832 com.google.android.permissioncontroller
+1794336088130 [ALL] 11-10 18:41:28.063     0     0 I logd    : start watching /data/system/packages.list ...
+1794336088134 [ALL] 11-10 18:41:28.066     0     0 I logd    : ReadPackageList, total packages: 203
+1794336088395 [ALL] 11-10 18:41:28.094  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N17bFv3ff//1+GdFHWXJVuWZMsX+RLHdrwkTdyldb5u0nZri6LXDcMQDBsSFPtv/Wtb99eAYcOQ/dms/xTuCnzbJluLNu36axtnbpuvm2Z2YjuxY8t3S7JkWXdRvPOc3x+yKFIiJZIiJR7…
+1794336088406 [ALL] 11-10 18:41:28.102   158  7373 I keystore2: system/security/keystore2/src/watchdog.rs:319 - Watchdog thread idle -> terminating. Have a great day.
+1794336088412 [ALL] 11-10 18:41:28.111  7461  7496 I appium  : channel read: GET /session/929b6d91-3032-4af0-8f9e-fc756cd449fe/source
+1794336088412 [ALL] 11-10 18:41:28.112  7461  7496 I appium  : Source command
+1794336088413 [ALL] 11-10 18:41:28.112  7461  7496 I appium  : Waiting up to 10000ms for the device to idle
+1794336088448 [ALL] 11-10 18:41:28.147  7461  7496 I appium  : AppiumResponse: {"sessionId":"929b6d91-3032-4af0-8f9e-fc756cd449fe","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

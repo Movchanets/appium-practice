@@ -1,0 +1,100 @@
+1794335893902 [ALL] 11-10 18:38:13.604   336  1236 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x78fa4b01a350
+1794335893902 [ALL] 11-10 18:38:13.605   336  1236 I resolv  : doQuery: rcode=0, ancount=4, return value=97
+1794335893910 [ALL] 11-10 18:38:13.612   336  1235 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+1794335893910 [ALL] 11-10 18:38:13.612   336  1235 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x78fa4b017890
+1794335893910 [ALL] 11-10 18:38:13.612   336  1235 I resolv  : doQuery: rcode=0, ancount=0, return value=118
+1794335893912 [ALL] 11-10 18:38:13.613  1153  1233 D TrafficStats: tagSocket(133) with statsTag=0xffffffff, statsUid=-1
+1794335894002 [ALL] 11-10 18:38:13.702  1153  1153 D TESTFAIRYSDK: onActivityStopped com.saucelabs.mydemoapp.android.view.activities.MainActivity
+1794335894006 [ALL] 11-10 18:38:13.711   521  1797 I ImeTracker: com.saucelabs.mydemoapp.android:654975a9: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_STATE_HIDDEN_FORWARD_NAV
+1794335894006 [ALL] 11-10 18:38:13.711   521  1797 I ImeTracker: com.saucelabs.mydemoapp.android:654975a9: onCancelled at PHASE_SERVER_SHOULD_HIDE
+1794335894008 [ALL] 11-10 18:38:13.712  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+1794335894015 [ALL] 11-10 18:38:13.712  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+1794335894017 [ALL] 11-10 18:38:13.715  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.saucelabs.mydemoapp.android fieldId=0 fieldName=null extras=null}, false)
+1794335894017 [ALL] 11-10 18:38:13.716  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+1794335894017 [ALL] 11-10 18:38:13.716  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+1794335894074 [ALL] 11-10 18:38:13.776   521  3394 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+1794335894378 [ALL] 11-10 18:38:14.082  1067  1143 I appium  : channel read: POST /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element
+1794335894379 [ALL] 11-10 18:38:14.083  1067  1143 I appium  : FindElement command
+1794335894380 [ALL] 11-10 18:38:14.084  1067  1143 I appium  : method: 'accessibility id', selector: 'Displays selected product'
+1794335894380 [ALL] 11-10 18:38:14.084  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335894541 [ALL] 11-10 18:38:14.245  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":{"ELEMENT":"00000000-0000-0529-ffff-ffff00000179","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0529-ffff-ffff00000179"}}
+1794335894548 [ALL] 11-10 18:38:14.252  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff00000179/attribute/displayed
+1794335894549 [ALL] 11-10 18:38:14.253  1067  1143 I appium  : GetElementAttribute command
+1794335894557 [ALL] 11-10 18:38:14.262  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894563 [ALL] 11-10 18:38:14.268  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff00000179/attribute/displayed
+1794335894564 [ALL] 11-10 18:38:14.269  1067  1143 I appium  : GetElementAttribute command
+1794335894573 [ALL] 11-10 18:38:14.278  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894579 [ALL] 11-10 18:38:14.284  1067  1143 I appium  : channel read: POST /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element
+1794335894580 [ALL] 11-10 18:38:14.284  1067  1143 I appium  : FindElement command
+1794335894581 [ALL] 11-10 18:38:14.285  1153  1167 W demoapp.android: Cleared Reference was only reachable from finalizer (only reported once)
+1794335894581 [ALL] 11-10 18:38:14.286  1067  1143 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/productTV'
+1794335894582 [ALL] 11-10 18:38:14.286  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335894606 [ALL] 11-10 18:38:14.303  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":{"ELEMENT":"00000000-0000-0529-ffff-ffff00000178","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0529-ffff-ffff00000178"}}
+1794335894614 [ALL] 11-10 18:38:14.318  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff00000178/attribute/displayed
+1794335894615 [ALL] 11-10 18:38:14.319  1067  1143 I appium  : GetElementAttribute command
+1794335894618 [ALL] 11-10 18:38:14.323  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894623 [ALL] 11-10 18:38:14.328  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff00000178/attribute/displayed
+1794335894624 [ALL] 11-10 18:38:14.328  1067  1143 I appium  : GetElementAttribute command
+1794335894627 [ALL] 11-10 18:38:14.331  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894633 [ALL] 11-10 18:38:14.337  1067  1143 I appium  : channel read: POST /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element
+1794335894634 [ALL] 11-10 18:38:14.338  1067  1143 I appium  : FindElement command
+1794335894635 [ALL] 11-10 18:38:14.340  1067  1143 I appium  : method: 'accessibility id', selector: 'Blue color'
+1794335894636 [ALL] 11-10 18:38:14.340  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335894653 [ALL] 11-10 18:38:14.357  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":{"ELEMENT":"00000000-0000-0529-ffff-ffff000001c4","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0529-ffff-ffff000001c4"}}
+1794335894659 [ALL] 11-10 18:38:14.363  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/attribute/displayed
+1794335894660 [ALL] 11-10 18:38:14.364  1067  1143 I appium  : GetElementAttribute command
+1794335894663 [ALL] 11-10 18:38:14.367  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894669 [ALL] 11-10 18:38:14.373  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/attribute/enabled
+1794335894672 [ALL] 11-10 18:38:14.374  1067  1143 I appium  : GetElementAttribute command
+1794335894674 [ALL] 11-10 18:38:14.378  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335894682 [ALL] 11-10 18:38:14.385  1067  1143 I appium  : channel read: POST /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/click
+1794335894682 [ALL] 11-10 18:38:14.386  1067  1143 I appium  : Click command
+1794335894698 [ALL] 11-10 18:38:14.397  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=229.0, y[0]=2045.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1753600, downTime=1753600, deviceId=-1, source=0x1002, displayId=0, eventId=-550355880 }
+1794335894702 [ALL] 11-10 18:38:14.403  1153  1153 D AutofillManager: Fill dialog is enabled:false, hints=[password, passwordAuto, creditCardNumber, creditCardSecurityCode, creditCardExpirationDate]
+1794335894716 [ALL] 11-10 18:38:14.413  1095  1095 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=229.0, y[0]=2045.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=1753622, downTime=1753600, deviceId=-1, source=0x1002, displayId=0, eventId=-742491140 }
+1794335894721 [ALL] 11-10 18:38:14.421   397   410 D audioserver: FGS Logger Transaction failed
+1794335894721 [ALL] 11-10 18:38:14.421   397   410 D audioserver: -129
+1794335894725 [ALL] 11-10 18:38:14.426  1067  1143 W GestureController: Gestures took longer than expected (37ms >> 16ms), device might be in a busy state.
+1794335894726 [ALL] 11-10 18:38:14.427  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335894729 [ALL] 11-10 18:38:14.429  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":null}
+1794335894737 [ALL] 11-10 18:38:14.441  1067  1143 I appium  : channel read: POST /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element
+1794335894739 [ALL] 11-10 18:38:14.442  1067  1143 I appium  : FindElement command
+1794335894739 [ALL] 11-10 18:38:14.443  1067  1143 I appium  : method: 'accessibility id', selector: 'Blue color'
+1794335894739 [ALL] 11-10 18:38:14.444  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335894771 [ALL] 11-10 18:38:14.475  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":{"ELEMENT":"00000000-0000-0529-ffff-ffff000001c4","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0529-ffff-ffff000001c4"}}
+1794335894788 [ALL] 11-10 18:38:14.489  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/attribute/displayed
+1794335894791 [ALL] 11-10 18:38:14.490  1067  1143 I appium  : GetElementAttribute command
+1794335894947 [ALL] 11-10 18:38:14.651   397   499 D audioserver: FGS Logger Transaction failed
+1794335894947 [ALL] 11-10 18:38:14.651   397   499 D audioserver: -129
+1794335895221 [ALL] 11-10 18:38:14.925  1153  1193 D EGL_emulation: app_time_stats: avg=277.15ms min=9.07ms max=693.45ms count=5
+1794335895493 [ALL] 11-10 18:38:15.184  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"true"}
+1794335895523 [ALL] 11-10 18:38:15.222   336  1245 I resolv  : GetAddrInfoHandler::run: {100 786532 100 983140 10131 0}
+1794335895523 [ALL] 11-10 18:38:15.222   336  1247 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+1794335895526 [ALL] 11-10 18:38:15.227  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/attribute/selected
+1794335895526 [ALL] 11-10 18:38:15.229  1067  1143 I appium  : GetElementAttribute command
+1794335895562 [ALL] 11-10 18:38:15.247   336  1248 I resolv  : res_nmkquery: (QUERY, IN, A)
+1794335895567 [ALL] 11-10 18:38:15.266   336  1247 I resolv  : res_nsend: used send_dg 269 terrno: 0
+1794335895567 [ALL] 11-10 18:38:15.267   336  1247 I resolv  : doQuery: rcode=0, ancount=8, return value=269
+1794335895577 [ALL] 11-10 18:38:15.274  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"false"}
+1794335895581 [ALL] 11-10 18:38:15.281   336  1248 I resolv  : res_nsend: used send_dg 173 terrno: 0
+1794335895581 [ALL] 11-10 18:38:15.281   336  1248 I resolv  : doQuery: rcode=0, ancount=8, return value=173
+1794335895607 [ALL] 11-10 18:38:15.298  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/element/00000000-0000-0529-ffff-ffff000001c4/attribute/selected
+1794335895613 [ALL] 11-10 18:38:15.306  1067  1143 I appium  : GetElementAttribute command
+1794335895623 [ALL] 11-10 18:38:15.323  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"false"}
+1794335895635 [ALL] 11-10 18:38:15.340  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/screenshot
+1794335895636 [ALL] 11-10 18:38:15.340  1067  1143 I appium  : CaptureScreenshot command
+1794335895637 [ALL] 11-10 18:38:15.342  1067  1143 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794335895637 [ALL] 11-10 18:38:15.342  1067  1143 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794335895683 [ALL] 11-10 18:38:15.386  1249  1249 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794335895684 [ALL] 11-10 18:38:15.387  1249  1249 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794335895701 [ALL] 11-10 18:38:15.632     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794335895701 [ALL] 11-10 18:38:15.399   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794335895701 [ALL] 11-10 18:38:15.399  1249  1260 I Gralloc4: mapper 4.x is not supported
+1794335895839 [ALL] 11-10 18:38:15.540  1153  1191 V SauceLabs: ba75d9993d0e4df5b09420b094c14185a3654d8657aa426fb5e48e45247e02a38d82b8d7ff9743c193f294126c96b3a40a8155a704ab472d8b4438ce06882786700a93330317401bb07f8344f822b312e2d19969ebae4ae69f23ab0b4404b7841b2e1b9e75094a8a8c8fe131621a573724ea5a50eccf4988b056f102ca64f9c9934f3f28a88049ea939c68e04b9ecc0cb80423e0d4b94b3591ec9a4bd87c9c1c083ee5683275408fae958ed6df8d46e983d391b551d64c48b63a3956cffcd72c22b79ba8bb63460a93d253a4fa2a501665ceaa1b2cb7409d9f05edecf78c21aa8e5b834daa1c4f72ac2398f22d6e3130cad2a3fd309d47e6972b862144f673e29eb867a6787049b487a9af39f6dbd3157580f426d4cf44f39aec43a4579615dd734c43a1b2f04cf3b0ec2cb3c23407537753f256fa024b02aa53ae87ab4d3ac423d25a5d29a64927889be484571f40ed099796cb0ed7496d9af9b36e89184ea94e6eb4975f9f4f4684907681526ebe3f0b7b23911a1646efab10f045d175881e466b7c4fcaf24b20b6b31329988d748311aaee202ba842cfb05aaf31a35669654bbd519f2c0c43f785556fa9cd1e16f1b794dc7dbead4c0eaa8c28c1aaab741a35bae837b862429c99d1cbea91f9933fd1d5a9401f5c4abbad763a182bebd9d81661402cef84433da7313818e8d79965db83b3ecb18c47af9eea11df6a3d6b1ed2ef76e8c4a94358b71b0548f968a01558edc8c629bc4d8dab8dd5a27edcc50c36de0eac0b314106b3b171107671a60244eff8ddc8d74ab7ba4065cf7c4e7d3a3fccbb711f3047d79339d7b525d5167b946b7c7121ab46dfa00044faa0f1111ae5b0cfad7f804451ae5178225e6f9880a827bf0e5ea14b0e97bc3bcbb819b6b68007eb7bc2e94acaaa3c9b776e203d580dca200907064332a832fa8c521f9ce30b7fe75e0e2643b7b84fa0c451a5d0b1318f2a3664604eea8d2a892bcefdc1918c7a0d6d128f4f75b2446e2986291dde7552b226601b41abb4bf2480e4da3f9ed69ceec5c466412889d47c3b7987d61fe3207ad07e754781bd8191a6e43fc298acef37ee7fbd4aa88ed2b065621c8e1e4fbdeb19c1d44483880ab08e3077ffbdf377bc0bccd94618b50726f3e338e1ec654a86e5a87e4d43b03c8ddbbfeaf478ad7d4e309aab48fa920e1d0f1c8a64d75c2e549db84b40d0b96529c8da0ffda88e7c6da744f14c5591f9b0084c6f4a8c6c97daeb3f9249598b22968a2317e67cc7e193517537410388645f072e85c727d4aed9ca4a754953bdd23e1efd261f7f90be0e8a51f147d4a86fe72f18bbe9dc5911233b403247fdb5f083cd948c318e17fdfb3eb5a845288f5aa8a73ad14dc3528e2bac6b504f6780661df7cc6e7b6e7c7f3fee2473446789ea16fb6f9b28434de8c33fd9f9446daf729c19b4c8e57ea429e239078e4c69b978a27065a80a4b50f9953543184d23b472b5acf9bd9c6da81f73b124a048b981be715154bd388e0f13544bef514598908255f607dee4548442bf9253d2423691f210e764f970cc0499ca9b8e5d47b6b798e439d2c684c92ac9a36834d54624b87d9cbfc7268a37b54385434e8948e6ac8b1c6423e6871a04b5f0eebc834870859d6bb4f9c92a8cfea850a7fada4c2a9fdbd27852be4955ed089ff4e397413d93edcecf81d12da5e662193e2b834bc09de623d35dc2821437a1be5bf3a141889074292b4dfd0e4857f8549579e84c23bdbadd79a86b735637b99cc708df4fa4ba4a16d8685c3023ea35a38592f84c57a7e9989beac86199048ea9f2fe3a4747bfc8d58f1474bad1533a23af679d45cb8446789595b5586fd171ef34b2324f34bb22f4080cf3e3325ac9ac7b513e41889fdd5f45c543c47ee81c2516edb646ffb1ea83b66678c8310e7687905ff44bc295fe81395a74ac08ced37cac76f44a2ab0288a2fcf08c642d856160de3e64932878f1a1bf6aa9c312c8b6bbc64a545a9a8285799a3fd0d7dbdfc9b6a4f7949c2a439cf647aaa9b99f3344d399e2d4ae4b5ac4fe76c7fce1191f391a47957408a8dad28a249a86b9fc23645d4b5494f8e97e08e071e855e2467851bc77c3f4df5b46e94d69736c3c7afdc9323ccaa44fc862bfc8a66b8f4604e06ac533a7a4bd7b933d1af5a7a2becc47e4ffbf05e4179af5943bfdfa3815256f7b1aae2524f5eae4bc22c207e2d6897717ed604774f8da2eb75575ca35e0f1d87e4840a33467a8ec8aa6984c2faf2b984a100b23f448b8605c4638c866af3572a2d76f5f64f8fbd693c4ed3677b1e78c8e8f985bd4ed88fecb6d90a851008b8c35536c5394d04a49e03efeaab3978249df17ed5fe457e8ecc86507c1b98d0a8ff9fb9e7de4888a656ccd613f69986f192ba993db54f3198215b6c5e21afeadadadfd1a27c4462a5aee6a6baa944f62721640d36ec43a195ccb2039c9aef4b6f97cead22f4451cb7ecbd66fae20aa6e69b2b07379c41ec8e872f8721774ff9c3206461ec3644b2b4fcf37c774b432aa245a349484a46469e6c6cf9ee5f10a472d5b0caf9764d9ba68ffd34f491a0b511ed687571404d208049b7c457546d8e90e7f678b38747e8acd6c036110055d0c48f20a102ce42e095c4c7fe398dbfbd7d7457de251a406f8834a52757e8d8c16421fa30cf86490194d48e3670061ed7e825e0ec28fb4e88a88fbe8ce65fc4a1d70ac3ab9d5b429fb2e058398ff83f9ce172059727cc4605a32dcb4124cc5e64ff3bcefd5feb4a3a8c17188905033d8dfa45f01565b447dfb8ca1275658714c6267c00af249344d1980eb52a2027a18ddc96decfe01c465eb8bec84e063eaa4ac8db608b382c4332b7828e67
+1794335895839 [ALL] 11-10 18:38:15.543  1153  1264 V Network : Sending POST request to https://my-demo-app.net/api/analytics/collect/
+1794335895840 [ALL] 11-10 18:38:15.545  1153  1264 D TrafficStats: tagSocket(120) with statsTag=0xffffffff, statsUid=-1
+1794335895999 [ALL] 11-10 18:38:15.703  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N15eFTlocfx32Qy2cgeEghhFRVFEVEQrbtoQaqoiOJal9a94tVqrW21tXqvWvXa1lat9CqKtWIRQS3iglpkqYogUgVEMAtrAmSDrDNz7h/AMAmzL5l5w/fzPDzPzFne887kzDDnd97FZlm…
+1794335896013 [ALL] 11-10 18:38:15.717  1067  1143 I appium  : channel read: GET /session/1b56e4e3-f29c-4002-84b0-31ed93d365e0/source
+1794335896014 [ALL] 11-10 18:38:15.718  1067  1143 I appium  : Source command
+1794335896014 [ALL] 11-10 18:38:15.718  1067  1143 I appium  : Waiting up to 10000ms for the device to idle
+1794335896098 [ALL] 11-10 18:38:15.802  1067  1143 I appium  : AppiumResponse: {"sessionId":"1b56e4e3-f29c-4002-84b0-31ed93d365e0","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

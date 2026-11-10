@@ -1,0 +1,100 @@
+1794334788754 [ALL] 11-10 18:19:48.484   831   865 V WindowManagerShell: All active transition animations finished
+1794334788859 [ALL] 11-10 18:19:48.590   831   831 D StatusBarIconController: ignoring old pipeline callbacks, because the new mobile icons are enabled
+1794334789130 [ALL] 11-10 18:19:48.862 15869 15869 D TESTFAIRYSDK: onActivityStopped com.saucelabs.mydemoapp.android.view.activities.SplashActivity
+1794334789145 [ALL] 11-10 18:19:48.867 15869 15869 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@aa4c8e2
+1794334789145 [ALL] 11-10 18:19:48.868   521  2291 D CoreBackPreview: Window{a54d15d u0 com.saucelabs.mydemoapp.android/com.saucelabs.mydemoapp.android.view.activities.SplashActivity}: Setting back callback null
+1794334789156 [ALL] 11-10 18:19:48.873   521  2291 W InputManager-JNI: Input channel object 'a54d15d com.saucelabs.mydemoapp.android/com.saucelabs.mydemoapp.android.view.activities.SplashActivity (client)' was disposed without first being removed with the input manager!
+1794334789156 [ALL] 11-10 18:19:48.887   521  2291 I ImeTracker: com.saucelabs.mydemoapp.android:92538f49: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_STATE_HIDDEN_FORWARD_NAV
+1794334789156 [ALL] 11-10 18:19:48.887   521  2291 I ImeTracker: com.saucelabs.mydemoapp.android:92538f49: onCancelled at PHASE_SERVER_SHOULD_HIDE
+1794334789158 [ALL] 11-10 18:19:48.888  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+1794334789160 [ALL] 11-10 18:19:48.889  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+1794334789160 [ALL] 11-10 18:19:48.890  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.saucelabs.mydemoapp.android fieldId=0 fieldName=null extras=null}, false)
+1794334789160 [ALL] 11-10 18:19:48.890  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+1794334789160 [ALL] 11-10 18:19:48.890  1555  1555 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+1794334789696 [ALL] 11-10 18:19:49.428 15827 15860 W tomator2.server: Accessing hidden method Landroid/view/MotionEvent;->setDisplayId(I)V (blocked,test-api, reflection, allowed)
+1794334789714 [ALL] 11-10 18:19:49.447 15827 15860 W tomator2.server: Accessing hidden field Landroid/view/accessibility/AccessibilityNodeInfo;->mSourceNodeId:J (unsupported, reflection, allowed)
+1794334789717 [ALL] 11-10 18:19:49.450 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff00000012","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff00000012"}}
+1794334789725 [ALL] 11-10 18:19:49.458 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334789726 [ALL] 11-10 18:19:49.458 15827 15860 I appium  : FindElement command
+1794334789727 [ALL] 11-10 18:19:49.460 15827 15860 I appium  : method: 'accessibility id', selector: 'App logo and name', contextId: '00000000-0000-01e4-ffff-ffff00000012'
+1794334789729 [ALL] 11-10 18:19:49.462 15827 15860 D UiObject2: Retrieving node with selector: BySelector [DESC='\QApp logo and name\E'].
+1794334789732 [ALL] 11-10 18:19:49.465 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff0000001a","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff0000001a"}}
+1794334789741 [ALL] 11-10 18:19:49.474 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff0000001a/attribute/displayed
+1794334789742 [ALL] 11-10 18:19:49.475 15827 15860 I appium  : GetElementAttribute command
+1794334789748 [ALL] 11-10 18:19:49.480 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"true"}
+1794334789754 [ALL] 11-10 18:19:49.487 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff0000001a/attribute/displayed
+1794334789755 [ALL] 11-10 18:19:49.488 15827 15860 I appium  : GetElementAttribute command
+1794334789759 [ALL] 11-10 18:19:49.492 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"true"}
+1794334789765 [ALL] 11-10 18:19:49.498 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334789766 [ALL] 11-10 18:19:49.499 15827 15860 I appium  : FindElement command
+1794334789767 [ALL] 11-10 18:19:49.500 15827 15860 I appium  : method: 'xpath', selector: '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.saucelabs.mydemoapp.android:id/productRV"]/android.view.ViewGroup'
+1794334789768 [ALL] 11-10 18:19:49.500 15827 15860 I appium  : Waiting up to 10000ms for the device to idle
+1794334789769 [ALL] 11-10 18:19:49.502 15827 15860 I appium  : The following attributes will be included to the page source: [resource-id]
+1794334789772 [ALL] 11-10 18:19:49.505 15869 15919 V Network : Sending GET request to https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js
+1794334789776 [ALL] 11-10 18:19:49.509   336 15920 I resolv  : GetAddrInfoHandler::run: {100 100 100 983140 10195 0}
+1794334789780 [ALL] 11-10 18:19:49.513   336 15921 I resolv  : res_nmkquery: (QUERY, IN, AAAA)
+1794334789780 [ALL] 11-10 18:19:49.513   336 15921 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x78fc2b00a390
+1794334789780 [ALL] 11-10 18:19:49.513   336 15921 I resolv  : doQuery: rcode=0, ancount=1, return value=65
+1794334789784 [ALL] 11-10 18:19:49.517   336 15922 I resolv  : res_nmkquery: (QUERY, IN, A)
+1794334789786 [ALL] 11-10 18:19:49.517   336 15922 I resolv  : resolv_cache_lookup: FOUND IN CACHE entry=0x78fbab00fc10
+1794334789786 [ALL] 11-10 18:19:49.517   336 15922 I resolv  : doQuery: rcode=0, ancount=1, return value=53
+1794334789786 [ALL] 11-10 18:19:49.518 15869 15919 D TrafficStats: tagSocket(100) with statsTag=0xffffffff, statsUid=-1
+1794334790206 [ALL] 11-10 18:19:49.939 15827 15860 D CompatibilityChangeReporter: Compat change id reported: 247079863; UID 10194; state: ENABLED
+1794334790263 [ALL] 11-10 18:19:49.996 15827 15860 I appium  : Took 0ms to retrieve 1 matches for '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.saucelabs.mydemoapp.android:id/productRV"]/android.view.ViewGroup' XPath2 query
+1794334790266 [ALL] 11-10 18:19:49.999 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff0000005b","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff0000005b"}}
+1794334790273 [ALL] 11-10 18:19:50.006 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/elements
+1794334790274 [ALL] 11-10 18:19:50.006 15827 15860 I appium  : FindElements command
+1794334790275 [ALL] 11-10 18:19:50.008 15827 15860 I appium  : method: 'xpath', selector: '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.saucelabs.mydemoapp.android:id/productRV"]/android.view.ViewGroup'
+1794334790275 [ALL] 11-10 18:19:50.008 15827 15860 I appium  : Waiting up to 10000ms for the device to idle
+1794334790277 [ALL] 11-10 18:19:50.010 15827 15860 I appium  : The following attributes will be included to the page source: [resource-id]
+1794334790396 [ALL] 11-10 18:19:50.129 15827 15860 I appium  : Took 0ms to retrieve 4 matches for '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.saucelabs.mydemoapp.android:id/productRV"]/android.view.ViewGroup' XPath2 query
+1794334790398 [ALL] 11-10 18:19:50.131 15827 15860 I appium  : Caching 4 found elements
+1794334790400 [ALL] 11-10 18:19:50.132 15827 15860 I appium  : Cached 4 elements
+1794334790402 [ALL] 11-10 18:19:50.134 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":[{"ELEMENT":"00000000-0000-01e4-ffff-ffff0000005b","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff0000005b"},{"ELEMENT":"00000000-0000-01e4-ffff-ffff00000066","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-fff…
+1794334790410 [ALL] 11-10 18:19:50.143 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334790411 [ALL] 11-10 18:19:50.144 15827 15860 I appium  : FindElement command
+1794334790412 [ALL] 11-10 18:19:50.145 15827 15860 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/titleTV', contextId: '00000000-0000-01e4-ffff-ffff0000005b'
+1794334790414 [ALL] 11-10 18:19:50.147 15827 15860 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/titleTV\E'].
+1794334790417 [ALL] 11-10 18:19:50.150 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff0000005d","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff0000005d"}}
+1794334790424 [ALL] 11-10 18:19:50.156 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff0000005d/text
+1794334790425 [ALL] 11-10 18:19:50.157 15827 15860 I appium  : GetText command
+1794334790429 [ALL] 11-10 18:19:50.162 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"Sauce Labs Backpack"}
+1794334790430 [ALL] 11-10 18:19:50.163   521  3394 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+1794334790438 [ALL] 11-10 18:19:50.170 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334790438 [ALL] 11-10 18:19:50.171 15827 15860 I appium  : FindElement command
+1794334790439 [ALL] 11-10 18:19:50.172 15827 15860 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/titleTV', contextId: '00000000-0000-01e4-ffff-ffff00000066'
+1794334790441 [ALL] 11-10 18:19:50.174 15827 15860 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/titleTV\E'].
+1794334790445 [ALL] 11-10 18:19:50.177 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff00000068","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff00000068"}}
+1794334790451 [ALL] 11-10 18:19:50.184 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff00000068/text
+1794334790452 [ALL] 11-10 18:19:50.185 15827 15860 I appium  : GetText command
+1794334790457 [ALL] 11-10 18:19:50.189 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"Sauce Labs Backpack (green)"}
+1794334790463 [ALL] 11-10 18:19:50.196 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334790464 [ALL] 11-10 18:19:50.196 15827 15860 I appium  : FindElement command
+1794334790465 [ALL] 11-10 18:19:50.197 15827 15860 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/titleTV', contextId: '00000000-0000-01e4-ffff-ffff00000071'
+1794334790467 [ALL] 11-10 18:19:50.199 15827 15860 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/titleTV\E'].
+1794334790470 [ALL] 11-10 18:19:50.202 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff00000073","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff00000073"}}
+1794334790475 [ALL] 11-10 18:19:50.208 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff00000073/text
+1794334790476 [ALL] 11-10 18:19:50.209 15827 15860 I appium  : GetText command
+1794334790479 [ALL] 11-10 18:19:50.212 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"Sauce Labs Backpack (orange)"}
+1794334790485 [ALL] 11-10 18:19:50.217 15827 15860 I appium  : channel read: POST /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element
+1794334790485 [ALL] 11-10 18:19:50.218 15827 15860 I appium  : FindElement command
+1794334790486 [ALL] 11-10 18:19:50.219 15827 15860 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/titleTV', contextId: '00000000-0000-01e4-ffff-ffff0000007c'
+1794334790488 [ALL] 11-10 18:19:50.221 15827 15860 D UiObject2: Retrieving node with selector: BySelector [RES='\Qcom.saucelabs.mydemoapp.android:id/titleTV\E'].
+1794334790491 [ALL] 11-10 18:19:50.224 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":{"ELEMENT":"00000000-0000-01e4-ffff-ffff0000007e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-01e4-ffff-ffff0000007e"}}
+1794334790496 [ALL] 11-10 18:19:50.229 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/element/00000000-0000-01e4-ffff-ffff0000007e/text
+1794334790497 [ALL] 11-10 18:19:50.230 15827 15860 I appium  : GetText command
+1794334790501 [ALL] 11-10 18:19:50.234 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"Sauce Labs Backpack (red)"}
+1794334790510 [ALL] 11-10 18:19:50.243 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/screenshot
+1794334790511 [ALL] 11-10 18:19:50.244 15827 15860 I appium  : CaptureScreenshot command
+1794334790512 [ALL] 11-10 18:19:50.245 15827 15860 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794334790512 [ALL] 11-10 18:19:50.245 15827 15860 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794334790563 [ALL] 11-10 18:19:50.295 15930 15930 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794334790563 [ALL] 11-10 18:19:50.295 15930 15930 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794334790578 [ALL] 11-10 18:19:50.538     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794334790579 [ALL] 11-10 18:19:50.305   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794334790579 [ALL] 11-10 18:19:50.305 15930 15935 I Gralloc4: mapper 4.x is not supported
+1794334790879 [ALL] 11-10 18:19:50.611 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N15fFTV/f/x98xkspE9ISQhrC7IIsqioFIXXEHFHdC6+7XVVq2127et3/7afmtbtdWvtVq1rfuKFhdUsKJiBcQNUBBEBckGZCdkzyz390dgyCQzSWYyk8kJr+fjweMxc+fec08mM2Hue87…
+1794334790895 [ALL] 11-10 18:19:50.628 15827 15860 I appium  : channel read: GET /session/3d138c2c-efe5-4b43-a002-baa21513fec4/source
+1794334790896 [ALL] 11-10 18:19:50.629 15827 15860 I appium  : Source command
+1794334790897 [ALL] 11-10 18:19:50.629 15827 15860 I appium  : Waiting up to 10000ms for the device to idle
+1794334791044 [ALL] 11-10 18:19:50.776 15827 15860 I appium  : AppiumResponse: {"sessionId":"3d138c2c-efe5-4b43-a002-baa21513fec4","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …
