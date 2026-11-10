@@ -91,13 +91,9 @@ class CatalogPage(BasePage):
         return self
 
     def select_product_by_title(self, title: str) -> Self:
-        """Scroll dynamically to find the specified product title and tap it."""
+        """Scroll dynamically to find the specified product title and tap its card."""
         self.scroll_to_text(title)
-        product_locator: Locator = (
-            AppiumBy.XPATH,
-            f"//android.widget.TextView[@text='{title}']",
-        )
-        self.click(product_locator)
+        self.get_product_card_by_title(title).click_item()
         return self
 
     def sort_products(self, option: SortOption) -> Self:

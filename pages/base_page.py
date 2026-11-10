@@ -30,6 +30,24 @@ class BasePage(Base):
 
     HEADER_ROOT: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/header")
     DRAWER_MENU: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/menuRV")
+    PERMISSION_ALLOW_BUTTON: Locator = (
+        AppiumBy.XPATH,
+        "//*[@resource-id='com.android.permissioncontroller:id/permission_allow_button' "
+        "or @resource-id='com.android.packageinstaller:id/permission_allow_button']",
+    )
+    PERMISSION_DENY_BUTTON: Locator = (
+        AppiumBy.ID,
+        "com.android.permissioncontroller:id/permission_deny_button",
+    )
+    SCROLLABLE_TEXT_LOCATOR: Locator = (
+        AppiumBy.ANDROID_UIAUTOMATOR,
+        "new UiScrollable(new UiSelector().scrollable(true))"
+        '.scrollIntoView(new UiSelector().textContains("{text}"))',
+    )
+    TEXT_CONTAINS_LOCATOR: Locator = (
+        AppiumBy.XPATH,
+        "//*[contains(@text, '{text}')]",
+    )
 
     def __init__(self, driver: WebDriver) -> None:
         """Initialize the page object with a mobile WebDriver instance."""
@@ -133,23 +151,16 @@ class BasePage(Base):
         """
         # Attempt Android native UiScrollable
         try:
-            ui_scrollable_query = (
-                "new UiScrollable(new UiSelector().scrollable(true))"
-                f'.scrollIntoView(new UiSelector().textContains("{text}"))'
-            )
-            return self.find_element(
-                (AppiumBy.ANDROID_UIAUTOMATOR, ui_scrollable_query), timeout=3.0
-            )
+            scrollable_locator = self.resolve_locator(self.SCROLLABLE_TEXT_LOCATOR, text=text)
+            return self.find_element(scrollable_locator, timeout=3.0)
         except Exception:
             pass
 
         # Cross-platform fallback loop with dynamic swipes
+        text_locator = self.resolve_locator(self.TEXT_CONTAINS_LOCATOR, text=text)
         for _ in range(max_swipes):
             try:
-                element = self.find_element(
-                    (AppiumBy.XPATH, f"//*[contains(@text, '{text}')]"),
-                    timeout=1.5,
-                )
+                element = self.find_element(text_locator, timeout=1.5)
                 if element.is_displayed():
                     return element
             except (TimeoutException, NoSuchElementException):
@@ -226,18 +237,9 @@ class BasePage(Base):
             else:
                 alert.dismiss()
         except Exception:
-            # Fallback to standard Android system dialog buttons
-            deny_xpath = (
-                "//*[@resource-id='com.android.permissioncontroller:id/permission_deny_button']"
-            )
-            permission_xpath = (
-                "//*[@resource-id='com.android.permissioncontroller:id/permission_allow_button' "
-                "or @resource-id='com.android.packageinstaller:id/permission_allow_button']"
-                if allow
-                else deny_xpath
-            )
+            target_locator = self.PERMISSION_ALLOW_BUTTON if allow else self.PERMISSION_DENY_BUTTON
             try:
-                btn = self.find_element((AppiumBy.XPATH, permission_xpath), timeout=2.0)
+                btn = self.find_element(target_locator, timeout=2.0)
                 btn.click()
             except (TimeoutException, NoSuchElementException):
                 pass

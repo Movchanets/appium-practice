@@ -71,6 +71,11 @@ class Base:
             return (by, "." + value)
         return locator
 
+    def resolve_locator(self, locator: Locator, **kwargs: str) -> Locator:
+        """Format a parameterized class-level Locator attribute with runtime values."""
+        by, value = locator
+        return (by, value.format(**kwargs))
+
     def _find_element(self, locator: Locator, from_driver: bool = False) -> WebElement:
         """Find a single element within the active context or optionally root driver."""
         target = self._target if not from_driver else self.driver

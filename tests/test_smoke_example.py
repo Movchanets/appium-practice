@@ -8,7 +8,6 @@ Demonstrates:
 """
 
 import pytest
-from appium.webdriver.webdriver import WebDriver
 
 from pages.catalog_page import CatalogPage
 from pages.login_page import LoginPage
@@ -19,19 +18,14 @@ from pages.login_page import LoginPage
 class TestMobileSmokeSuite:
     """Production reference test suite for core mobile workflows."""
 
-    def test_catalog_display_and_navigation(self, driver: WebDriver) -> None:
+    def test_catalog_display_and_navigation(self, catalog_page: CatalogPage) -> None:
         """Verify catalog items are rendered and menu interaction works."""
-        catalog_page = CatalogPage(driver)
-
-        # Assert catalog screen header is visible
         assert catalog_page.is_loaded(), "Expected Catalog screen to be loaded"
-
-        # Interacting with slide menu
         catalog_page.open_menu()
+        assert catalog_page.drawer_menu.is_open(), "Expected Drawer menu to be open"
 
-    def test_dynamic_catalog_swipe(self, driver: WebDriver) -> None:
+    def test_dynamic_catalog_swipe(self, catalog_page: CatalogPage) -> None:
         """Verify dynamic vertical swiping on catalog grid using relative screen dimensions."""
-        catalog_page = CatalogPage(driver)
         assert catalog_page.is_loaded(), "Catalog should be loaded before swiping"
 
         # Execute dynamic gesture calculated from window bounds (no hardcoded pixels)
@@ -40,14 +34,8 @@ class TestMobileSmokeSuite:
         # Verify page remains stable and responsive after gesture
         assert catalog_page.is_loaded(), "Catalog must remain functional after swipe gesture"
 
-    def test_app_background_resilience(self, driver: WebDriver) -> None:
-        """Verify application lifecycle handling when placed in the background.
-
-        In mobile environments, apps are regularly interrupted by incoming calls,
-        notifications, and user multitasking. The app must resume gracefully
-        without crashes or losing session state.
-        """
-        catalog_page = CatalogPage(driver)
+    def test_app_background_resilience(self, catalog_page: CatalogPage) -> None:
+        """Verify application lifecycle handling when placed in the background."""
         assert catalog_page.is_loaded(), "Initial screen should be active"
 
         # Put app into background for 3 seconds, Appium automatically brings it back
@@ -56,12 +44,14 @@ class TestMobileSmokeSuite:
         # Assert UI state restored intact
         assert catalog_page.is_loaded(), "Application should resume in active state without crash"
 
-    def test_invalid_login_validation_flow(self, driver: WebDriver) -> None:
+    def test_invalid_login_validation_flow(
+        self,
+        catalog_page: CatalogPage,
+        login_page: LoginPage,
+    ) -> None:
         """Verify authentication error display with proper explicit wait assertions."""
-        catalog_page = CatalogPage(driver)
         catalog_page.navigate_to_login()
 
-        login_page = LoginPage(driver)
         # Attempt login with locked-out user in the Android demo app
         login_page.login(username="alice@example.com", password="10203040")
 
