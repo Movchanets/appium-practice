@@ -10,6 +10,8 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 
+APPIUM_SERVER_URL = os.getenv("APPIUM_SERVER_URL", "http://127.0.0.1:4723")
+
 
 @pytest.fixture(scope="function")
 def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, None]:
@@ -44,7 +46,7 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
             android_options.udid = udid
 
         active_driver = webdriver.Remote(
-            command_executor="http://127.0.0.1:4723",
+            command_executor=APPIUM_SERVER_URL,
             options=android_options,
         )
 
@@ -60,7 +62,7 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
             ios_options.device_name = device_name
 
         active_driver = webdriver.Remote(
-            command_executor="http://127.0.0.1:4723",
+            command_executor=APPIUM_SERVER_URL,
             options=ios_options,
         )
 
@@ -83,7 +85,7 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
         bs_options.set_capability("appium:automationName", "UiAutomator2")
 
         active_driver = webdriver.Remote(
-            command_executor="http://hub-cloud.browserstack.com/wd/hub",
+            command_executor="https://hub-cloud.browserstack.com/wd/hub",
             options=bs_options,
         )
     else:

@@ -542,12 +542,12 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "allure-pytest", specifier = ">=2.13.0" },
-    { name = "appium-python-client", specifier = ">=4.0.0" },
+    { name = "appium-python-client", specifier = ">=5.0.0" },
     { name = "pydantic", specifier = ">=2.7.0" },
     { name = "pytest", specifier = ">=8.0.0" },
     { name = "requests", specifier = ">=2.31.0" },
     { name = "ruff", specifier = ">=0.4.0" },
-    { name = "selenium", specifier = ">=4.20.0" },
+    { name = "selenium", specifier = ">=4.26.0" },
 ]
 
 [package.metadata.requires-dev]

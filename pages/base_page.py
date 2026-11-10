@@ -194,7 +194,10 @@ class BasePage(Base):
 
     def background_app(self, seconds: int = 5) -> None:
         """Send the mobile application to background for specified seconds, then resume."""
-        self.driver.background_app(seconds)
+        try:
+            self.driver.execute_script("mobile: backgroundApp", {"seconds": seconds})
+        except Exception:
+            self.driver.background_app(seconds)
 
     def set_orientation(self, orientation: str) -> None:
         """Set screen orientation (PORTRAIT or LANDSCAPE)."""
@@ -207,9 +210,12 @@ class BasePage(Base):
     def hide_keyboard(self) -> None:
         """Safely hide on-screen soft keyboard if currently open."""
         try:
-            self.driver.hide_keyboard()
+            self.driver.execute_script("mobile: hideKeyboard")
         except Exception:
-            pass
+            try:
+                self.driver.hide_keyboard()
+            except Exception:
+                pass
 
     def handle_permission_alert(self, allow: bool = True) -> None:
         """Handle OS runtime system permission prompts."""
