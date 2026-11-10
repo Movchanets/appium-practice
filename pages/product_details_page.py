@@ -48,8 +48,10 @@ class ProductDetailsPage(BasePage):
         return ReviewModal(self.driver)
 
     def is_loaded(self) -> bool:
-        """Check if product title is visible."""
-        return self.is_displayed(self.PRODUCT_TITLE, timeout=10.0)
+        """Check if product details screen is loaded (hero image and title visible)."""
+        return self.is_displayed(self.PRODUCT_IMAGE, timeout=10.0) and self.is_displayed(
+            self.PRODUCT_TITLE, timeout=5.0
+        )
 
     def get_title(self) -> str:
         """Retrieve the displayed product title."""

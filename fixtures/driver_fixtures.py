@@ -85,7 +85,7 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
                 "com.saucelabs.mydemoapp.android.view.activities.SplashActivity"
             )
             android_options.app_wait_activity = "com.saucelabs.mydemoapp.android.view.activities.*"
-            android_options.no_reset = True
+            android_options.no_reset = False
             android_options.auto_grant_permissions = True
             android_options.new_command_timeout = 300
             if app_path:

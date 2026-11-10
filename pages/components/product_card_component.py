@@ -37,7 +37,7 @@ class ProductCardComponent(BaseComponent):
 
     def click_item(self) -> None:
         """Tap this product item to navigate to its details screen."""
-        self.root.click()
+        self.click(self.IMAGE)
 
     def click_image(self) -> None:
         """Tap product image thumbnail."""
