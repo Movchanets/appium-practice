@@ -1,5 +1,15 @@
 """Base Page Object implementation providing core actions, waits, and W3C gestures."""
 
+from __future__ import annotations
+
+import sys
+
+if sys.version_info >= (3, 11):
+    from typing import Self
+else:
+    from typing_extensions import Self
+
+
 from appium.webdriver.common.appiumby import AppiumBy
 from appium.webdriver.webdriver import WebDriver
 from selenium.common.exceptions import NoSuchElementException, TimeoutException
@@ -8,80 +18,40 @@ from selenium.webdriver.common.actions import interaction
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.ui import WebDriverWait
 
-Locator = tuple[AppiumBy | str, str]
+from pages.base import Base
+from pages.components.drawer_menu_component import DrawerMenuComponent
+from pages.components.header_component import HeaderComponent
+from pages.types import Locator
 
 
-class BasePage:
+class BasePage(Base):
     """Foundational Page Object with robust explicit waits and dynamic W3C touch gestures."""
 
+    HEADER_ROOT: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/header")
+    DRAWER_MENU: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/menuRV")
+
     def __init__(self, driver: WebDriver) -> None:
-        self.driver = driver
+        """Initialize the page object with a mobile WebDriver instance."""
+        super().__init__(driver)
 
-    # ---------------------------------------------------------
-    # Core Element Interactions & Explicit Waits
-    # ---------------------------------------------------------
+    @property
+    def header(self) -> HeaderComponent:
+        """Access the top HeaderComponent."""
+        header_el = self.find_element(self.HEADER_ROOT)
+        return HeaderComponent(header_el)
 
-    def find_element(self, locator: Locator, timeout: float = 10.0) -> WebElement:
-        """Find an element on the screen waiting until it is present."""
-        return WebDriverWait(self.driver, timeout).until(
-            ec.presence_of_element_located(locator),
-            message=f"Element with locator {locator} was not found within {timeout}s",
-        )
+    @property
+    def drawer_menu(self) -> DrawerMenuComponent:
+        """Access the slide DrawerMenuComponent."""
+        drawer_el = self.find_element(self.DRAWER_MENU)
+        return DrawerMenuComponent(drawer_el)
 
-    def find_elements(self, locator: Locator, timeout: float = 10.0) -> list[WebElement]:
-        """Find all elements matching locator waiting until at least one is present."""
-        try:
-            return WebDriverWait(self.driver, timeout).until(
-                ec.presence_of_all_elements_located(locator),
-                message=f"Elements with locator {locator} were not found within {timeout}s",
-            )
-        except TimeoutException:
-            return []
-
-    def click(self, locator: Locator, timeout: float = 10.0) -> None:
-        """Wait until element is clickable and perform click."""
-        element = WebDriverWait(self.driver, timeout).until(
-            ec.element_to_be_clickable(locator),
-            message=f"Element {locator} was not clickable within {timeout}s",
-        )
-        element.click()
-
-    def send_keys(
-        self,
-        locator: Locator,
-        text: str,
-        clear: bool = True,
-        timeout: float = 10.0,
-    ) -> None:
-        """Wait for element visibility, optionally clear existing content, and type text."""
-        element = WebDriverWait(self.driver, timeout).until(
-            ec.visibility_of_element_located(locator),
-            message=f"Element {locator} not visible for text entry within {timeout}s",
-        )
-        if clear:
-            element.clear()
-        element.send_keys(text)
-
-    def get_text(self, locator: Locator, timeout: float = 10.0) -> str:
-        """Retrieve visible text or content-desc attribute from an element."""
-        element = self.find_element(locator, timeout=timeout)
-        text = element.text
-        if not text:
-            # Fallback to Android content-desc or accessibility label
-            text = element.get_attribute("content-desc") or element.get_attribute("text") or ""
-        return text
-
-    def is_displayed(self, locator: Locator, timeout: float = 5.0) -> bool:
-        """Check if an element is visible on screen without raising an uncaught exception."""
-        try:
-            return bool(
-                WebDriverWait(self.driver, timeout).until(ec.visibility_of_element_located(locator))
-            )
-        except (TimeoutException, NoSuchElementException):
-            return False
+    def open_menu(self) -> Self:
+        """Tap navigation drawer trigger button if drawer is not already opened."""
+        if not self.is_displayed(self.DRAWER_MENU, timeout=1.5):
+            self.header.click_menu()
+        return self
 
     # ---------------------------------------------------------
     # Dynamic W3C Gestures (Screen Percentage Calculations)

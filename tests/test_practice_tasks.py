@@ -12,6 +12,7 @@ from appium.webdriver.webdriver import WebDriver
 from pages.base_page import BasePage
 from pages.catalog_page import CatalogPage
 from pages.login_page import LoginPage
+from pages.types import Locator
 
 
 # ============================================================================
@@ -45,8 +46,8 @@ def test_task_1_fix_brittle_locators(driver: WebDriver) -> None:
     # )
 
     # TODO: Реалізуй стійкі локатори відповідно до правил CLAUDE.md:
-    STABLE_CART_LOCATOR = (AppiumBy.ACCESSIBILITY_ID, "cart badge")  # Доопрацюй за потреби
-    STABLE_TITLE_LOCATOR = (AppiumBy.XPATH, "//android.widget.TextView[@text='Products']")
+    STABLE_CART_LOCATOR: Locator = (AppiumBy.ACCESSIBILITY_ID, "cart badge")  # Доопрацюй за потреби
+    STABLE_TITLE_LOCATOR: Locator = (AppiumBy.XPATH, "//android.widget.TextView[@text='Products']")
 
     cart_elem = base.find_element(STABLE_CART_LOCATOR)
     title_elem = base.find_element(STABLE_TITLE_LOCATOR)
@@ -175,7 +176,7 @@ def test_debug_task_1_intentional_broken_locator(driver: WebDriver) -> None:
     """
     base = BasePage(driver)
     # ❌ НАВМИСНА ПОМИЛКА: такого accessibility_id не існує
-    WRONG_LOCATOR = (AppiumBy.ACCESSIBILITY_ID, "non_existent_inventory_button_12345")
+    WRONG_LOCATOR: Locator = (AppiumBy.ACCESSIBILITY_ID, "non_existent_inventory_button_12345")
     element = base.find_element(WRONG_LOCATOR, timeout=3.0)
     assert element.is_displayed()
 
@@ -192,6 +193,6 @@ def test_debug_task_2_intentional_state_mismatch(driver: WebDriver) -> None:
     """
     base = BasePage(driver)
     # ❌ НАВМИСНА ПОМИЛКА: Спроба знайти кнопку чекауту на екрані каталогу без додавання товару
-    CHECKOUT_BUTTON = (AppiumBy.ACCESSIBILITY_ID, "Checkout button")
+    CHECKOUT_BUTTON: Locator = (AppiumBy.ACCESSIBILITY_ID, "Checkout button")
     checkout_element = base.find_element(CHECKOUT_BUTTON, timeout=3.0)
     assert checkout_element.is_displayed(), "Checkout button should be present"

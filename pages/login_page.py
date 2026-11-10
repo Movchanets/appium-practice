@@ -1,5 +1,7 @@
 """Login Page Object for Sauce Labs Demo App."""
 
+from __future__ import annotations
+
 import sys
 
 if sys.version_info >= (3, 11):
@@ -10,35 +12,33 @@ else:
 from appium.webdriver.common.appiumby import AppiumBy
 
 from pages.base_page import BasePage
+from pages.types import Locator
 
 
 class LoginPage(BasePage):
     """Page Object encapsulating elements and actions for the Authentication Screen."""
 
-    # Locators prioritized: ACCESSIBILITY_ID > relative XPATH
-    USERNAME_INPUT = (
-        AppiumBy.XPATH,
-        "//*[@content-desc='Username input field'] "
-        "| //*[@resource-id='com.saucelabs.mydemoapp.android:id/nameET']",
+    TITLE: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/loginTV")
+    USERNAME_INPUT: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/nameET")
+    PASSWORD_INPUT: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/passwordET")
+    LOGIN_BUTTON: Locator = (
+        AppiumBy.ACCESSIBILITY_ID,
+        "Tap to login with given credentials",
     )
-    PASSWORD_INPUT = (
+    USERNAME_ERROR: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/nameErrorTV")
+    PASSWORD_ERROR: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/passwordErrorTV")
+    ERROR_MESSAGE: Locator = (
         AppiumBy.XPATH,
-        "//*[@content-desc='Password input field'] "
-        "| //*[@resource-id='com.saucelabs.mydemoapp.android:id/passwordET']",
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/passwordErrorTV" '
+        'or @resource-id="com.saucelabs.mydemoapp.android:id/nameErrorTV"]',
     )
-    LOGIN_BUTTON = (
-        AppiumBy.XPATH,
-        "//*[@content-desc='Login button'] "
-        "| //*[@resource-id='com.saucelabs.mydemoapp.android:id/loginBtn']",
-    )
-    ERROR_MESSAGE = (
-        AppiumBy.XPATH,
-        "//*[@resource-id='com.saucelabs.mydemoapp.android:id/passwordErrorTV'] "
-        "| //*[@resource-id='com.saucelabs.mydemoapp.android:id/nameErrorTV'] "
-        "| //*[contains(@resource-id, 'Error') or contains(@resource-id, 'error') "
-        "or contains(@text, 'match') or contains(@text, 'Sorry') or contains(@text, 'locked out')]",
-    )
-    BIOMETRICS_SWITCH = (AppiumBy.ACCESSIBILITY_ID, "biometrics-switch")
+    USER_BOD: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/username1TV")
+    USER_ALICE: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/username2TV")
+    USER_VISUAL: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/username3TV")
+
+    def is_loaded(self) -> bool:
+        """Check if login screen title is displayed."""
+        return self.is_displayed(self.TITLE, timeout=5.0)
 
     def enter_username(self, username: str) -> Self:
         """Fill the username input field."""
@@ -63,10 +63,33 @@ class LoginPage(BasePage):
         self.click_login()
         return self
 
+    def autofill_bod(self) -> Self:
+        """Tap sample credentials for standard user bod@example.com."""
+        self.click(self.USER_BOD)
+        return self
+
+    def autofill_alice(self) -> Self:
+        """Tap sample credentials for locked out user alice@example.com."""
+        self.click(self.USER_ALICE)
+        return self
+
+    def autofill_visual(self) -> Self:
+        """Tap sample credentials for visual user visual@example.com."""
+        self.click(self.USER_VISUAL)
+        return self
+
+    def get_username_error(self) -> str:
+        """Retrieve username validation error text."""
+        return self.get_text(self.USERNAME_ERROR)
+
+    def get_password_error(self) -> str:
+        """Retrieve password validation error text."""
+        return self.get_text(self.PASSWORD_ERROR)
+
     def get_error_message(self) -> str:
-        """Retrieve the authentication error text displayed on failure."""
+        """Retrieve any authentication error text displayed on failure."""
         return self.get_text(self.ERROR_MESSAGE)
 
-    def is_error_displayed(self, timeout: float = 7.0) -> bool:
-        """Check whether the authentication error banner is visible."""
+    def is_error_displayed(self, timeout: float = 5.0) -> bool:
+        """Check whether any authentication error is visible."""
         return self.is_displayed(self.ERROR_MESSAGE, timeout=timeout)
