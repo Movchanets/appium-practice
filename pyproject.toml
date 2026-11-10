@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mobile-atqc-bootcamp"
 version = "0.1.0"
-description = "Senior Mobile QA Automation Engineering Bootcamp (Appium 2.x, pytest, API, Best Practices)"
+description = "Senior Mobile QA Automation Engineering Bootcamp (Appium 3.x, pytest, API, Best Practices)"
 readme = "CLAUDE.md"
 requires-python = ">=3.10"
 dependencies = [
     "pytest>=8.0.0",
-    "Appium-Python-Client>=4.0.0",
-    "selenium>=4.20.0",
+    "Appium-Python-Client>=5.0.0",
+    "selenium>=4.26.0",
     "requests>=2.31.0",
     "pydantic>=2.7.0",
     "ruff>=0.4.0",

@@ -2,7 +2,7 @@
 
 ## Project Purpose
 Bootcamp and hands-on laboratory for Senior Mobile QA Automation Engineers preparing for technical interviews and production-grade automation projects.
-Core stack: **Python 3.10+**, **Appium 2.x**, **UiAutomator2**, **XCUITest**, **pytest**, **Pydantic v2**, and **Allure**.
+Core stack: **Python 3.10+**, **Appium 3.x**, **UiAutomator2**, **XCUITest**, **pytest**, **Pydantic v2**, and **Allure**.
 Target demo application: Sauce Labs Demo App (`com.saucelabs.mydemoapp.android`).
 
 ---
@@ -88,7 +88,7 @@ Always adhere to the strict selector hierarchy:
 ### 4. Dynamic Gesture Calculation
 - **Zero Hardcoded Coordinates**: Coordinates for gestures (`swipe`, `scroll`, `tap`) MUST NEVER be hardcoded pixel values (e.g., `(300, 850)`).
 - **Percentage-Based Geometry**: All coordinates must be dynamically computed as ratios/percentages of actual screen dimensions obtained via `driver.get_window_size()`.
-- Gestures must use W3C Actions (`ActionChains` / W3C pointer actions) to ensure cross-platform consistency and compatibility with Appium 2.x.
+- Gestures must use W3C Actions (`ActionChains` / W3C pointer actions) to ensure cross-platform consistency and compatibility with Appium 3.x.
 
 ### 5. Device State & Teardown Hygiene
 - **App State Isolation**: Each test must start from a predictable, clean state (`no_reset=False` or explicit cache reset).

@@ -105,21 +105,33 @@ def pytest_runtest_makereport(item: pytest.Item, call: Any) -> Generator[None, A
 
         # 3. Android Logcat capture (last 100 entries)
         try:
-            logcat_entries = active_driver.get_log("logcat")
-            last_entries = logcat_entries[-100:] if len(logcat_entries) > 100 else logcat_entries
-            logcat_text = "\n".join(
-                f"{entry.get('timestamp', '')} [{entry.get('level', '')}] "
-                f"{entry.get('message', '')}"
-                for entry in last_entries
-            )
-            logcat_path = logs_dir / f"{test_name}_logcat.log"
-            logcat_path.write_text(logcat_text, encoding="utf-8")
-            if allure is not None:
-                allure.attach(
-                    logcat_text,
-                    name=f"{test_name}_logcat",
-                    attachment_type=allure.attachment_type.TEXT,
+            logcat_entries: Any = None
+            try:
+                logcat_entries = active_driver.execute_script(
+                    "mobile: getLogs", {"logType": "logcat"}
                 )
+            except Exception:
+                logcat_entries = active_driver.get_log("logcat")
+
+            if logcat_entries and isinstance(logcat_entries, list):
+                last_entries = (
+                    logcat_entries[-100:] if len(logcat_entries) > 100 else logcat_entries
+                )
+                logcat_text = "\n".join(
+                    f"{entry.get('timestamp', '')} [{entry.get('level', '')}] "
+                    f"{entry.get('message', '')}"
+                    if isinstance(entry, dict)
+                    else str(entry)
+                    for entry in last_entries
+                )
+                logcat_path = logs_dir / f"{test_name}_logcat.log"
+                logcat_path.write_text(logcat_text, encoding="utf-8")
+                if allure is not None:
+                    allure.attach(
+                        logcat_text,
+                        name=f"{test_name}_logcat",
+                        attachment_type=allure.attachment_type.TEXT,
+                    )
         except Exception:
             # Platform might not support logcat (e.g. iOS or remote cloud limitations)
             pass
