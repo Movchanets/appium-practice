@@ -127,10 +127,13 @@ jobs:
 
       - name: Enable KVM group perms
         run: |
-          echo "=== Checking KVM acceleration ==="
-          sudo apt-get update && sudo apt-get install -y cpu-checker || true
-          kvm-ok || true
-          sudo usermod -a -G kvm $USER
+          echo "=== Configuring KVM permissions ==="
+          if [ -e /dev/kvm ]; then
+            sudo chmod 666 /dev/kvm
+            echo "KVM acceleration permissions granted."
+          else
+            echo "Warning: /dev/kvm not found."
+          fi
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
