@@ -132,3 +132,35 @@ class CheckoutShippingPage(BasePage):
     def get_country_error(self) -> str:
         """Retrieve country validation error text."""
         return self.get_text(self.COUNTRY_ERROR)
+
+    def is_full_name_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Full Name input field is displayed."""
+        return self.is_displayed(self.FULL_NAME_INPUT, timeout=timeout)
+
+    def is_address_line_1_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Address Line 1 input field is displayed."""
+        return self.is_displayed(self.ADDRESS_1_INPUT, timeout=timeout)
+
+    def is_address_line_2_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Address Line 2 input field is displayed."""
+        return self.is_displayed(self.ADDRESS_2_INPUT, timeout=timeout)
+
+    def is_city_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if City input field is displayed."""
+        return self.is_displayed(self.CITY_INPUT, timeout=timeout)
+
+    def is_state_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if State/Region input field is displayed."""
+        return self.is_displayed(self.STATE_INPUT, timeout=timeout)
+
+    def is_zip_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Zip/Postal Code input field is displayed."""
+        return self.is_displayed(self.ZIP_INPUT, timeout=timeout)
+
+    def is_country_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Country input field is displayed."""
+        return self.is_displayed(self.COUNTRY_INPUT, timeout=timeout)
+
+    def is_to_payment_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if To Payment button is displayed."""
+        return self.is_displayed(self.TO_PAYMENT_BUTTON, timeout=timeout)

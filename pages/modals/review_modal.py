@@ -23,6 +23,14 @@ class ReviewModal(BaseModal):
         """Retrieve review confirmation message text."""
         return self.get_text(self.MESSAGE_TEXT).strip()
 
+    def get_message_text(self) -> str:
+        """Retrieve review confirmation message text (alias for get_message)."""
+        return self.get_message()
+
+    def is_close_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if close button is visible."""
+        return self.is_displayed(self.CLOSE_BUTTON, timeout=timeout)
+
     def close(self) -> None:
         """Tap Close button to dismiss review modal."""
         self.click(self.CLOSE_BUTTON)

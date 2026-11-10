@@ -50,3 +50,23 @@ class SortModal(BaseModal):
     def sort_by_price_descending(self) -> None:
         """Sort by price descending."""
         self.select_option("price_desc")
+
+    def is_name_asc_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Name Ascending option is displayed."""
+        return self.is_displayed(self.NAME_ASC, timeout=timeout)
+
+    def is_name_desc_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Name Descending option is displayed."""
+        return self.is_displayed(self.NAME_DESC, timeout=timeout)
+
+    def is_price_asc_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Price Ascending option is displayed."""
+        return self.is_displayed(self.PRICE_ASC, timeout=timeout)
+
+    def is_price_desc_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Price Descending option is displayed."""
+        return self.is_displayed(self.PRICE_DESC, timeout=timeout)
+
+    def dismiss(self) -> None:
+        """Dismiss the sort modal by triggering Android system back navigation."""
+        self.driver.back()

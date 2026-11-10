@@ -133,3 +133,51 @@ class DrawerMenuComponent(BaseComponent):
                 confirm_btn.click()
             except (TimeoutException, NoSuchElementException):
                 pass
+
+    def is_catalog_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Catalog menu item is displayed."""
+        return self.is_displayed(self.MENU_CATALOG_ITEM, timeout=timeout)
+
+    def is_webview_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if WebView menu item is displayed."""
+        return self.is_displayed(self.MENU_WEBVIEW_ITEM, timeout=timeout)
+
+    def is_qr_code_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if QR Code Scanner menu item is displayed."""
+        return self.is_displayed(self.MENU_QR_CODE_ITEM, timeout=timeout)
+
+    def is_geo_location_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Geo Location menu item is displayed."""
+        return self.is_displayed(self.MENU_GEO_LOCATION_ITEM, timeout=timeout)
+
+    def is_drawing_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Drawing menu item is displayed."""
+        return self.is_displayed(self.MENU_DRAWING_ITEM, timeout=timeout)
+
+    def is_about_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if About menu item is displayed."""
+        return self.is_displayed(self.MENU_ABOUT_ITEM, timeout=timeout)
+
+    def is_reset_app_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Reset App State menu item is displayed."""
+        return self.is_displayed(self.MENU_RESET_APP_ITEM, timeout=timeout)
+
+    def is_fingerprint_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if FingerPrint menu item is displayed."""
+        return self.is_displayed(self.MENU_FINGERPRINT_ITEM, timeout=timeout)
+
+    def is_virtual_usb_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Virtual USB menu item is displayed."""
+        return self.is_displayed(self.MENU_VIRTUAL_USB_ITEM, timeout=timeout)
+
+    def is_crash_app_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Crash app menu item is displayed."""
+        return self.is_displayed(self.MENU_CRASH_APP_ITEM, timeout=timeout)
+
+    def is_login_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Login menu item is displayed."""
+        return self.is_displayed(self.MENU_LOGIN_ITEM, timeout=timeout)
+
+    def is_logout_item_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Logout menu item is displayed."""
+        return self.is_displayed(self.MENU_LOGOUT_ITEM, timeout=timeout)

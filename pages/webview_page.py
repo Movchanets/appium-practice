@@ -24,6 +24,12 @@ class WebViewPage(BasePage):
         AppiumBy.ACCESSIBILITY_ID,
         "Tap to view content of given url",
     )
+    URL_ERROR: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/urlErrorTV"'
+        ' or contains(@text, "URL") or contains(@text, "https")'
+        ' or contains(@text, "Please enter")]',
+    )
 
     def is_loaded(self) -> bool:
         """Check if WebView page title is displayed."""
@@ -45,3 +51,11 @@ class WebViewPage(BasePage):
         self.hide_keyboard()
         self.click_go()
         return self
+
+    def get_url_error(self) -> str:
+        """Retrieve URL format or security error text."""
+        return self.get_text(self.URL_ERROR)
+
+    def is_url_error_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if URL error warning is displayed."""
+        return self.is_displayed(self.URL_ERROR, timeout=timeout)

@@ -54,3 +54,27 @@ class ProductCardComponent(BaseComponent):
         }
         locator = star_locators.get(star, self.STAR_5)
         self.click(locator)
+
+    def is_image_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if product thumbnail image is displayed."""
+        return self.is_displayed(self.IMAGE, timeout=timeout)
+
+    def is_title_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if product title text is displayed."""
+        return self.is_displayed(self.TITLE, timeout=timeout)
+
+    def is_price_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if product price text is displayed."""
+        return self.is_displayed(self.PRICE, timeout=timeout)
+
+    def is_rating_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if rating star container is displayed."""
+        return self.is_displayed(self.RATING_CONTAINER, timeout=timeout)
+
+    def get_rating_stars_count(self) -> int:
+        """Count number of rating stars displayed on this product card."""
+        count = 0
+        for star_locator in (self.STAR_1, self.STAR_2, self.STAR_3, self.STAR_4, self.STAR_5):
+            if self.is_displayed(star_locator, timeout=1.0):
+                count += 1
+        return count

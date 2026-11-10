@@ -47,3 +47,19 @@ class HeaderComponent(BaseComponent):
             return int(raw_text.strip())
         except ValueError:
             return 0
+
+    def is_menu_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if hamburger menu button is displayed."""
+        return self.is_displayed(self.MENU_BUTTON, timeout=timeout)
+
+    def is_cart_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if cart button is displayed."""
+        return self.is_displayed(self.CART_BUTTON, timeout=timeout)
+
+    def is_sort_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if sort button is displayed."""
+        return self.is_displayed(self.SORT_BUTTON, timeout=timeout)
+
+    def is_cart_badge_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if cart item count badge is displayed."""
+        return self.is_displayed(self.CART_BADGE, timeout=timeout)

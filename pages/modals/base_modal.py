@@ -43,3 +43,11 @@ class BaseModal(Base):
     def dismiss(self) -> None:
         """Click the cancel/negative action button."""
         self.click(self.CANCEL_BUTTON)
+
+    def is_confirm_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if confirm button is currently visible."""
+        return self.is_displayed(self.CONFIRM_BUTTON, timeout=timeout)
+
+    def is_cancel_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if cancel button is currently visible."""
+        return self.is_displayed(self.CANCEL_BUTTON, timeout=timeout)

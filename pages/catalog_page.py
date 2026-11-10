@@ -13,6 +13,7 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selenium.common.exceptions import NoSuchElementException
 
 from pages.base_page import BasePage
+from pages.components.footer_component import FooterComponent
 from pages.components.product_card_component import ProductCardComponent
 from pages.modals.confirmation_modal import ConfirmationModal
 from pages.modals.review_modal import ReviewModal
@@ -28,6 +29,10 @@ class CatalogPage(BasePage):
         '//androidx.recyclerview.widget.RecyclerView[@resource-id="com.saucelabs.mydemoapp.android:id/productRV"]/android.view.ViewGroup',
     )
     SORT_BUTTON: Locator = (AppiumBy.ID, "com.saucelabs.mydemoapp.android:id/sortIV")
+    FOOTER_ROOT: Locator = (
+        AppiumBy.XPATH,
+        '//android.widget.TextView[contains(@text, "Sauce Labs All Rights Reserved")]',
+    )
 
     # ---------------------------------------------------------
     # Composed Modals
@@ -47,6 +52,13 @@ class CatalogPage(BasePage):
     def confirmation_modal(self) -> ConfirmationModal:
         """Access the standard ConfirmationModal dialog."""
         return ConfirmationModal(self.driver)
+
+    @property
+    def footer(self) -> FooterComponent:
+        """Access the FooterComponent, scrolling down if needed."""
+        self.scroll_to_text("Sauce Labs All Rights Reserved")
+        footer_el = self.find_element(self.FOOTER_ROOT)
+        return FooterComponent(footer_el)
 
     # ---------------------------------------------------------
     # Product Card Components
@@ -106,6 +118,15 @@ class CatalogPage(BasePage):
         """Perform a dynamic swipe up to scroll catalog down."""
         self.swipe_up()
         return self
+
+    def scroll_catalog_up(self) -> Self:
+        """Perform a dynamic swipe down to scroll catalog back up to the top."""
+        self.swipe_down()
+        return self
+
+    def get_footer_copyright_text(self) -> str:
+        """Scroll to bottom and retrieve footer copyright banner text."""
+        return self.footer.get_copyright_text()
 
     def get_cart_item_count(self) -> int:
         """Extract number of items displayed in cart badge; returns 0 if absent."""

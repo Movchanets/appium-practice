@@ -48,3 +48,24 @@ class GeoLocationPage(BasePage):
     def get_longitude(self) -> str:
         """Retrieve displayed longitude value."""
         return self.get_text(self.LONGITUDE_TEXT)
+
+    def grant_location_permission(self, allow: bool = True) -> Self:
+        """Handle system location permission alert."""
+        self.handle_permission_alert(allow=allow)
+        return self
+
+    def is_latitude_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if latitude display field is visible."""
+        return self.is_displayed(self.LATITUDE_TEXT, timeout=timeout)
+
+    def is_longitude_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if longitude display field is visible."""
+        return self.is_displayed(self.LONGITUDE_TEXT, timeout=timeout)
+
+    def is_start_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Start Observing button is visible."""
+        return self.is_displayed(self.START_BUTTON, timeout=timeout)
+
+    def is_stop_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Stop Observing button is visible."""
+        return self.is_displayed(self.STOP_BUTTON, timeout=timeout)

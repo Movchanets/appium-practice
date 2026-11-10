@@ -66,3 +66,15 @@ class DrawingPage(BasePage):
         """Tap 'Save' button to save signature."""
         self.click(self.SAVE_BUTTON)
         return self
+
+    def is_signature_pad_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if signature pad canvas is visible."""
+        return self.is_displayed(self.SIGNATURE_PAD, timeout=timeout)
+
+    def is_clear_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Clear button is visible."""
+        return self.is_displayed(self.CLEAR_BUTTON, timeout=timeout)
+
+    def is_save_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Save button is visible."""
+        return self.is_displayed(self.SAVE_BUTTON, timeout=timeout)

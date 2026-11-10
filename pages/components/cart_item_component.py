@@ -57,3 +57,21 @@ class CartItemComponent(BaseComponent):
     def remove_item(self) -> None:
         """Tap the Remove Item button."""
         self.click(self.REMOVE_BUTTON)
+
+    def get_color(self) -> str:
+        """Retrieve the product variant color label."""
+        return self.get_text(self.COLOR_LABEL)
+
+    def is_color_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if color icon or label is displayed."""
+        return self.is_displayed(self.COLOR_ICON, timeout=timeout) or self.is_displayed(
+            self.COLOR_LABEL, timeout=timeout
+        )
+
+    def is_image_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if cart item product image is displayed."""
+        return self.is_displayed(self.IMAGE, timeout=timeout)
+
+    def is_remove_button_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if Remove button is displayed."""
+        return self.is_displayed(self.REMOVE_BUTTON, timeout=timeout)

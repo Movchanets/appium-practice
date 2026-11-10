@@ -114,3 +114,42 @@ class ProductDetailsPage(BasePage):
         locator = star_map.get(star, self.STAR_5)
         self.click(locator)
         return self
+
+    def is_image_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if product hero image is displayed."""
+        return self.is_displayed(self.PRODUCT_IMAGE, timeout=timeout)
+
+    def is_price_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if product price is displayed."""
+        return self.is_displayed(self.PRODUCT_PRICE, timeout=timeout)
+
+    def is_description_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if product description text is displayed."""
+        return self.is_displayed(self.DESCRIPTION_TEXT, timeout=timeout)
+
+    def is_rating_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if rating star container is displayed."""
+        return self.is_displayed(self.RATING_CONTAINER, timeout=timeout)
+
+    def is_add_to_cart_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Add to Cart button is displayed."""
+        return self.is_displayed(self.ADD_TO_CART_BUTTON, timeout=timeout)
+
+    def is_color_displayed(self, color: ProductColor, timeout: float = 2.0) -> bool:
+        """Check if specific product color variant button is displayed."""
+        color_locators: dict[ProductColor, Locator] = {
+            "black": self.COLOR_BLACK,
+            "blue": self.COLOR_BLUE,
+            "gray": self.COLOR_GRAY,
+            "green": self.COLOR_GREEN,
+        }
+        loc = color_locators.get(color)
+        return self.is_displayed(loc, timeout=timeout) if loc else False
+
+    def get_rating_stars_count(self) -> int:
+        """Count number of rating star elements visible on product details."""
+        count = 0
+        for star_locator in (self.STAR_1, self.STAR_2, self.STAR_3, self.STAR_4, self.STAR_5):
+            if self.is_displayed(star_locator, timeout=1.0):
+                count += 1
+        return count

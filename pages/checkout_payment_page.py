@@ -56,6 +56,11 @@ class CheckoutPaymentPage(BasePage):
         AppiumBy.ACCESSIBILITY_ID,
         "Select if User billing address and shipping address are same",
     )
+    BILLING_ADDRESS_HEADER: Locator = (
+        AppiumBy.XPATH,
+        '//*[contains(@text, "Billing Address") or contains(@text, "billing address")'
+        ' or @resource-id="com.saucelabs.mydemoapp.android:id/billingAddressTV"]',
+    )
     REVIEW_ORDER_BUTTON: Locator = (
         AppiumBy.ACCESSIBILITY_ID,
         "Saves payment info and launches screen to review checkout data",
@@ -130,3 +135,36 @@ class CheckoutPaymentPage(BasePage):
     def get_security_code_error(self) -> str:
         """Retrieve security code error text."""
         return self.get_text(self.SECURITY_CODE_ERROR)
+
+    def is_card_holder_name_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Card Holder Name input field is displayed."""
+        return self.is_displayed(self.NAME_INPUT, timeout=timeout)
+
+    def is_card_number_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Card Number input field is displayed."""
+        return self.is_displayed(self.CARD_NUMBER_INPUT, timeout=timeout)
+
+    def is_expiration_date_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Expiration Date input field is displayed."""
+        return self.is_displayed(self.EXPIRATION_DATE_INPUT, timeout=timeout)
+
+    def is_security_code_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Security Code input field is displayed."""
+        return self.is_displayed(self.SECURITY_CODE_INPUT, timeout=timeout)
+
+    def is_billing_same_as_shipping_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if billing same as shipping checkbox is displayed."""
+        return self.is_displayed(self.BILLING_SAME_CHECKBOX, timeout=timeout)
+
+    def is_billing_same_as_shipping_checked(self) -> bool:
+        """Check if 'My billing address is the same as my shipping address' is checked."""
+        element = self.find_element(self.BILLING_SAME_CHECKBOX)
+        return element.get_attribute("checked") == "true"
+
+    def is_billing_address_displayed(self, timeout: float = 2.0) -> bool:
+        """Check if separate billing address section/fields are visible."""
+        return self.is_displayed(self.BILLING_ADDRESS_HEADER, timeout=timeout)
+
+    def is_review_order_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Review Order button is displayed."""
+        return self.is_displayed(self.REVIEW_ORDER_BUTTON, timeout=timeout)

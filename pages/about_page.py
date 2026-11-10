@@ -34,3 +34,15 @@ class AboutPage(BasePage):
         """Tap website URL link."""
         self.click(self.WEB_LINK)
         return self
+
+    def is_version_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if application version string is displayed."""
+        return self.is_displayed(self.VERSION_TEXT, timeout=timeout)
+
+    def is_web_link_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if external website link is displayed."""
+        return self.is_displayed(self.WEB_LINK, timeout=timeout)
+
+    def get_web_link_text(self) -> str:
+        """Retrieve external website link text."""
+        return self.get_text(self.WEB_LINK)

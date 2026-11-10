@@ -6,6 +6,7 @@ import pytest
 
 from pages.catalog_page import CatalogPage
 from pages.components.drawer_menu_component import DrawerMenuComponent
+from pages.components.footer_component import FooterComponent
 from pages.components.header_component import HeaderComponent
 
 
@@ -19,3 +20,9 @@ def header_component(catalog_page: CatalogPage) -> HeaderComponent:
 def drawer_menu_component(catalog_page: CatalogPage) -> DrawerMenuComponent:
     """Fixture providing DrawerMenuComponent instance bound to active screen."""
     return catalog_page.drawer_menu
+
+
+@pytest.fixture(scope="function")
+def footer_component(catalog_page: CatalogPage) -> FooterComponent:
+    """Fixture providing FooterComponent instance bound to active catalog screen."""
+    return catalog_page.footer

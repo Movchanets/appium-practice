@@ -78,3 +78,19 @@ class CartPage(BasePage):
         """Tap Proceed To Checkout button."""
         self.click(self.CHECKOUT_BUTTON)
         return self
+
+    def is_go_shopping_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Go Shopping button is displayed."""
+        return self.is_displayed(self.GO_SHOPPING_BUTTON, timeout=timeout)
+
+    def is_checkout_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Proceed to Checkout button is displayed."""
+        return self.is_displayed(self.CHECKOUT_BUTTON, timeout=timeout)
+
+    def is_total_price_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if total price label is displayed."""
+        return self.is_displayed(self.TOTAL_PRICE_LABEL, timeout=timeout)
+
+    def is_total_items_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if total items count label is displayed."""
+        return self.is_displayed(self.TOTAL_ITEMS_LABEL, timeout=timeout)

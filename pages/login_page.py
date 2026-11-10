@@ -106,3 +106,27 @@ class LoginPage(BasePage):
     def is_error_displayed(self, timeout: float = 5.0) -> bool:
         """Check whether any authentication error is visible."""
         return self.is_displayed(self.ERROR_MESSAGE, timeout=timeout)
+
+    def get_password(self) -> str:
+        """Retrieve current value of password input field."""
+        return self.get_text(self.PASSWORD_INPUT)
+
+    def is_username_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if username input field is displayed."""
+        return self.is_displayed(self.USERNAME_INPUT, timeout=timeout)
+
+    def is_password_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if password input field is displayed."""
+        return self.is_displayed(self.PASSWORD_INPUT, timeout=timeout)
+
+    def is_login_button_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Login button is displayed."""
+        return self.is_displayed(self.LOGIN_BUTTON, timeout=timeout)
+
+    def is_username_error_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if username validation error is displayed."""
+        return self.is_displayed(self.USERNAME_ERROR, timeout=timeout)
+
+    def is_password_error_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if password validation error is displayed."""
+        return self.is_displayed(self.PASSWORD_ERROR, timeout=timeout)
