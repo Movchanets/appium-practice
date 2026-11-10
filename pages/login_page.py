@@ -50,10 +50,18 @@ class LoginPage(BasePage):
         self.send_keys(self.PASSWORD_INPUT, password)
         return self
 
+    def get_username(self) -> str:
+        """Retrieve the current value of the username input field."""
+        return self.get_text(self.USERNAME_INPUT)
+
     def click_login(self) -> Self:
         """Tap the login submission button."""
         self.click(self.LOGIN_BUTTON)
         return self
+
+    def click_login_button(self) -> Self:
+        """Alias for click_login to support button-oriented step naming."""
+        return self.click_login()
 
     def login(self, username: str, password: str) -> Self:
         """Fluent helper executing complete credential entry and submission."""
@@ -62,6 +70,11 @@ class LoginPage(BasePage):
         self.hide_keyboard()
         self.click_login()
         return self
+
+    def is_logged_in(self) -> bool:
+        """Check if login was successful by verifying the presence of logout item in drawer menu."""
+        self.open_menu()
+        return self.drawer_menu.is_logged_in(timeout=5.0)
 
     def autofill_bod(self) -> Self:
         """Tap sample credentials for standard user bod@example.com."""

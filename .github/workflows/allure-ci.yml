@@ -1,0 +1,369 @@
+name: Allure 3 CI — API & Android Matrices
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      test_scope:
+        description: "Test execution scope"
+        type: choice
+        options:
+          - all
+          - api_only
+          - android_emulator
+          - android_remote
+        default: all
+      android_env:
+        description: "Android target environment"
+        type: choice
+        options:
+          - local_android
+          - browserstack
+        default: local_android
+      remote_appium_url:
+        description: "Remote Appium server URL (for android_remote)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  code-quality:
+    name: Code Quality & Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+          pip install mypy types-requests
+
+      - name: Lint with Ruff
+        run: |
+          ruff check .
+          ruff format --check .
+
+      - name: Type check with Mypy
+        run: |
+          mypy .
+
+  api-matrix:
+    name: API Suite (Python ${{ matrix.python-version }})
+    needs: [code-quality]
+    if: github.event_name != 'workflow_dispatch' || inputs.test_scope == 'all' || inputs.test_scope == 'api_only'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+        suite: ["api"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run Pytest API Suite
+        run: |
+          pytest -m ${{ matrix.suite }} --alluredir=allure-results -o junit_family=xunit2
+
+      - name: Write Allure Environment Metadata
+        if: always()
+        run: |
+          if [ -d "allure-results" ]; then
+            cat <<EOF > allure-results/environment.properties
+          Layer=API
+          Python=${{ matrix.python-version }}
+          Suite=${{ matrix.suite }}
+          EOF
+          fi
+
+      - name: Upload Allure Results Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-api-py${{ matrix.python-version }}-${{ matrix.suite }}
+          path: allure-results
+          retention-days: 7
+
+  android-emulator-matrix:
+    name: Android Emu (API ${{ matrix.api-level }} - ${{ matrix.suite }})
+    needs: [code-quality]
+    if: (github.event_name == 'workflow_dispatch' && (inputs.test_scope == 'all' || inputs.test_scope == 'android_emulator')) || github.event_name != 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        api-level: [33, 34]
+        device-profile: ["pixel_6"]
+        suite: ["smoke", "mobile"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enable KVM group perms
+        run: |
+          echo "=== Checking KVM acceleration ==="
+          sudo apt-get update && sudo apt-get install -y cpu-checker || true
+          kvm-ok || true
+          sudo usermod -a -G kvm $USER
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Install Appium 3 & UiAutomator2 driver
+        run: |
+          npm install -g appium
+          appium driver install uiautomator2
+
+      - name: Start Appium Server
+        run: |
+          appium --address 127.0.0.1 --port 4723 --relaxed-security > appium.log 2>&1 &
+          sleep 5
+          curl --retry 5 --retry-connrefused --retry-delay 2 http://127.0.0.1:4723/status || cat appium.log
+
+      - name: Run Android UI Tests on Emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          profile: ${{ matrix.device-profile }}
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: pytest -m ${{ matrix.suite }} --env=local_android --device-name=emulator-5554 --platform-version=${{ matrix.api-level }} --alluredir=allure-results
+
+      - name: Write Allure Environment Metadata
+        if: always()
+        run: |
+          if [ -d "allure-results" ]; then
+            cat <<EOF >> allure-results/environment.properties
+          Layer=Mobile
+          Platform=Android
+          ApiLevel=${{ matrix.api-level }}
+          DeviceProfile=${{ matrix.device-profile }}
+          Suite=${{ matrix.suite }}
+          EOF
+          fi
+
+      - name: Upload Allure Results Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-android-emu-api${{ matrix.api-level }}-${{ matrix.suite }}
+          path: allure-results
+          retention-days: 7
+
+      - name: Upload Failure Diagnostics Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnostics-android-emu-api${{ matrix.api-level }}-${{ matrix.suite }}
+          path: artifacts/
+          retention-days: 7
+
+  android-remote-matrix:
+    name: Android Remote (${{ matrix.device.name }} - ${{ matrix.suite }})
+    needs: [code-quality]
+    if: github.event_name == 'workflow_dispatch' && inputs.test_scope == 'android_remote'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        device:
+          - name: "Pixel_7_Remote"
+            udid: "emulator-5554"
+            version: "14"
+          - name: "Samsung_S23_Remote"
+            udid: "R58M123456"
+            version: "13"
+        suite: ["smoke", "mobile"]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run Tests on Remote Android Host
+        env:
+          REMOTE_URL: ${{ inputs.remote_appium_url || secrets.REMOTE_APPIUM_URL || 'http://127.0.0.1:4723' }}
+        run: |
+          pytest -m ${{ matrix.suite }} \
+            --env=${{ inputs.android_env }} \
+            --appium-url="${REMOTE_URL}" \
+            --udid=${{ matrix.device.udid }} \
+            --device-name=${{ matrix.device.name }} \
+            --platform-version=${{ matrix.device.version }} \
+            --alluredir=allure-results
+
+      - name: Write Allure Environment Metadata
+        if: always()
+        run: |
+          if [ -d "allure-results" ]; then
+            cat <<EOF >> allure-results/environment.properties
+          Layer=Mobile-Remote
+          Platform=Android
+          DeviceName=${{ matrix.device.name }}
+          PlatformVersion=${{ matrix.device.version }}
+          Suite=${{ matrix.suite }}
+          TargetEnv=${{ inputs.android_env }}
+          EOF
+          fi
+
+      - name: Upload Allure Results Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results-android-remote-${{ matrix.device.name }}-${{ matrix.suite }}
+          path: allure-results
+          retention-days: 7
+
+      - name: Upload Failure Diagnostics Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: diagnostics-android-remote-${{ matrix.device.name }}-${{ matrix.suite }}
+          path: artifacts/
+          retention-days: 7
+
+  allure-report-pages:
+    name: Generate Allure 3 Report & Deploy Pages
+    runs-on: ubuntu-latest
+    if: always()
+    needs: [code-quality, api-matrix, android-emulator-matrix, android-remote-matrix]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Download all Allure Results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: allure-results-*
+          path: allure-results
+          merge-multiple: true
+
+      - name: Restore Previous Allure History from gh-pages
+        run: |
+          mkdir -p ./allure-history
+          mkdir -p ./allure-results/history
+          if git ls-remote --exit-code --heads origin gh-pages; then
+            echo "Fetching existing gh-pages branch to restore history..."
+            git fetch origin gh-pages:gh-pages
+            git checkout gh-pages -- allure-history/history.jsonl 2>/dev/null || true
+            git checkout gh-pages -- history/ 2>/dev/null || true
+            if [ -d "history" ]; then
+              cp -r history/* ./allure-results/history/ 2>/dev/null || true
+            fi
+            git reset HEAD -- . 2>/dev/null || true
+          else
+            echo "No existing gh-pages branch found. Starting fresh history."
+          fi
+
+      - name: Generate Allure Executor Metadata
+        run: |
+          mkdir -p allure-results
+          cat <<EOF > allure-results/executor.json
+          {
+            "name": "GitHub Actions",
+            "type": "github",
+            "buildOrder": ${GITHUB_RUN_NUMBER},
+            "buildName": "${GITHUB_WORKFLOW} #${GITHUB_RUN_NUMBER}",
+            "buildUrl": "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}",
+            "reportUrl": "https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/"
+          }
+          EOF
+
+      - name: Install Allure 3 & Plugins
+        run: |
+          npm install -g allure@3 @allurereport/plugin-awesome
+          npm link allure @allurereport/plugin-awesome
+
+      - name: Generate Allure 3 Report
+        run: |
+          allure generate ./allure-results --output ./allure-report --config ./allure.config.mjs
+
+      - name: Preserve History for Next Builds
+        run: |
+          mkdir -p ./allure-report/allure-history
+          if [ -f "./allure-history/history.jsonl" ]; then
+            cp ./allure-history/history.jsonl ./allure-report/allure-history/history.jsonl
+          fi
+          if [ -d "./allure-results/history" ]; then
+            mkdir -p ./allure-report/history
+            cp -r ./allure-results/history/* ./allure-report/history/ 2>/dev/null || true
+          fi
+
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          keep_files: false
+
+      - name: Publish Step Summary
+        run: |
+          echo "### 🚀 Allure 3 Test Report Published" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Parameter | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Workflow Run** | [#${GITHUB_RUN_NUMBER}](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Commit** | [\`${GITHUB_SHA::7}\`](${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/commit/${GITHUB_SHA}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Allure 3 Report** | [Open Report](https://${GITHUB_REPOSITORY_OWNER}.github.io/${GITHUB_REPOSITORY#*/}/) |" >> $GITHUB_STEP_SUMMARY

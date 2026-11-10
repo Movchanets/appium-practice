@@ -49,6 +49,8 @@ coverage.xml
 # Allure & Test Artifacts
 allure-results/
 allure-report/
+allure-history/
+node_modules/
 artifacts/
 logs/
 *.log
@@ -61,3 +63,4 @@ logs/
 *~
 .DS_Store
 Thumbs.db
+docs/

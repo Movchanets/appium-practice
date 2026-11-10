@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from collections.abc import Generator
 from pathlib import Path
@@ -47,6 +48,18 @@ def pytest_addoption(parser: pytest.Parser) -> None:
         action="store",
         default=os.getenv("ANDROID_SERIAL", None),
         help="Unique Device Identifier (UDID) for targeting a specific device",
+    )
+    parser.addoption(
+        "--appium-url",
+        action="store",
+        default=os.getenv("APPIUM_SERVER_URL", "http://127.0.0.1:4723"),
+        help="Remote or local Appium 3 server URL",
+    )
+    parser.addoption(
+        "--platform-version",
+        action="store",
+        default=os.getenv("ANDROID_PLATFORM_VERSION", None),
+        help="Target mobile OS platform version (e.g. 13.0, 14.0)",
     )
 
 
@@ -135,3 +148,36 @@ def pytest_runtest_makereport(item: pytest.Item, call: Any) -> Generator[None, A
         except Exception:
             # Platform might not support logcat (e.g. iOS or remote cloud limitations)
             pass
+
+
+def pytest_sessionfinish(session: pytest.Session, exitstatus: int) -> None:
+    """Generate defect classification categories.json for Allure 3 reporting."""
+    try:
+        allure_dir_opt = session.config.getoption("--alluredir", default=None)
+    except (ValueError, AttributeError):
+        allure_dir_opt = None
+
+    if allure_dir_opt:
+        allure_dir = Path(str(allure_dir_opt))
+        allure_dir.mkdir(parents=True, exist_ok=True)
+        categories_path = allure_dir / "categories.json"
+        if not categories_path.exists():
+            categories = [
+                {
+                    "name": "Product Defects",
+                    "matchedStatuses": ["failed"],
+                    "traceRegex": ".*AssertionError.*",
+                },
+                {
+                    "name": "Mobile Infrastructure / Appium Defects",
+                    "matchedStatuses": ["broken"],
+                    "traceRegex": (
+                        ".*(WebDriverException|TimeoutException|NoSuchElementException).*"
+                    ),
+                },
+                {
+                    "name": "Broken / Setup Error",
+                    "matchedStatuses": ["broken"],
+                },
+            ]
+            categories_path.write_text(json.dumps(categories, indent=2), encoding="utf-8")

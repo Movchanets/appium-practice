@@ -218,6 +218,16 @@ class BasePage(Base):
         """Get the current screen orientation in upper case."""
         return str(self.driver.orientation).upper()
 
+    def rotate_to_landscape(self) -> Self:
+        """Rotate device orientation to LANDSCAPE."""
+        self.set_orientation("LANDSCAPE")
+        return self
+
+    def rotate_to_portrait(self) -> Self:
+        """Rotate device orientation to PORTRAIT."""
+        self.set_orientation("PORTRAIT")
+        return self
+
     def hide_keyboard(self) -> None:
         """Safely hide on-screen soft keyboard if currently open."""
         try:

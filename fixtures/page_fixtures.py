@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from collections.abc import Generator
+
 import pytest
 from appium import webdriver
 
@@ -27,9 +29,19 @@ def catalog_page(driver: webdriver.Remote) -> CatalogPage:
 
 
 @pytest.fixture(scope="function")
-def login_page(driver: webdriver.Remote) -> LoginPage:
-    """Fixture providing initialized LoginPage instance."""
-    return LoginPage(driver)
+def login_page(driver: webdriver.Remote) -> Generator[LoginPage, None, None]:
+    """Fixture navigating to Login screen via drawer menu and returning LoginPage."""
+    page = LoginPage(driver)
+    page.open_menu()
+    page.drawer_menu.logout_if_logged_in()
+    page.open_menu()
+    page.drawer_menu.click_login()
+    yield page
+    try:
+        page.open_menu()
+        page.drawer_menu.logout_if_logged_in()
+    except Exception:
+        pass
 
 
 @pytest.fixture(scope="function")
@@ -40,8 +52,10 @@ def product_details_page(driver: webdriver.Remote) -> ProductDetailsPage:
 
 @pytest.fixture(scope="function")
 def cart_page(driver: webdriver.Remote) -> CartPage:
-    """Fixture providing initialized CartPage instance."""
-    return CartPage(driver)
+    """Fixture navigating to Cart screen via header and returning CartPage."""
+    page = CartPage(driver)
+    page.header.click_cart()
+    return page
 
 
 @pytest.fixture(scope="function")
@@ -70,29 +84,44 @@ def checkout_complete_page(driver: webdriver.Remote) -> CheckoutCompletePage:
 
 @pytest.fixture(scope="function")
 def webview_page(driver: webdriver.Remote) -> WebViewPage:
-    """Fixture providing initialized WebViewPage instance."""
-    return WebViewPage(driver)
+    """Fixture navigating to WebView screen via drawer menu and returning WebViewPage."""
+    page = WebViewPage(driver)
+    page.open_menu()
+    page.drawer_menu.click_webview()
+    return page
 
 
 @pytest.fixture(scope="function")
 def qr_code_scanner_page(driver: webdriver.Remote) -> QrCodeScannerPage:
-    """Fixture providing initialized QrCodeScannerPage instance."""
-    return QrCodeScannerPage(driver)
+    """Fixture navigating to QR Code Scanner via drawer menu and returning QrCodeScannerPage."""
+    page = QrCodeScannerPage(driver)
+    page.open_menu()
+    page.drawer_menu.click_qr_code_scanner()
+    return page
 
 
 @pytest.fixture(scope="function")
 def geo_location_page(driver: webdriver.Remote) -> GeoLocationPage:
-    """Fixture providing initialized GeoLocationPage instance."""
-    return GeoLocationPage(driver)
+    """Fixture navigating to Geo Location screen via drawer menu and returning GeoLocationPage."""
+    page = GeoLocationPage(driver)
+    page.open_menu()
+    page.drawer_menu.click_geo_location()
+    return page
 
 
 @pytest.fixture(scope="function")
 def drawing_page(driver: webdriver.Remote) -> DrawingPage:
-    """Fixture providing initialized DrawingPage instance."""
-    return DrawingPage(driver)
+    """Fixture navigating to Drawing screen via drawer menu and returning DrawingPage."""
+    page = DrawingPage(driver)
+    page.open_menu()
+    page.drawer_menu.click_drawing()
+    return page
 
 
 @pytest.fixture(scope="function")
 def about_page(driver: webdriver.Remote) -> AboutPage:
-    """Fixture providing initialized AboutPage instance."""
-    return AboutPage(driver)
+    """Fixture navigating to About screen via drawer menu and returning AboutPage."""
+    page = AboutPage(driver)
+    page.open_menu()
+    page.drawer_menu.click_about()
+    return page

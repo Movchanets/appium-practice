@@ -23,6 +23,8 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
     app_path = request.config.getoption("--app-path")
     device_name = request.config.getoption("--device-name")
     udid = request.config.getoption("--udid")
+    appium_url: str = request.config.getoption("--appium-url") or APPIUM_SERVER_URL
+    platform_version = request.config.getoption("--platform-version")
 
     active_driver: webdriver.Remote
 
@@ -44,9 +46,11 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
             android_options.device_name = device_name
         if udid:
             android_options.udid = udid
+        if platform_version:
+            android_options.platform_version = str(platform_version)
 
         active_driver = webdriver.Remote(
-            command_executor=APPIUM_SERVER_URL,
+            command_executor=appium_url,
             options=android_options,
         )
 
@@ -60,9 +64,11 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
             ios_options.app = app_path
         if device_name:
             ios_options.device_name = device_name
+        if platform_version:
+            ios_options.platform_version = str(platform_version)
 
         active_driver = webdriver.Remote(
-            command_executor=APPIUM_SERVER_URL,
+            command_executor=appium_url,
             options=ios_options,
         )
 
@@ -80,6 +86,8 @@ def driver(request: pytest.FixtureRequest) -> Generator[webdriver.Remote, None, 
             "buildName": "SauceDemo Android Build",
             "sessionName": request.node.name,
         }
+        if platform_version:
+            bstack_options["osVersion"] = str(platform_version)
         bs_options.set_capability("bstack:options", bstack_options)
         bs_options.set_capability("platformName", "android")
         bs_options.set_capability("appium:automationName", "UiAutomator2")
