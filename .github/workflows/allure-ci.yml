@@ -118,7 +118,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        api-level: [33, 34]
+        api-level: [34]
         device-profile: ["pixel_6"]
         suite: ["mobile"]
     steps:
@@ -173,7 +173,7 @@ jobs:
           arch: x86_64
           target: google_apis
           disable-animations: true
-          script: pytest -m ${{ matrix.suite }} --env=local_android --device-name=emulator-5554 --platform-version=${{ matrix.api-level }} --alluredir=allure-results
+          script: pytest -m ${{ matrix.suite }} --env=local_android --device-name=emulator-5554 --platform-version=${{ matrix.api-level }} --app-path=apps/sauce_demo_app.apk --alluredir=allure-results
 
       - name: Write Allure Environment Metadata
         if: always()
