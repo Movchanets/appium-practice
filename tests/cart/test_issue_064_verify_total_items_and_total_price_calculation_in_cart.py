@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Summary Calculation")
 @allure.title("TC-064: Verify Total Items and Total Price Calculation in Cart")
+@allure.issue("64")
 def test_issue_064_verify_total_items_and_total_price_calculation_in_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

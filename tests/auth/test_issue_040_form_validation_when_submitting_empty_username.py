@@ -15,6 +15,7 @@ from pages.login_page import LoginPage
 @allure.feature("Authentication")
 @allure.story("Form Validation")
 @allure.title("Form Validation when Submitting Empty Username")
+@allure.issue("40")
 def test_issue_040_form_validation_when_submitting_empty_username(
     login_page: LoginPage,
 ) -> None:

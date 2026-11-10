@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Add To Cart")
 @allure.title("TC-054: Add Single Product to Shopping Cart")
+@allure.issue("54")
 def test_issue_054_add_single_product_to_shopping_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

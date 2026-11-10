@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Catalog")
 @allure.story("Catalog Scrolling")
 @allure.title("TC-006: View Off-Screen Product Details by Scrolling Down Catalog")
+@allure.issue("6")
 def test_issue_006_view_off_screen_product_details_by_scrolling_down_catalog(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

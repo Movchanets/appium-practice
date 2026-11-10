@@ -19,6 +19,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Soft Keyboard Navigation")
 @allure.title("TC-074: Dismiss Soft Keyboard to Access To Payment Button")
+@allure.issue("74")
 def test_issue_074_dismiss_soft_keyboard_to_access_to_payment_button(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

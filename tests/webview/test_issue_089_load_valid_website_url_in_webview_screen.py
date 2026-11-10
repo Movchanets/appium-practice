@@ -16,6 +16,7 @@ from pages.webview_page import WebViewPage
 @allure.feature("WebView")
 @allure.story("URL Navigation")
 @allure.title("TC-089: Load Valid Website URL in WebView Screen")
+@allure.issue("89")
 def test_issue_089_load_valid_website_url_in_webview_screen(
     webview_page: WebViewPage,
 ) -> None:

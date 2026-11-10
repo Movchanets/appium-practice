@@ -15,6 +15,7 @@ from pages.login_page import LoginPage
 @allure.feature("Authentication")
 @allure.story("Login Validation")
 @allure.title("Login Attempt with Locked-Out User Account")
+@allure.issue("36")
 def test_issue_036_login_attempt_with_locked_out_user_account(
     login_page: LoginPage,
 ) -> None:

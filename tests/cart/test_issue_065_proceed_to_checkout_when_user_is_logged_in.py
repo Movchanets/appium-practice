@@ -19,6 +19,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Checkout Progression")
 @allure.title("TC-065: Proceed to Checkout when User is Logged In")
+@allure.issue("65")
 def test_issue_065_proceed_to_checkout_when_user_is_logged_in(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

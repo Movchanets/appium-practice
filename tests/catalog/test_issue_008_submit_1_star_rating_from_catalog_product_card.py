@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Product Rating")
 @allure.title("TC-008: Submit 1-Star Rating from Catalog Product Card")
+@allure.issue("8")
 def test_issue_008_submit_1_star_rating_from_catalog_product_card(
     catalog_page: CatalogPage,
 ) -> None:

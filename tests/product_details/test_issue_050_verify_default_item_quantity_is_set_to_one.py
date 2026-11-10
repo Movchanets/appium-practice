@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Quantity Management")
 @allure.title("TC-050: Verify Default Item Quantity is Set to One")
+@allure.issue("50")
 def test_issue_050_verify_default_item_quantity_is_set_to_one(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

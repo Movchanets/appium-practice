@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Multiple Products Display")
 @allure.title("TC-060: Verify Multiple Different Products Displayed in Cart")
+@allure.issue("60")
 def test_issue_060_verify_multiple_different_products_displayed_in_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

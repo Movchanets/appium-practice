@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Product Search")
 @allure.title("Verify Non-Existent Product is Not Found in Catalog")
+@allure.issue("14")
 def test_issue_014_verify_non_existent_product_is_not_found_in_catalog(
     catalog_page: CatalogPage,
 ) -> None:

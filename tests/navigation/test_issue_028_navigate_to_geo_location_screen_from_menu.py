@@ -17,6 +17,7 @@ from pages.geo_location_page import GeoLocationPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Navigate to Geo Location Screen from Menu")
+@allure.issue("28")
 def test_issue_028_navigate_to_geo_location_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

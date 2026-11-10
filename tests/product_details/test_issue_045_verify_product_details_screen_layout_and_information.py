@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Product Layout")
 @allure.title("TC-045: Verify Product Details Screen Layout and Information")
+@allure.issue("45")
 def test_issue_045_verify_product_details_screen_layout_and_information(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

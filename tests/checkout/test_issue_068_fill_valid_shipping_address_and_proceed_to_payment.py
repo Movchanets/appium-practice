@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Shipping Address Entry")
 @allure.title("TC-068: Fill Valid Shipping Address and Proceed to Payment")
+@allure.issue("68")
 def test_issue_068_fill_valid_shipping_address_and_proceed_to_payment(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

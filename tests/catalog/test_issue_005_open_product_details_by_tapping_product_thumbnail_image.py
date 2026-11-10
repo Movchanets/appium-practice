@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Catalog")
 @allure.story("Product Navigation")
 @allure.title("TC-005: Open Product Details by Tapping Product Thumbnail Image")
+@allure.issue("5")
 def test_issue_005_open_product_details_by_tapping_product_thumbnail_image(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

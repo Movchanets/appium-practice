@@ -15,6 +15,7 @@ from pages.qr_code_scanner_page import QrCodeScannerPage
 @allure.feature("Device Features")
 @allure.story("QR Code Scanner")
 @allure.title("TC-091: Open QR Code Scanner and Grant Camera Permission")
+@allure.issue("91")
 def test_issue_091_open_qr_code_scanner_and_grant_camera_permission(
     qr_code_scanner_page: QrCodeScannerPage,
 ) -> None:

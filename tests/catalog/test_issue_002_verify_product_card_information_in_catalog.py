@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Product Card Details")
 @allure.title("TC-002: Verify Product Card Information in Catalog")
+@allure.issue("2")
 def test_issue_002_verify_product_card_information_in_catalog(
     catalog_page: CatalogPage,
 ) -> None:

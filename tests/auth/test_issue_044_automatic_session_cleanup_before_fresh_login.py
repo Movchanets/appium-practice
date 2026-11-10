@@ -18,6 +18,7 @@ from pages.modals.confirmation_modal import ConfirmationModal
 @allure.feature("Login Screen")
 @allure.story("Session Management")
 @allure.title("TC-044: Automatic Session Cleanup Before Fresh Login")
+@allure.issue("44")
 def test_issue_044_automatic_session_cleanup_before_fresh_login(
     catalog_page: CatalogPage,
     confirmation_modal: ConfirmationModal,

@@ -15,6 +15,7 @@ from pages.geo_location_page import GeoLocationPage
 @allure.feature("Device Features")
 @allure.story("Geo Location")
 @allure.title("TC-092: Start Real-Time Location Tracking in Geo Location Screen")
+@allure.issue("92")
 def test_issue_092_start_real_time_location_tracking_in_geo_location_screen(
     geo_location_page: GeoLocationPage,
 ) -> None:

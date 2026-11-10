@@ -17,6 +17,7 @@ from pages.qr_code_scanner_page import QrCodeScannerPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Navigate to QR Code Scanner Screen from Menu")
+@allure.issue("27")
 def test_issue_027_navigate_to_qr_code_scanner_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

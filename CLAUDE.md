@@ -96,6 +96,12 @@ Always adhere to the strict selector hierarchy:
 - **Fail-Safe Driver Teardown**: Drivers must always be quit in fixture teardown (`try ... finally driver.quit()`).
 - **Artifact Diagnostics**: Automatic capture of screenshots, logcat, and XML page source dumps upon failure to allow immediate root-cause analysis.
 
+### 6. Strict Issue Fidelity & Zero Bug-Masking
+- **Issue Link by Number**: Every test MUST include `@allure.issue("<N>")` (e.g., `@allure.issue("34")`), which resolves automatically via `--allure-link-pattern=issue:https://github.com/Movchanets/appium-practice/issues/{}` in `pytest.ini`.
+- **Execute Strictly What Is Written in the Issue**: Every test MUST implement the exact preconditions, steps, target UI elements, and expected results specified in its Issue description — nothing more, nothing less.
+- **Never Work Around Application Bugs**: If an Issue specifies an action on a specific element (e.g., tapping the product title text vs. tapping the product image, or rotating device orientation), the test MUST interact with that exact element/API.
+- **Zero Fake Passes**: NEVER substitute an alternate UI path, weaken an assertion, or alter test steps just to make a test pass when the application under test has a defect. If a test fails due to an application bug, let it fail honestly (or document the known application defect via `@pytest.mark.xfail(reason="BUG: ...", strict=False)` when instructed).
+
 ---
 
 ## Tooling Recommendations & When to Use

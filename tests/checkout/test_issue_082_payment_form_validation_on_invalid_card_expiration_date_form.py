@@ -21,6 +21,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Method Validation")
 @allure.title("TC-082: Payment Form Validation on Invalid Card Expiration Date Format")
+@allure.issue("82")
 def test_issue_082_payment_form_validation_on_invalid_card_expiration_date_form(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

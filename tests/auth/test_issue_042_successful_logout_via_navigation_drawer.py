@@ -17,6 +17,7 @@ from pages.modals.confirmation_modal import ConfirmationModal
 @allure.feature("Login Screen")
 @allure.story("Logout Flow")
 @allure.title("TC-042: Successful Logout via Navigation Drawer")
+@allure.issue("42")
 def test_issue_042_successful_logout_via_navigation_drawer(
     login_page: LoginPage,
     confirmation_modal: ConfirmationModal,

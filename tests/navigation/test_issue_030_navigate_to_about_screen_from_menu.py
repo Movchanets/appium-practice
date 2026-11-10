@@ -17,6 +17,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Navigate to About Screen from Menu")
+@allure.issue("30")
 def test_issue_030_navigate_to_about_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

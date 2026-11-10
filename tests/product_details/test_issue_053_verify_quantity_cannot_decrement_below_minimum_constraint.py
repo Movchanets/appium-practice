@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Quantity Management")
 @allure.title("TC-053: Verify Quantity Cannot Decrement Below Minimum Constraint")
+@allure.issue("53")
 def test_issue_053_verify_quantity_cannot_decrement_below_minimum_constraint(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

@@ -17,6 +17,7 @@ from pages.modals.confirmation_modal import ConfirmationModal
 @allure.feature("Login Screen")
 @allure.story("Logout Flow")
 @allure.title("TC-043: Cancel Logout from Confirmation Dialog")
+@allure.issue("43")
 def test_issue_043_cancel_logout_from_confirmation_dialog(
     login_page: LoginPage,
     confirmation_modal: ConfirmationModal,

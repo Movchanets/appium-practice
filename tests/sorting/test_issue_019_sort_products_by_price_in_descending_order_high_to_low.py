@@ -14,6 +14,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Product Sorting")
 @allure.title("Sort Products by Price in Descending Order (High to Low)")
+@allure.issue("19")
 def test_issue_019_sort_products_by_price_in_descending_order_high_to_low(
     catalog_page: CatalogPage,
 ) -> None:

@@ -17,6 +17,7 @@ from pages.webview_page import WebViewPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Navigate to WebView Screen from Menu")
+@allure.issue("26")
 def test_issue_026_navigate_to_webview_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

@@ -15,6 +15,7 @@ from pages.modals.sort_modal import SortModal
 @allure.feature("Catalog Screen")
 @allure.story("Sort Dialog")
 @allure.title("Open and Verify Sort Options Dialog")
+@allure.issue("15")
 def test_issue_015_open_and_verify_sort_options_dialog(catalog_page: CatalogPage) -> None:
     """
     Preconditions:

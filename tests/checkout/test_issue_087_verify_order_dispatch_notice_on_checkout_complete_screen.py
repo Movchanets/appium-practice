@@ -22,6 +22,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Confirmation")
 @allure.title("TC-087: Verify Order Dispatch Notice on Checkout Complete Screen")
+@allure.issue("87")
 def test_issue_087_verify_order_dispatch_notice_on_checkout_complete_screen(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

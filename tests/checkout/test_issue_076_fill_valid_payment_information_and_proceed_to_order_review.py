@@ -21,6 +21,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Information Submission")
 @allure.title("TC-076: Fill Valid Payment Information and Proceed to Order Review")
+@allure.issue("76")
 def test_issue_076_fill_valid_payment_information_and_proceed_to_order_review(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

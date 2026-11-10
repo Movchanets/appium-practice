@@ -40,7 +40,7 @@ markers = [
     "device_features: Hardware and system features",
     "gestures_lifecycle: Touch gestures, rotation, backgrounding tests",
 ]
-addopts = "-v --tb=short"
+addopts = "-v --tb=short --allure-link-pattern=issue:https://github.com/Movchanets/appium-practice/issues/{}"
 
 [tool.ruff]
 line-length = 100

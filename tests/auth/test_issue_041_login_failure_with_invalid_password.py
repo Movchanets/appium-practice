@@ -16,6 +16,7 @@ from pages.login_page import LoginPage
 @allure.feature("Login Screen")
 @allure.story("Login Validation")
 @allure.title("TC-041: Login Failure with Invalid Password")
+@allure.issue("41")
 def test_issue_041_login_failure_with_invalid_password(login_page: LoginPage) -> None:
     """
     Preconditions:

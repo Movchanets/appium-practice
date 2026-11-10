@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Navigation")
 @allure.story("Shopping Cart Badge")
 @allure.title("Verify Shopping Cart Badge is Empty by Default")
+@allure.issue("24")
 def test_issue_024_verify_shopping_cart_badge_is_empty_by_default(
     catalog_page: CatalogPage,
 ) -> None:

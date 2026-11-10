@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Form Validation")
 @allure.title("TC-078: Payment Form Validation on Missing Card Holder Name")
+@allure.issue("78")
 def test_issue_078_payment_form_validation_on_missing_card_holder_name(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

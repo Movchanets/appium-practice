@@ -15,6 +15,7 @@ from pages.webview_page import WebViewPage
 @allure.feature("WebView")
 @allure.story("URL Validation")
 @allure.title("TC-090: URL Validation for Insecure or Invalid Format in WebView")
+@allure.issue("90")
 def test_issue_090_url_validation_for_insecure_or_invalid_format_in_webview(
     webview_page: WebViewPage,
 ) -> None:

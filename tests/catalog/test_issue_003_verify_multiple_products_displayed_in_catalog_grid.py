@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Catalog Grid Display")
 @allure.title("TC-003: Verify Multiple Products Displayed in Catalog Grid")
+@allure.issue("3")
 def test_issue_003_verify_multiple_products_displayed_in_catalog_grid(
     catalog_page: CatalogPage,
 ) -> None:

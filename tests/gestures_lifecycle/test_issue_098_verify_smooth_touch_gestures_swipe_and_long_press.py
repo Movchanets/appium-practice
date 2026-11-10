@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Gestures & Lifecycle")
 @allure.story("Touch Gestures")
 @allure.title("TC-098: Verify Smooth Touch Gestures Swipe and Long Press")
+@allure.issue("98")
 def test_issue_098_verify_smooth_touch_gestures_swipe_and_long_press(
     catalog_page: CatalogPage,
 ) -> None:

@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Product Review")
 @allure.title("TC-056: Rate Product from Product Details Screen and Dismiss Dialog")
+@allure.issue("56")
 def test_issue_056_rate_product_from_product_details_screen_and_dismiss_dialog(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

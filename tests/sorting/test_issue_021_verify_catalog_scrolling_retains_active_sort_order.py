@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Sorting")
 @allure.title("Verify Catalog Scrolling Retains Active Sort Order")
+@allure.issue("21")
 def test_issue_021_verify_catalog_scrolling_retains_active_sort_order(
     catalog_page: CatalogPage,
 ) -> None:

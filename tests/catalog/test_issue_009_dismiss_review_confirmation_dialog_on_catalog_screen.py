@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Review Modal Dialog")
 @allure.title("TC-009: Dismiss Review Confirmation Dialog on Catalog Screen")
+@allure.issue("9")
 def test_issue_009_dismiss_review_confirmation_dialog_on_catalog_screen(
     catalog_page: CatalogPage,
 ) -> None:

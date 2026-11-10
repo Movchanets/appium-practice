@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Product Rating")
 @allure.title("TC-010: Submit 3-Star Rating and Dismiss Confirmation Dialog")
+@allure.issue("10")
 def test_issue_010_submit_3_star_rating_and_dismiss_confirmation_dialog(
     catalog_page: CatalogPage,
 ) -> None:

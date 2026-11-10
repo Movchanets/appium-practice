@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Navigation Drawer")
 @allure.story("Reset App State")
 @allure.title("Reset App State via Navigation Menu - Cancel Action")
+@allure.issue("32")
 def test_issue_032_reset_app_state_via_navigation_menu_cancel_action(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

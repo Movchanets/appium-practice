@@ -21,6 +21,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Review")
 @allure.title("TC-083: Verify Shipping Information on Order Review Screen")
+@allure.issue("83")
 def test_issue_083_verify_shipping_information_on_order_review_screen(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

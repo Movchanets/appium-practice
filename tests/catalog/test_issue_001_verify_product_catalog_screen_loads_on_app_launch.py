@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Product Catalog")
 @allure.story("Catalog Screen Launch")
 @allure.title("TC-001: Verify Product Catalog Screen Loads on App Launch")
+@allure.issue("1")
 def test_issue_001_verify_product_catalog_screen_loads_on_app_launch(
     catalog_page: CatalogPage,
 ) -> None:

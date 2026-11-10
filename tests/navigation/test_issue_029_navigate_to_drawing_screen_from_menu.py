@@ -17,6 +17,7 @@ from pages.drawing_page import DrawingPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Navigate to Drawing Screen from Menu")
+@allure.issue("29")
 def test_issue_029_navigate_to_drawing_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

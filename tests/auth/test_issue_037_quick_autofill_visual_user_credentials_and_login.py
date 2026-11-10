@@ -15,6 +15,7 @@ from pages.login_page import LoginPage
 @allure.feature("Authentication")
 @allure.story("Quick Autofill")
 @allure.title("Quick Autofill Visual User Credentials and Login")
+@allure.issue("37")
 def test_issue_037_quick_autofill_visual_user_credentials_and_login(
     login_page: LoginPage,
 ) -> None:

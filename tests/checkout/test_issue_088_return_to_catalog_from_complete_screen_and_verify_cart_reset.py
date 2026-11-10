@@ -22,6 +22,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Confirmation")
 @allure.title("TC-088: Return to Catalog from Complete Screen and Verify Cart Reset")
+@allure.issue("88")
 def test_issue_088_return_to_catalog_from_complete_screen_and_verify_cart_reset(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

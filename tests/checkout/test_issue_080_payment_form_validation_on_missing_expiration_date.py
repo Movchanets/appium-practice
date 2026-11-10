@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Form Validation")
 @allure.title("TC-080: Payment Form Validation on Missing Expiration Date")
+@allure.issue("80")
 def test_issue_080_payment_form_validation_on_missing_expiration_date(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

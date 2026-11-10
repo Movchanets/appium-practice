@@ -18,6 +18,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Checkout Authentication")
 @allure.title("TC-066: Attempt Checkout when Unauthenticated Prompts Login")
+@allure.issue("66")
 def test_issue_066_attempt_checkout_when_unauthenticated_prompts_login(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

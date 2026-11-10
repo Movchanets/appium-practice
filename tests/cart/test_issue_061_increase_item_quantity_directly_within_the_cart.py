@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Quantity Management")
 @allure.title("TC-061: Increase Item Quantity Directly Within the Cart")
+@allure.issue("61")
 def test_issue_061_increase_item_quantity_directly_within_the_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

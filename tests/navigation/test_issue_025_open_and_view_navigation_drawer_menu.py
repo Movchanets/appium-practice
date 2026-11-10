@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Navigation")
 @allure.story("Drawer Menu Navigation")
 @allure.title("Open and View Navigation Drawer Menu")
+@allure.issue("25")
 def test_issue_025_open_and_view_navigation_drawer_menu(
     catalog_page: CatalogPage,
 ) -> None:

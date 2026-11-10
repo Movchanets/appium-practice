@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Navigation")
 @allure.story("Top Navigation Header")
 @allure.title("Verify Top Navigation Header Layout and Branding")
+@allure.issue("23")
 def test_issue_023_verify_top_navigation_header_layout_and_branding(
     catalog_page: CatalogPage,
 ) -> None:

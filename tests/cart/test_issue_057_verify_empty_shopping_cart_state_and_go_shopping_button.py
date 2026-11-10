@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Cart")
 @allure.story("Empty State")
 @allure.title("TC-057: Verify Empty Shopping Cart State and Go Shopping Button")
+@allure.issue("57")
 def test_issue_057_verify_empty_shopping_cart_state_and_go_shopping_button(
     catalog_page: CatalogPage,
 ) -> None:

@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Cart")
 @allure.story("Empty State Navigation")
 @allure.title("TC-058: Navigate from Empty Cart Back to Catalog via Go Shopping Button")
+@allure.issue("58")
 def test_issue_058_navigate_from_empty_cart_back_to_catalog_via_go_shopping_but(
     cart_page: CartPage,
 ) -> None:

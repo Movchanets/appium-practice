@@ -19,6 +19,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Shipping Address Validation")
 @allure.title("TC-072: Shipping Address Validation on Missing Zip Code")
+@allure.issue("72")
 def test_issue_072_shipping_address_validation_on_missing_zip_code(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

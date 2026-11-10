@@ -17,6 +17,7 @@ from pages.login_page import LoginPage
 @allure.feature("Authentication")
 @allure.story("Navigation to Login")
 @allure.title("Navigate to Login Screen from Menu")
+@allure.issue("33")
 def test_issue_033_navigate_to_login_screen_from_menu(
     catalog_page: CatalogPage,
 ) -> None:

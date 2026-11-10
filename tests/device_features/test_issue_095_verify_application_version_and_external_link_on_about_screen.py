@@ -15,6 +15,7 @@ from pages.about_page import AboutPage
 @allure.feature("Device Features")
 @allure.story("About")
 @allure.title("TC-095: Verify Application Version and External Link on About Screen")
+@allure.issue("95")
 def test_issue_095_verify_application_version_and_external_link_on_about_screen(
     about_page: AboutPage,
 ) -> None:

@@ -14,6 +14,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Product Sorting")
 @allure.title("Change Sort Selection Sequentially from Price to Name")
+@allure.issue("20")
 def test_issue_020_change_sort_selection_sequentially_from_price_to_name(
     catalog_page: CatalogPage,
 ) -> None:

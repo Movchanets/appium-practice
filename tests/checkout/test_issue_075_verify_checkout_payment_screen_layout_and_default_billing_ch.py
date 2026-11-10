@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Screen Layout")
 @allure.title("TC-075: Verify Checkout Payment Screen Layout and Default Billing Checkbox")
+@allure.issue("75")
 def test_issue_075_verify_checkout_payment_screen_layout_and_default_billing_ch(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Quantity Management")
 @allure.title("TC-052: Decrease Item Quantity Using Minus Button")
+@allure.issue("52")
 def test_issue_052_decrease_item_quantity_using_minus_button(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

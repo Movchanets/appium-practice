@@ -16,8 +16,10 @@ from src.api.models import UserCredentials, UserSessionResponse
 @allure.feature("Backend API Integration")
 @allure.story("Authentication")
 @allure.title("TC-099: Verify Backend API User Authentication and Session Token Generation")
+@allure.issue("99")
 def test_issue_099_verify_backend_api_user_authentication_and_session_token_gen() -> None:
-    """Preconditions:
+    """
+    Preconditions:
         Store backend API is accessible.
     Steps:
         1. Send an authentication request with valid user credentials.

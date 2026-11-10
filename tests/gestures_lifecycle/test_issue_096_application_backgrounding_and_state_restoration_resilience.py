@@ -15,6 +15,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Gestures & Lifecycle")
 @allure.story("Application Backgrounding")
 @allure.title("TC-096: Application Backgrounding and State Restoration Resilience")
+@allure.issue("96")
 def test_issue_096_application_backgrounding_and_state_restoration_resilience(
     catalog_page: CatalogPage,
 ) -> None:

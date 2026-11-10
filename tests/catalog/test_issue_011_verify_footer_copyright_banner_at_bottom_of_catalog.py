@@ -16,6 +16,7 @@ from pages.components.footer_component import FooterComponent
 @allure.feature("Catalog Screen")
 @allure.story("Footer Banner")
 @allure.title("Verify Footer Copyright Banner at Bottom of Catalog")
+@allure.issue("11")
 def test_issue_011_verify_footer_copyright_banner_at_bottom_of_catalog(
     catalog_page: CatalogPage,
 ) -> None:

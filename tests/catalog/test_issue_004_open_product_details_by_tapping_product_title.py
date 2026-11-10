@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Catalog")
 @allure.story("Product Navigation")
 @allure.title("TC-004: Open Product Details by Tapping Product Title")
+@allure.issue("4")
 def test_issue_004_open_product_details_by_tapping_product_title(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,
@@ -42,8 +43,8 @@ def test_issue_004_open_product_details_by_tapping_product_title(
         card = catalog_page.get_product_card_by_title("Sauce Labs Backpack")
         assert card.is_visible(), "Sauce Labs Backpack card is not visible"
 
-    with allure.step("Step 2: Tap on the product item to open details"):
-        card.click_item()
+    with allure.step("Step 2: Tap directly on the product title text"):
+        card.click(card.TITLE)
 
     with allure.step("Verify Product Details screen opens with title, price, and options"):
         assert product_details_page.is_loaded(), "Product Details screen failed to load"

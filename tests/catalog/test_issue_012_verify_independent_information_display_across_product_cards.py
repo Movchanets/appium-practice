@@ -14,6 +14,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Product Grid")
 @allure.title("Verify Independent Information Display Across Product Cards")
+@allure.issue("12")
 def test_issue_012_verify_independent_information_display_across_product_cards(
     catalog_page: CatalogPage,
 ) -> None:

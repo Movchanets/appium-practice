@@ -23,6 +23,7 @@ from pages.login_page import LoginPage
         ("visual@example.com", "10203040"),
     ],
 )
+@allure.issue("34")
 def test_issue_034_successful_login_with_valid_standard_user_credentials(
     login_page: LoginPage, username: str, password: str
 ) -> None:

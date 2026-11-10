@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Payment Method Validation")
 @allure.title("TC-081: Payment Form Validation on Missing Security Code CVV")
+@allure.issue("81")
 def test_issue_081_payment_form_validation_on_missing_security_code_cvv(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

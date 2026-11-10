@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Add To Cart")
 @allure.title("TC-055: Add Multiple Quantities of a Product to Cart")
+@allure.issue("55")
 def test_issue_055_add_multiple_quantities_of_a_product_to_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

@@ -19,6 +19,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Shipping Address Validation")
 @allure.title("TC-069: Shipping Address Validation on Missing Full Name")
+@allure.issue("69")
 def test_issue_069_shipping_address_validation_on_missing_full_name(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

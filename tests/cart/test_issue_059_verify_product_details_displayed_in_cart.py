@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Cart Item Details")
 @allure.title("TC-059: Verify Product Details Displayed in Cart")
+@allure.issue("59")
 def test_issue_059_verify_product_details_displayed_in_cart(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

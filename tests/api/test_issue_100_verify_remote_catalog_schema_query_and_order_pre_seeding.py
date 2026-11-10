@@ -16,8 +16,10 @@ from src.api.models import OrderRequest, OrderResponse, ProductPayload
 @allure.feature("Backend API Integration")
 @allure.story("Catalog & Order Pre-seeding")
 @allure.title("TC-100: Verify Remote Catalog Schema Query and Order Pre-seeding")
+@allure.issue("100")
 def test_issue_100_verify_remote_catalog_schema_query_and_order_pre_seeding() -> None:
-    """Preconditions:
+    """
+    Preconditions:
         Store backend API is accessible.
     Steps:
         1. Query the remote product catalog endpoint.

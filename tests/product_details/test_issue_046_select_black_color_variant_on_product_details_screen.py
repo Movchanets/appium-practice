@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Color Selection")
 @allure.title("TC-046: Select Black Color Variant on Product Details Screen")
+@allure.issue("46")
 def test_issue_046_select_black_color_variant_on_product_details_screen(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

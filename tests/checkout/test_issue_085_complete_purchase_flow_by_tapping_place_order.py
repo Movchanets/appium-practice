@@ -22,6 +22,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Submission")
 @allure.title("TC-085: Complete Purchase Flow by Tapping Place Order")
+@allure.issue("85")
 def test_issue_085_complete_purchase_flow_by_tapping_place_order(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

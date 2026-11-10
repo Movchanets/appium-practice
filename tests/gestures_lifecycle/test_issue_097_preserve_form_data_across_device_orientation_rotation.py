@@ -1,3 +1,7 @@
+"""TC-097: Preserve Form Data Across Device Orientation Rotation."""
+
+from __future__ import annotations
+
 import allure
 import pytest
 
@@ -11,6 +15,7 @@ from pages.login_page import LoginPage
 @allure.feature("Login Screen")
 @allure.story("Device Rotation")
 @allure.title("Preserve form data across device orientation rotation")
+@allure.issue("97")
 @pytest.mark.xfail(
     reason=(
         "BUG: App is hardcoded to portrait mode in AndroidManifest.xml (Orientation change ignored)"
@@ -19,6 +24,7 @@ from pages.login_page import LoginPage
 )
 def test_preserve_form_data_across_device_orientation_rotation(login_page: LoginPage) -> None:
     """
+
     Preconditions:
         User is on Login screen and enters 'tactical_operator' in Username field.
     Steps:

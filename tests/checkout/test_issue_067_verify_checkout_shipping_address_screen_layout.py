@@ -19,6 +19,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Shipping Address Screen")
 @allure.title("TC-067: Verify Checkout Shipping Address Screen Layout")
+@allure.issue("67")
 def test_issue_067_verify_checkout_shipping_address_screen_layout(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

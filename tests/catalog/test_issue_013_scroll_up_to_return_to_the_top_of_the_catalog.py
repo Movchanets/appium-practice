@@ -14,6 +14,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Navigation Gestures")
 @allure.title("Scroll Up to Return to the Top of the Catalog")
+@allure.issue("13")
 def test_issue_013_scroll_up_to_return_to_the_top_of_the_catalog(
     catalog_page: CatalogPage,
 ) -> None:

@@ -16,6 +16,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Product Details")
 @allure.story("Quantity Management")
 @allure.title("TC-051: Increase Item Quantity Using Plus Button")
+@allure.issue("51")
 def test_issue_051_increase_item_quantity_using_plus_button(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

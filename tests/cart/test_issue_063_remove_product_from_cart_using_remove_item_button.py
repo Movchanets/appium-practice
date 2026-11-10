@@ -17,6 +17,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Cart")
 @allure.story("Item Removal")
 @allure.title("TC-063: Remove Product from Cart Using Remove Item Button")
+@allure.issue("63")
 def test_issue_063_remove_product_from_cart_using_remove_item_button(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

@@ -21,6 +21,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Review")
 @allure.title("TC-084: Verify Payment Method and Total Amount on Order Review Screen")
+@allure.issue("84")
 def test_issue_084_verify_payment_method_and_total_amount_on_order_review_scree(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

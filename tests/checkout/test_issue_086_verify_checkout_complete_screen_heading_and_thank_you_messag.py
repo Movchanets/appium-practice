@@ -22,6 +22,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Order Confirmation")
 @allure.title("TC-086: Verify Checkout Complete Screen Heading and Thank You Message")
+@allure.issue("86")
 def test_issue_086_verify_checkout_complete_screen_heading_and_thank_you_messag(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

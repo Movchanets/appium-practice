@@ -20,6 +20,7 @@ from pages.product_details_page import ProductDetailsPage
 @allure.feature("Checkout")
 @allure.story("Billing Address Checkbox")
 @allure.title("TC-077: Toggle Same Billing Address as Shipping Address Checkbox")
+@allure.issue("77")
 def test_issue_077_toggle_same_billing_address_as_shipping_address_checkbox(
     catalog_page: CatalogPage,
     product_details_page: ProductDetailsPage,

@@ -16,6 +16,7 @@ from pages.catalog_page import CatalogPage
 @allure.feature("Catalog Screen")
 @allure.story("Sorting")
 @allure.title("Verify Dismissing Sort Dialog Retains Current Sort Order")
+@allure.issue("22")
 def test_issue_022_verify_dismissing_sort_dialog_retains_current_sort_order(
     catalog_page: CatalogPage,
 ) -> None:
