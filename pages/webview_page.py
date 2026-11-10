@@ -30,6 +30,7 @@ class WebViewPage(BasePage):
         ' or contains(@text, "URL") or contains(@text, "https")'
         ' or contains(@text, "Please enter")]',
     )
+    WEBVIEW_CONTAINER: Locator = (AppiumBy.CLASS_NAME, "android.webkit.WebView")
 
     def is_loaded(self) -> bool:
         """Check if WebView page title is displayed."""
@@ -59,3 +60,7 @@ class WebViewPage(BasePage):
     def is_url_error_displayed(self, timeout: float = 3.0) -> bool:
         """Check if URL error warning is displayed."""
         return self.is_displayed(self.URL_ERROR, timeout=timeout)
+
+    def is_webview_displayed(self, timeout: float = 10.0) -> bool:
+        """Check if embedded WebView container is displayed on screen."""
+        return self.is_displayed(self.WEBVIEW_CONTAINER, timeout=timeout)

@@ -13,6 +13,7 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Catalog Scrolling")
 @allure.title("TC-006: View Off-Screen Product Details by Scrolling Down Catalog")
@@ -35,9 +36,6 @@ def test_issue_006_view_off_screen_product_details_by_scrolling_down_catalog(
         - Tapping the item opens the Product Details screen for "Sauce Labs Onesie".
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: Scroll down the catalog until reaching the 'Sauce Labs Onesie'"):

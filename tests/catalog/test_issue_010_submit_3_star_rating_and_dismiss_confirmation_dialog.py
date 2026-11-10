@@ -12,6 +12,7 @@ from pages.catalog_page import CatalogPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Product Rating")
 @allure.title("TC-010: Submit 3-Star Rating and Dismiss Confirmation Dialog")
@@ -33,9 +34,6 @@ def test_issue_010_submit_3_star_rating_and_dismiss_confirmation_dialog(
           cleanly upon tapping Close.
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: On the 'Sauce Labs Bolt T-Shirt' card, tap the 3rd star icon"):

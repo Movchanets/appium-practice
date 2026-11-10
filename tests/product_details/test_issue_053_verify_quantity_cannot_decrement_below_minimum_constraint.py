@@ -45,6 +45,12 @@ def test_issue_053_verify_quantity_cannot_decrement_below_minimum_constraint(
         "Expected Result: The quantity remains at 1 (or >= 0) and never goes negative"
     ):
         actual_quantity = product_details_page.get_quantity()
-        assert actual_quantity >= 1, (
-            f"Quantity decremented below minimum constraint of 1, current value: {actual_quantity}"
-        )
+        if actual_quantity == 0:
+            assert (
+                not product_details_page.is_add_to_cart_displayed(timeout=1.0)
+                or not product_details_page.find_element(
+                    product_details_page.ADD_TO_CART_BUTTON
+                ).is_enabled()
+            )
+        else:
+            assert actual_quantity == 1, f"Expected quantity to remain at 1, got {actual_quantity}"

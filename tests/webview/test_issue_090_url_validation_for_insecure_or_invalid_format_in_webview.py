@@ -46,10 +46,12 @@ def test_issue_090_url_validation_for_insecure_or_invalid_format_in_webview(
 
     with allure.step("Verify: The app prevents loading or displays a security validation warning"):
         error_displayed = webview_page.is_url_error_displayed(timeout=3.0)
-        url_input_retained = webview_page.is_displayed(webview_page.URL_INPUT, timeout=2.0)
-        assert error_displayed or url_input_retained, (
+        webview_not_displayed = not webview_page.is_webview_displayed(timeout=2.0)
+        assert error_displayed or webview_not_displayed, (
             "App did not prevent loading or display validation warning for insecure URL"
         )
         if error_displayed:
-            error_text = webview_page.get_url_error()
-            assert len(error_text.strip()) > 0, "URL validation error text is empty"
+            error_text = webview_page.get_url_error().lower()
+            assert "https" in error_text or "url" in error_text or "valid" in error_text, (
+                f"Unexpected URL error text: '{error_text}'"
+            )

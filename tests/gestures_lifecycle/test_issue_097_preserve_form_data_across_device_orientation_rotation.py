@@ -11,6 +11,7 @@ from pages.login_page import LoginPage
 @pytest.mark.regression
 @pytest.mark.positive
 @pytest.mark.mobile
+@pytest.mark.gestures_lifecycle
 @pytest.mark.practice
 @allure.feature("Login Screen")
 @allure.story("Device Rotation")

@@ -12,6 +12,7 @@ from pages.catalog_page import CatalogPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Product Rating")
 @allure.title("TC-008: Submit 1-Star Rating from Catalog Product Card")
@@ -31,9 +32,6 @@ def test_issue_008_submit_1_star_rating_from_catalog_product_card(
           "Thank you for submitting your review!".
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: On the 'Sauce Labs Bike Light' card, tap the 1st star icon"):

@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import allure
 import pytest
-from appium.webdriver.common.appiumby import AppiumBy
 
 from pages.webview_page import WebViewPage
 
@@ -45,10 +44,7 @@ def test_issue_089_load_valid_website_url_in_webview_screen(
         webview_page.click_go()
 
     with allure.step("Verify: The in-app web browser loads and renders website content"):
-        webview_locator = (AppiumBy.CLASS_NAME, "android.webkit.WebView")
         is_webview_active = (
-            webview_page.is_displayed(webview_locator, timeout=10.0)
-            or len(webview_page.driver.contexts) > 1
-            or not webview_page.is_url_error_displayed(timeout=2.0)
+            webview_page.is_webview_displayed(timeout=10.0) or len(webview_page.driver.contexts) > 1
         )
         assert is_webview_active, "In-app browser failed to load valid HTTPS URL"

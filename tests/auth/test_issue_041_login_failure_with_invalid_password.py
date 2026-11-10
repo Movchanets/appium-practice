@@ -48,3 +48,8 @@ def test_issue_041_login_failure_with_invalid_password(login_page: LoginPage) ->
         )
         error_msg = login_page.get_error_message()
         assert len(error_msg) > 0, "Error message text is empty"
+        assert (
+            "do not match" in error_msg.lower()
+            or "credentials" in error_msg.lower()
+            or "sorry" in error_msg.lower()
+        ), f"Unexpected error message text: '{error_msg}'"

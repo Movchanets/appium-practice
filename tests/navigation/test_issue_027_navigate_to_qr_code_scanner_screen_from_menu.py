@@ -45,3 +45,4 @@ def test_issue_027_navigate_to_qr_code_scanner_screen_from_menu(
         assert "QR Code Scanner" in scanner_page.get_title_text(), (
             f"Unexpected QR Code Scanner title: {scanner_page.get_title_text()}"
         )
+        assert scanner_page.is_viewfinder_displayed(), "Camera scanning viewfinder is not displayed"

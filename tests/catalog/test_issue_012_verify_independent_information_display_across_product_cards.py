@@ -46,10 +46,7 @@ def test_issue_012_verify_independent_information_display_across_product_cards(
 
         assert price1, "First product card price is empty"
         assert price2, "Second product card price is empty"
+        assert price1 != price2, f"Product cards share identical price: '{price1}'"
 
-        assert card1.find_element(card1.IMAGE).is_displayed(), (
-            "First product thumbnail is not displayed"
-        )
-        assert card2.find_element(card2.IMAGE).is_displayed(), (
-            "Second product thumbnail is not displayed"
-        )
+        assert card1.is_image_displayed(), "First product thumbnail is not displayed"
+        assert card2.is_image_displayed(), "Second product thumbnail is not displayed"

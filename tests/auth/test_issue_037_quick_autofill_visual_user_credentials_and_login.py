@@ -5,6 +5,7 @@ from __future__ import annotations
 import allure
 import pytest
 
+from pages.catalog_page import CatalogPage
 from pages.login_page import LoginPage
 
 
@@ -33,11 +34,14 @@ def test_issue_037_quick_autofill_visual_user_credentials_and_login(
         assert login_page.get_username() == "visual@example.com", (
             "Username was not autofilled for visual user"
         )
+        assert len(login_page.get_password()) > 0, "Password field was not autofilled"
 
     with allure.step("Step 2: Tap the 'Login' button"):
         login_page.click_login_button()
 
-    with allure.step("Verify login succeeds and user is authenticated"):
+    with allure.step("Verify login succeeds and user is authenticated on Catalog screen"):
+        catalog_page = CatalogPage(login_page.driver)
+        assert catalog_page.is_loaded(), "User was not redirected to Catalog screen"
         assert login_page.is_logged_in(), (
             "User was not successfully authenticated with visual user credentials"
         )

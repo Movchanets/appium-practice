@@ -38,6 +38,7 @@ def test_issue_016_sort_products_by_name_in_ascending_order_a_to_z(
 
     with allure.step("Step 2: Select 'Ascending order by name'"):
         catalog_page.sort_modal.sort_by_name_ascending()
+        assert not catalog_page.sort_modal.is_displayed(), "Sort dialog did not close"
 
     with allure.step("Step 3: Observe the product titles in the catalog"):
         cards = catalog_page.get_product_cards()

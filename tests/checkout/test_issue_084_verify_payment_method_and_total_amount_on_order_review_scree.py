@@ -80,6 +80,6 @@ def test_issue_084_verify_payment_method_and_total_amount_on_order_review_scree(
         assert any(ch.isdigit() for ch in card_number), (
             f"Card number '{card_number}' does not contain digits"
         )
-        assert expected_price in total_amount or total_amount.startswith("$"), (
+        assert expected_price in total_amount, (
             f"Expected total amount '{total_amount}' to contain '{expected_price}'"
         )

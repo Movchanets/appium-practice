@@ -13,6 +13,7 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Product Navigation")
 @allure.title("TC-005: Open Product Details by Tapping Product Thumbnail Image")
@@ -33,9 +34,6 @@ def test_issue_005_open_product_details_by_tapping_product_thumbnail_image(
         - The Product Details screen opens displaying the selected product.
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: Locate the item 'Sauce Labs Backpack'"):

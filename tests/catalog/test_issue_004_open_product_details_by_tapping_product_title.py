@@ -13,6 +13,7 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Product Navigation")
 @allure.title("TC-004: Open Product Details by Tapping Product Title")
@@ -34,9 +35,6 @@ def test_issue_004_open_product_details_by_tapping_product_title(
           image, and options.
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: Locate the item 'Sauce Labs Backpack'"):
@@ -51,4 +49,5 @@ def test_issue_004_open_product_details_by_tapping_product_title(
         assert product_details_page.get_title() == "Sauce Labs Backpack"
         assert product_details_page.is_displayed(product_details_page.PRODUCT_IMAGE)
         assert product_details_page.get_price() == "$ 29.99"
+        assert product_details_page.get_description(), "Product description is empty"
         assert product_details_page.is_displayed(product_details_page.ADD_TO_CART_BUTTON)

@@ -64,9 +64,7 @@ def test_issue_060_verify_multiple_different_products_displayed_in_cart(
         " with their respective details"
     ):
         cart_items = cart_page.get_cart_items()
-        assert len(cart_items) >= 2, (
-            f"Expected at least 2 cart item rows, but got {len(cart_items)}"
-        )
+        assert len(cart_items) == 2, f"Expected exactly 2 cart item rows, but got {len(cart_items)}"
         backpack_item = cart_page.get_cart_item_by_title("Sauce Labs Backpack")
         bike_light_item = cart_page.get_cart_item_by_title("Sauce Labs Bike Light")
 
@@ -76,9 +74,17 @@ def test_issue_060_verify_multiple_different_products_displayed_in_cart(
         assert "Sauce Labs Bike Light" in bike_light_item.get_title(), (
             f"Expected title 'Sauce Labs Bike Light', got '{bike_light_item.get_title()}'"
         )
-        assert backpack_item.get_quantity() >= 1, (
-            f"Expected Backpack quantity >= 1, got {backpack_item.get_quantity()}"
+        assert backpack_item.get_quantity() == 1, (
+            f"Expected Backpack quantity 1, got {backpack_item.get_quantity()}"
         )
-        assert bike_light_item.get_quantity() >= 1, (
-            f"Expected Bike Light quantity >= 1, got {bike_light_item.get_quantity()}"
+        assert bike_light_item.get_quantity() == 1, (
+            f"Expected Bike Light quantity 1, got {bike_light_item.get_quantity()}"
         )
+        assert "$ 29.99" in backpack_item.get_price(), (
+            f"Expected price '$ 29.99' in Backpack price, got '{backpack_item.get_price()}'"
+        )
+        assert "$ 9.99" in bike_light_item.get_price(), (
+            f"Expected price '$ 9.99' in Bike Light price, got '{bike_light_item.get_price()}'"
+        )
+        assert backpack_item.is_image_displayed(), "Backpack image is not displayed in cart"
+        assert bike_light_item.is_image_displayed(), "Bike Light image is not displayed in cart"

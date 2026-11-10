@@ -12,6 +12,7 @@ from pages.catalog_page import CatalogPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Product Card Details")
 @allure.title("TC-002: Verify Product Card Information in Catalog")
@@ -33,9 +34,6 @@ def test_issue_002_verify_product_card_information_in_catalog(
         - Thumbnail image is clearly visible, and 5 interactive rating stars are displayed.
     """
     with allure.step("Precondition: Ensure Catalog page is loaded"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: Inspect the 'Sauce Labs Backpack' product card in the grid"):

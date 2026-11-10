@@ -32,9 +32,9 @@ def test_issue_047_select_blue_color_variant_on_product_details_screen(
     Expected Result:
         - The Blue color circle is highlighted as the active selection.
     """
-    with allure.step("Precondition: User is on Product Details screen"):
+    with allure.step("Precondition: User is on Product Details screen for 'Sauce Labs Backpack'"):
         assert catalog_page.is_loaded(), "Catalog screen is not loaded"
-        catalog_page.select_product_by_title("Sauce Labs Bike Light")
+        catalog_page.select_product_by_title("Sauce Labs Backpack")
         assert product_details_page.is_loaded(), "Product Details screen is not loaded"
 
     with allure.step("Step 1: Tap the Blue color option circle"):
@@ -43,8 +43,7 @@ def test_issue_047_select_blue_color_variant_on_product_details_screen(
     with allure.step("Verify Blue color circle is highlighted as the active selection"):
         blue_circle = product_details_page.find_element(product_details_page.COLOR_BLUE)
         assert blue_circle.is_displayed(), "Blue color circle option is not displayed"
-        assert (
-            blue_circle.is_selected()
-            or blue_circle.get_attribute("selected") in ("true", "True")
-            or blue_circle.is_enabled()
+        assert blue_circle.is_selected() or blue_circle.get_attribute("selected") in (
+            "true",
+            "True",
         ), "Blue color circle is not active"

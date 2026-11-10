@@ -36,3 +36,6 @@ def test_issue_091_open_qr_code_scanner_and_grant_camera_permission(
         assert "QR Code Scanner" in qr_code_scanner_page.get_title_text(), (
             f"Unexpected title text: '{qr_code_scanner_page.get_title_text()}'"
         )
+        assert qr_code_scanner_page.is_viewfinder_displayed(), (
+            "QR Code Scanner viewfinder is not displayed"
+        )

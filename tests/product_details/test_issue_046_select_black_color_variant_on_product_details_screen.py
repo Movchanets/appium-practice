@@ -44,8 +44,7 @@ def test_issue_046_select_black_color_variant_on_product_details_screen(
     with allure.step("Verify Black color circle is highlighted as the active selection"):
         black_circle = product_details_page.find_element(product_details_page.COLOR_BLACK)
         assert black_circle.is_displayed(), "Black color circle option is not displayed"
-        assert (
-            black_circle.is_selected()
-            or black_circle.get_attribute("selected") in ("true", "True")
-            or black_circle.is_enabled()
+        assert black_circle.is_selected() or black_circle.get_attribute("selected") in (
+            "true",
+            "True",
         ), "Black color circle is not active"

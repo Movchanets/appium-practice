@@ -12,6 +12,7 @@ from pages.catalog_page import CatalogPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.practice
+@pytest.mark.catalog
 @allure.feature("Product Catalog")
 @allure.story("Catalog Screen Launch")
 @allure.title("TC-001: Verify Product Catalog Screen Loads on App Launch")
@@ -34,9 +35,6 @@ def test_issue_001_verify_product_catalog_screen_loads_on_app_launch(
           prices, and images.
     """
     with allure.step("Precondition: App is opened on the Catalog screen"):
-        if not catalog_page.is_displayed(catalog_page.PRODUCT_ITEMS, timeout=2.0):
-            catalog_page.open_menu()
-            catalog_page.drawer_menu.click_catalog()
         assert catalog_page.is_loaded(), "Catalog page failed to load on app launch"
 
     with allure.step("Step 1: Observe the top header"):
@@ -44,10 +42,9 @@ def test_issue_001_verify_product_catalog_screen_loads_on_app_launch(
 
     with allure.step("Step 2: Observe the product catalog grid content"):
         cards = catalog_page.get_product_cards()
-        assert len(cards) > 0, "No product cards found in catalog grid"
-        first_card = cards[0]
-        assert first_card.get_title(), "First product card title is empty"
-        assert first_card.get_price(), "First product card price is empty"
-        assert first_card.is_displayed(first_card.IMAGE), (
-            "First product thumbnail image is not displayed"
-        )
+        assert len(cards) >= 2, "Expected at least 2 product cards in catalog grid"
+        for i in range(2):
+            card = cards[i]
+            assert card.get_title(), f"Product card {i} title is empty"
+            assert card.get_price(), f"Product card {i} price is empty"
+            assert card.is_image_displayed(), f"Product card {i} image is not displayed"
