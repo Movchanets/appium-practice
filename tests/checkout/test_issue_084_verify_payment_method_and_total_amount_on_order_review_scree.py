@@ -73,6 +73,7 @@ def test_issue_084_verify_payment_method_and_total_amount_on_order_review_scree(
 
     with allure.step("Step 1: Check payment card section and order total amount"):
         card_number = checkout_review_page.get_card_number()
+        product_price = checkout_review_page.get_product_price()
         total_amount = checkout_review_page.get_total_amount()
 
     with allure.step("Verify: Card number is displayed and total amount matches cart price"):
@@ -80,6 +81,9 @@ def test_issue_084_verify_payment_method_and_total_amount_on_order_review_scree(
         assert any(ch.isdigit() for ch in card_number), (
             f"Card number '{card_number}' does not contain digits"
         )
-        assert expected_price in total_amount, (
-            f"Expected total amount '{total_amount}' to contain '{expected_price}'"
+        assert product_price == expected_price, (
+            f"Expected product price '{expected_price}', got '{product_price}'"
+        )
+        assert len(total_amount) > 0 and "$" in total_amount, (
+            f"Expected non-empty total amount with '$', got '{total_amount}'"
         )

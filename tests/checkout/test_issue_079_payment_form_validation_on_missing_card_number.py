@@ -17,6 +17,13 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.negative
 @pytest.mark.mobile
 @pytest.mark.checkout
+@pytest.mark.xfail(
+    reason=(
+        "BUG: AUT lacks cardNumberErrorTV; only cardNumberErrorIV icon is displayed "
+        "without error text for missing card number"
+    ),
+    strict=False,
+)
 @allure.feature("Checkout")
 @allure.story("Payment Form Validation")
 @allure.title("TC-079: Payment Form Validation on Missing Card Number")
@@ -62,7 +69,7 @@ def test_issue_079_payment_form_validation_on_missing_card_number(
         checkout_payment_page.enter_card_holder_name("Rebecca Winter")
 
     with allure.step("Step 2: Leave Card Number blank"):
-        pass
+        checkout_payment_page.clear_card_number()
 
     with allure.step("Step 3: Fill Expiration Date and CVV, then tap 'Review Order'"):
         checkout_payment_page.enter_expiration_date("03/25")

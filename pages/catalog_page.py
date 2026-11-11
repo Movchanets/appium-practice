@@ -10,7 +10,8 @@ else:
     from typing_extensions import Self
 
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.webdriver.remote.webelement import WebElement
 
 from pages.base_page import BasePage
 from pages.components.footer_component import FooterComponent
@@ -70,24 +71,59 @@ class CatalogPage(BasePage):
         return [ProductCardComponent(el) for el in card_elements]
 
     def get_product_card_by_title(self, title: str) -> ProductCardComponent:
-        """Find a product card component by its visible title."""
+        """Find product card component by visible title, scrolling if needed."""
         for card in self.get_product_cards():
             if title in card.get_title():
                 return card
+        try:
+            self.scroll_to_text(title)
+            for card in self.get_product_cards():
+                if title in card.get_title():
+                    return card
+        except Exception:
+            pass
         raise NoSuchElementException(f"Product card with title '{title}' not found on screen")
+
+    def scroll_to_text(self, text: str, max_swipes: int = 5) -> WebElement:
+        """Scroll dynamically to text element via controlled W3C swipe gestures."""
+        text_locator = self.resolve_locator(self.TEXT_CONTAINS_LOCATOR, text=text)
+        for _ in range(max_swipes):
+            try:
+                element = self.find_element(text_locator, timeout=1.0)
+                if element.is_displayed():
+                    return element
+            except (TimeoutException, NoSuchElementException):
+                pass
+            self.swipe_up(duration_ms=600)
+
+        try:
+            element = self.find_element(text_locator, timeout=1.5)
+            if element.is_displayed():
+                return element
+        except (TimeoutException, NoSuchElementException):
+            pass
+
+        raise NoSuchElementException(
+            f"Failed to find element with text '{text}' after {max_swipes} dynamic swipes."
+        )
 
     # ---------------------------------------------------------
     # Page Actions & Workflows
     # ---------------------------------------------------------
 
-    def is_loaded(self) -> bool:
-        """Check if catalog is loaded and header logo is visible."""
-        return self.header.is_title_displayed(timeout=10.0)
+    def is_loaded(self, timeout: float = 10.0) -> bool:
+        """Check if catalog is loaded, sort button is displayed, and drawer menu is closed."""
+        return (
+            self.is_displayed(self.SORT_BUTTON, timeout=timeout)
+            and not self.is_displayed(self.DRAWER_MENU, timeout=0.5)
+        )
 
     def logout_if_logged_in(self) -> Self:
         """Perform graceful logout if an active user session is present in the navigation drawer."""
         self.open_menu()
         self.drawer_menu.logout_if_logged_in()
+        if self.drawer_menu.is_open(timeout=1.0):
+            self.drawer_menu.close()
         return self
 
     def navigate_to_login(self) -> Self:
@@ -104,8 +140,8 @@ class CatalogPage(BasePage):
 
     def select_product_by_title(self, title: str) -> Self:
         """Scroll dynamically to find the specified product title and tap its card."""
-        self.scroll_to_text(title)
-        self.get_product_card_by_title(title).click_item()
+        card = self.get_product_card_by_title(title)
+        card.click_item()
         return self
 
     def sort_products(self, option: SortOption) -> Self:

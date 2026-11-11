@@ -14,6 +14,13 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.cart
+@pytest.mark.xfail(
+    reason=(
+        "BUG: App crashes with 'My Demo App keeps stopping' when opening "
+        "'Sauce Labs Bike Light' details screen"
+    ),
+    strict=False,
+)
 @allure.feature("Cart")
 @allure.story("Multiple Products Display")
 @allure.title("TC-060: Verify Multiple Different Products Displayed in Cart")
@@ -41,8 +48,7 @@ def test_issue_060_verify_multiple_different_products_displayed_in_cart(
             "Cart count did not update to 1 after adding Backpack"
         )
 
-        product_details_page.open_menu()
-        product_details_page.drawer_menu.click_catalog()
+        product_details_page.go_back()
         assert catalog_page.is_loaded(), "Failed to return to Catalog page"
 
         catalog_page.select_product_by_title("Sauce Labs Bike Light")

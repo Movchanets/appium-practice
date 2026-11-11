@@ -35,6 +35,7 @@ def test_issue_008_submit_1_star_rating_from_catalog_product_card(
         assert catalog_page.is_loaded(), "Catalog page is not loaded"
 
     with allure.step("Step 1: On the 'Sauce Labs Bike Light' card, tap the 1st star icon"):
+        catalog_page.scroll_to_text("Sauce Labs Bike Light")
         card = catalog_page.get_product_card_by_title("Sauce Labs Bike Light")
         card.click_rating_star(1)
 

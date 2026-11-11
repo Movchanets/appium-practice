@@ -14,6 +14,13 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.positive
 @pytest.mark.mobile
 @pytest.mark.cart
+@pytest.mark.xfail(
+    reason=(
+        "BUG: App crashes with 'My Demo App keeps stopping' when opening "
+        "'Sauce Labs Bike Light' details screen"
+    ),
+    strict=False,
+)
 @allure.feature("Cart")
 @allure.story("Summary Calculation")
 @allure.title("TC-064: Verify Total Items and Total Price Calculation in Cart")
@@ -37,8 +44,7 @@ def test_issue_064_verify_total_items_and_total_price_calculation_in_cart(
         product_details_page.add_to_cart()
 
     with allure.step("Precondition: Return to catalog and add 'Sauce Labs Bike Light' to cart"):
-        product_details_page.open_menu()
-        product_details_page.drawer_menu.click_catalog()
+        product_details_page.go_back()
         assert catalog_page.is_loaded(), "Catalog page did not load"
         catalog_page.select_product_by_title("Sauce Labs Bike Light")
         assert product_details_page.is_loaded(), "Product details page did not load"

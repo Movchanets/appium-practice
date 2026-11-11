@@ -3,6 +3,10 @@
 from __future__ import annotations
 
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions import interaction
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 
 from pages.modals.base_modal import BaseModal
 from pages.types import Locator, SortOption
@@ -68,5 +72,24 @@ class SortModal(BaseModal):
         return self.is_displayed(self.PRICE_DESC, timeout=timeout)
 
     def dismiss(self) -> None:
-        """Dismiss the sort modal by triggering Android system back navigation."""
-        self.driver.back()
+        """Dismiss the sort modal by tapping outside the dialog or pressing back."""
+        try:
+            window_size = self.driver.get_window_size()
+            x = int(window_size["width"] * 0.5)
+            y = int(window_size["height"] * 0.2)
+            actions = ActionChains(self.driver)
+            actions.w3c_actions = ActionBuilder(
+                self.driver, mouse=PointerInput(interaction.POINTER_TOUCH, "touch")
+            )
+            actions.w3c_actions.pointer_action.move_to_location(x, y)
+            actions.w3c_actions.pointer_action.pointer_down()
+            actions.w3c_actions.pointer_action.pause(0.1)
+            actions.w3c_actions.pointer_action.release()
+            actions.perform()
+        except Exception:
+            pass
+        if self.is_displayed(timeout=1.0):
+            try:
+                self.driver.back()
+            except Exception:
+                pass

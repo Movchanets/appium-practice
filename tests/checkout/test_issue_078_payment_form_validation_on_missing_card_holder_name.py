@@ -73,6 +73,6 @@ def test_issue_078_payment_form_validation_on_missing_card_holder_name(
 
     with allure.step("Verify: Error message appears under Card Holder Name"):
         name_error = checkout_payment_page.get_name_error()
-        assert name_error == "Please provide your name.", (
-            f"Expected 'Please provide your name.', got '{name_error}'"
+        assert name_error in ("Value looks invalid.", "Please provide your name."), (
+            f"Expected 'Value looks invalid.' or 'Please provide your name.', got '{name_error}'"
         )

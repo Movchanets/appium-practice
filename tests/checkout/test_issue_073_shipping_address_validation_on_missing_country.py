@@ -16,6 +16,13 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.negative
 @pytest.mark.mobile
 @pytest.mark.checkout
+@pytest.mark.xfail(
+    reason=(
+        "BUG: Shipping validation error text is truncated by AUT: 'Please provide your' "
+        "instead of 'Please provide your country.'"
+    ),
+    strict=False,
+)
 @allure.feature("Checkout")
 @allure.story("Shipping Address Validation")
 @allure.title("TC-073: Shipping Address Validation on Missing Country")

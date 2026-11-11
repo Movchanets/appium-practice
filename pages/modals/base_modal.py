@@ -13,11 +13,31 @@ from pages.types import Locator
 class BaseModal(Base):
     """Base Component Object Model representing dialogs and alert popups."""
 
-    MODAL_CONTAINER: Locator = (AppiumBy.ID, "android:id/parentPanel")
-    MODAL_TITLE: Locator = (AppiumBy.ID, "android:id/alertTitle")
-    MODAL_MESSAGE: Locator = (AppiumBy.ID, "android:id/message")
-    CONFIRM_BUTTON: Locator = (AppiumBy.ID, "android:id/button1")
-    CANCEL_BUTTON: Locator = (AppiumBy.ID, "android:id/button2")
+    MODAL_CONTAINER: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/parentPanel"'
+        ' or @resource-id="android:id/parentPanel"]',
+    )
+    MODAL_TITLE: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/alertTitle"'
+        ' or @resource-id="android:id/alertTitle"]',
+    )
+    MODAL_MESSAGE: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/message"'
+        ' or @resource-id="android:id/message"]',
+    )
+    CONFIRM_BUTTON: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/button1"'
+        ' or @resource-id="android:id/button1"]',
+    )
+    CANCEL_BUTTON: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/button2"'
+        ' or @resource-id="android:id/button2"]',
+    )
 
     def __init__(self, context: WebDriver | WebElement) -> None:
         """Initialize modal with WebDriver or WebElement context."""

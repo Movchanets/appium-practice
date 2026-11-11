@@ -48,7 +48,6 @@ def test_issue_045_verify_product_details_screen_layout_and_information(
         assert product_details_page.get_price() == "$ 29.99", (
             f"Expected price '$ 29.99', got '{product_details_page.get_price()}'"
         )
-        assert len(product_details_page.get_description()) > 0, "Product description is empty"
         assert product_details_page.is_displayed(product_details_page.PRODUCT_IMAGE), (
             "Product image is not displayed"
         )
@@ -64,3 +63,4 @@ def test_issue_045_verify_product_details_screen_layout_and_information(
         assert product_details_page.is_displayed(product_details_page.QUANTITY_TEXT), (
             "Quantity counter text is not displayed"
         )
+        assert len(product_details_page.get_description()) > 0, "Product description is empty"
