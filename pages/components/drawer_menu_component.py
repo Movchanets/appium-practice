@@ -64,7 +64,11 @@ class DrawerMenuComponent(BaseComponent):
     )
     MENU_LOGIN_ITEM: Locator = (AppiumBy.ACCESSIBILITY_ID, "Login Menu Item")
     MENU_LOGOUT_ITEM: Locator = (AppiumBy.ACCESSIBILITY_ID, "Logout Menu Item")
-    LOGOUT_CONFIRM_BUTTON: Locator = (AppiumBy.ID, "android:id/button1")
+    LOGOUT_CONFIRM_BUTTON: Locator = (
+        AppiumBy.XPATH,
+        '//*[@resource-id="com.saucelabs.mydemoapp.android:id/button1"'
+        ' or @resource-id="android:id/button1"]',
+    )
 
     def is_open(self, timeout: float = 1.5) -> bool:
         """Check if drawer menu root element is currently displayed."""
@@ -122,6 +126,17 @@ class DrawerMenuComponent(BaseComponent):
         """Tap Logout drawer menu item."""
         self.click(self.MENU_LOGOUT_ITEM)
 
+    def close(self) -> None:
+        """Close the navigation drawer if currently displayed."""
+        if self.is_open(timeout=1.0):
+            try:
+                self.click_catalog()
+            except Exception:
+                try:
+                    self.driver.back()
+                except Exception:
+                    pass
+
     def logout_if_logged_in(self) -> None:
         """Perform graceful logout and confirm dialog if session is active."""
         if self.is_logged_in(timeout=2.0):
@@ -133,6 +148,10 @@ class DrawerMenuComponent(BaseComponent):
                 confirm_btn.click()
             except (TimeoutException, NoSuchElementException):
                 pass
+            if self.is_open(timeout=1.0):
+                self.close()
+        else:
+            self.close()
 
     def is_catalog_item_displayed(self, timeout: float = 2.0) -> bool:
         """Check if Catalog menu item is displayed."""

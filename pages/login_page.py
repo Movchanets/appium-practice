@@ -56,6 +56,7 @@ class LoginPage(BasePage):
 
     def click_login(self) -> Self:
         """Tap the login submission button."""
+        self.hide_keyboard()
         self.click(self.LOGIN_BUTTON)
         return self
 
@@ -68,27 +69,32 @@ class LoginPage(BasePage):
         self.enter_username(username)
         self.enter_password(password)
         self.hide_keyboard()
-        self.click_login()
+        self.click(self.LOGIN_BUTTON)
         return self
 
     def is_logged_in(self) -> bool:
         """Check if login was successful by verifying the presence of logout item in drawer menu."""
         self.open_menu()
-        return self.drawer_menu.is_logged_in(timeout=5.0)
+        logged_in = self.drawer_menu.is_logged_in(timeout=5.0)
+        self.drawer_menu.close()
+        return logged_in
 
     def autofill_bod(self) -> Self:
         """Tap sample credentials for standard user bod@example.com."""
         self.click(self.USER_BOD)
+        self.hide_keyboard()
         return self
 
     def autofill_alice(self) -> Self:
         """Tap sample credentials for locked out user alice@example.com."""
         self.click(self.USER_ALICE)
+        self.hide_keyboard()
         return self
 
     def autofill_visual(self) -> Self:
         """Tap sample credentials for visual user visual@example.com."""
         self.click(self.USER_VISUAL)
+        self.hide_keyboard()
         return self
 
     def get_username_error(self) -> str:

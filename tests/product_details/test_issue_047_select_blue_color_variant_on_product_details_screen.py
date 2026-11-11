@@ -41,9 +41,7 @@ def test_issue_047_select_blue_color_variant_on_product_details_screen(
         product_details_page.select_color("blue")
 
     with allure.step("Verify Blue color circle is highlighted as the active selection"):
-        blue_circle = product_details_page.find_element(product_details_page.COLOR_BLUE)
-        assert blue_circle.is_displayed(), "Blue color circle option is not displayed"
-        assert blue_circle.is_selected() or blue_circle.get_attribute("selected") in (
-            "true",
-            "True",
-        ), "Blue color circle is not active"
+        assert product_details_page.is_displayed(product_details_page.COLOR_BLUE), (
+            "Blue color circle option is not displayed"
+        )
+        assert product_details_page.is_color_selected("blue"), "Blue color circle is not active"

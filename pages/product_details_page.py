@@ -61,8 +61,17 @@ class ProductDetailsPage(BasePage):
         """Retrieve product price string."""
         return self.get_text(self.PRODUCT_PRICE)
 
+    def scroll_to_description(self, max_swipes: int = 3) -> None:
+        """Scroll viewport down until product description is visible."""
+        for _ in range(max_swipes):
+            if self.is_displayed(self.DESCRIPTION_TEXT, timeout=1.0):
+                return
+            self.swipe_up()
+
     def get_description(self) -> str:
-        """Retrieve product description text."""
+        """Retrieve product description text, scrolling down if necessary."""
+        if not self.is_displayed(self.DESCRIPTION_TEXT, timeout=1.5):
+            self.scroll_to_description()
         return self.get_text(self.DESCRIPTION_TEXT)
 
     def select_color(self, color: ProductColor) -> Self:
@@ -77,6 +86,32 @@ class ProductDetailsPage(BasePage):
         if locator is None:
             raise ValueError(f"Unknown color: {color}")
         self.click(locator)
+        return self
+
+    def is_color_selected(self, color: ProductColor) -> bool:
+        """Check if specific color variant is currently selected/active.
+
+        The active color circle has an 'aroundIV' indicator inside the same ViewGroup container.
+        """
+        color_labels: dict[ProductColor, str] = {
+            "black": "Black color",
+            "blue": "Blue color",
+            "gray": "Gray color",
+            "green": "Green color",
+        }
+        label = color_labels.get(color)
+        if not label:
+            return False
+        xpath = (
+            f"//android.view.ViewGroup[android.widget.ImageView[@content-desc='{label}'] "
+            "and android.widget.ImageView[@resource-id="
+            "'com.saucelabs.mydemoapp.android:id/aroundIV']]"
+        )
+        return self.is_displayed((AppiumBy.XPATH, xpath), timeout=2.0)
+
+    def go_back(self) -> Self:
+        """Navigate back to previous screen (Catalog) via system back."""
+        self.driver.back()
         return self
 
     def get_quantity(self) -> int:
@@ -126,8 +161,21 @@ class ProductDetailsPage(BasePage):
         return self.is_displayed(self.PRODUCT_PRICE, timeout=timeout)
 
     def is_description_displayed(self, timeout: float = 3.0) -> bool:
-        """Check if product description text is displayed."""
+        """Check if product description text is displayed, scrolling down if needed."""
+        if self.is_displayed(self.DESCRIPTION_TEXT, timeout=timeout):
+            return True
+        self.scroll_to_description()
         return self.is_displayed(self.DESCRIPTION_TEXT, timeout=timeout)
+
+    def is_highlights_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if product highlights header is displayed, scrolling down if needed."""
+        if self.is_displayed(self.HIGHLIGHTS_TITLE, timeout=timeout):
+            return True
+        for _ in range(3):
+            if self.is_displayed(self.HIGHLIGHTS_TITLE, timeout=1.0):
+                return True
+            self.swipe_up()
+        return self.is_displayed(self.HIGHLIGHTS_TITLE, timeout=timeout)
 
     def is_rating_displayed(self, timeout: float = 3.0) -> bool:
         """Check if rating star container is displayed."""

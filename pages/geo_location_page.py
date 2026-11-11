@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sys
+import time
 
 if sys.version_info >= (3, 11):
     from typing import Self
@@ -31,6 +32,19 @@ class GeoLocationPage(BasePage):
         """Check if Geo Location title is displayed."""
         return self.is_displayed(self.TITLE, timeout=5.0)
 
+    def set_mock_location(
+        self,
+        latitude: float = 37.7749,
+        longitude: float = -122.4194,
+        altitude: float = 0.0,
+    ) -> Self:
+        """Set mock GPS coordinates on device/emulator (gracefully ignored if unsupported)."""
+        try:
+            self.driver.set_location(latitude, longitude, altitude)
+        except Exception:
+            pass
+        return self
+
     def start_location(self) -> Self:
         """Tap 'Start Observing' button."""
         self.click(self.START_BUTTON)
@@ -48,6 +62,26 @@ class GeoLocationPage(BasePage):
     def get_longitude(self) -> str:
         """Retrieve displayed longitude value."""
         return self.get_text(self.LONGITUDE_TEXT)
+
+    def wait_for_valid_coordinates(self, timeout: float = 10.0) -> tuple[str, str]:
+        """Poll until latitude and longitude contain valid non-null numeric digits."""
+        end_time = time.time() + timeout
+        lat = self.get_latitude()
+        lon = self.get_longitude()
+        while time.time() < end_time:
+            lat = self.get_latitude()
+            lon = self.get_longitude()
+            if (
+                lat
+                and lon
+                and lat.lower() != "null"
+                and lon.lower() != "null"
+                and any(c.isdigit() for c in lat)
+                and any(c.isdigit() for c in lon)
+            ):
+                return lat, lon
+            time.sleep(0.5)
+        return lat, lon
 
     def grant_location_permission(self, allow: bool = True) -> Self:
         """Handle system location permission alert."""

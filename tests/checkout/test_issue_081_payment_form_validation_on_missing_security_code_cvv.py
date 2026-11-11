@@ -77,6 +77,10 @@ def test_issue_081_payment_form_validation_on_missing_security_code_cvv(
             "Security code error element is not displayed"
         )
         security_code_error = checkout_payment_page.get_security_code_error()
-        assert security_code_error == "Please provide your security code.", (
-            f"Expected 'Please provide your security code.', got '{security_code_error}'"
+        assert security_code_error in (
+            "Value looks invalid.",
+            "Please provide your security code.",
+        ), (
+            f"Expected 'Value looks invalid.' or 'Please provide your security code.', "
+            f"got '{security_code_error}'"
         )

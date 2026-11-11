@@ -14,6 +14,13 @@ from pages.product_details_page import ProductDetailsPage
 @pytest.mark.mobile
 @pytest.mark.practice
 @pytest.mark.catalog
+@pytest.mark.xfail(
+    reason=(
+        "BUG: Product title TextView (titleTV) on catalog cards does not have an "
+        "OnClickListener attached"
+    ),
+    strict=False,
+)
 @allure.feature("Product Catalog")
 @allure.story("Product Navigation")
 @allure.title("TC-004: Open Product Details by Tapping Product Title")

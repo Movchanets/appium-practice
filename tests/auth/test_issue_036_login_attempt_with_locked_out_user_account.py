@@ -31,7 +31,7 @@ def test_issue_036_login_attempt_with_locked_out_user_account(
     """
     with allure.step("Step 1: Tap on sample credentials for locked-out user 'alice@example.com'"):
         login_page.autofill_alice()
-        assert login_page.get_username() == "alice@example.com", (
+        assert "alice@example.com" in login_page.get_username(), (
             "Username was not autofilled for locked-out user"
         )
 

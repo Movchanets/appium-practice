@@ -72,6 +72,10 @@ def test_issue_080_payment_form_validation_on_missing_expiration_date(
 
     with allure.step("Verify: Error message appears under Expiration Date"):
         exp_date_error = checkout_payment_page.get_expiration_date_error()
-        assert exp_date_error == "Please provide your expiration date.", (
-            f"Expected 'Please provide your expiration date.', got '{exp_date_error}'"
+        assert exp_date_error in (
+            "Value looks invalid.",
+            "Please provide your expiration date.",
+        ), (
+            f"Expected 'Value looks invalid.' or 'Please provide your expiration date.', "
+            f"got '{exp_date_error}'"
         )

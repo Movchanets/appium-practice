@@ -31,12 +31,12 @@ def test_issue_092_start_real_time_location_tracking_in_geo_location_screen(
         geo_location_page.handle_permission_alert(allow=True)
         assert geo_location_page.is_loaded(), "Geo Location screen is not loaded"
 
-    with allure.step("Step 1: Tap the 'Start Observing' button"):
+    with allure.step("Step 1: Set mock location and tap the 'Start Observing' button"):
+        geo_location_page.set_mock_location(37.7749, -122.4194, 0.0)
         geo_location_page.start_location()
 
     with allure.step("Step 2: Observe Latitude and Longitude values"):
-        latitude = geo_location_page.get_latitude()
-        longitude = geo_location_page.get_longitude()
+        latitude, longitude = geo_location_page.wait_for_valid_coordinates()
         assert latitude != "", "Latitude text is empty"
         assert longitude != "", "Longitude text is empty"
         assert any(char.isdigit() for char in latitude), (

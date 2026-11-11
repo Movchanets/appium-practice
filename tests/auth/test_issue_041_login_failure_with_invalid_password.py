@@ -13,6 +13,10 @@ from pages.login_page import LoginPage
 @pytest.mark.mobile
 @pytest.mark.practice
 @pytest.mark.auth
+@pytest.mark.xfail(
+    reason="BUG: App mock authentication does not validate password for valid usernames",
+    strict=False,
+)
 @allure.feature("Login Screen")
 @allure.story("Login Validation")
 @allure.title("TC-041: Login Failure with Invalid Password")

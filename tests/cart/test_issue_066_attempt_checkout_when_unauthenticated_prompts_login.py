@@ -35,6 +35,8 @@ def test_issue_066_attempt_checkout_when_unauthenticated_prompts_login(
     """
     with allure.step("Precondition: Ensure user is logged out and add 1 item to cart"):
         catalog_page.logout_if_logged_in()
+        if catalog_page.is_displayed(catalog_page.DRAWER_MENU, timeout=1.0):
+            catalog_page.driver.back()
         assert catalog_page.is_loaded(), "Catalog page did not load"
         catalog_page.select_product_by_title("Sauce Labs Backpack")
         assert product_details_page.is_loaded(), "Product details page did not load"

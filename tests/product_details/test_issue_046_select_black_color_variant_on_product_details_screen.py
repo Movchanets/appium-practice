@@ -25,7 +25,7 @@ def test_issue_046_select_black_color_variant_on_product_details_screen(
     """
     Preconditions:
         - User is on the Product Details screen for an item with color options
-          (e.g. Sauce Labs Bike Light).
+          (e.g. Sauce Labs Backpack).
 
     Steps:
         1. Tap the Black color option circle.
@@ -33,18 +33,16 @@ def test_issue_046_select_black_color_variant_on_product_details_screen(
     Expected Result:
         - The Black color circle is highlighted as the active selection.
     """
-    with allure.step("Precondition: User is on Product Details screen for 'Sauce Labs Bike Light'"):
+    with allure.step("Precondition: User is on Product Details screen for 'Sauce Labs Backpack'"):
         assert catalog_page.is_loaded(), "Catalog screen is not loaded"
-        catalog_page.select_product_by_title("Sauce Labs Bike Light")
+        catalog_page.select_product_by_title("Sauce Labs Backpack")
         assert product_details_page.is_loaded(), "Product Details screen is not loaded"
 
     with allure.step("Step 1: Tap the Black color option circle"):
         product_details_page.select_color("black")
 
     with allure.step("Verify Black color circle is highlighted as the active selection"):
-        black_circle = product_details_page.find_element(product_details_page.COLOR_BLACK)
-        assert black_circle.is_displayed(), "Black color circle option is not displayed"
-        assert black_circle.is_selected() or black_circle.get_attribute("selected") in (
-            "true",
-            "True",
-        ), "Black color circle is not active"
+        assert product_details_page.is_displayed(product_details_page.COLOR_BLACK), (
+            "Black color circle option is not displayed"
+        )
+        assert product_details_page.is_color_selected("black"), "Black color circle is not active"

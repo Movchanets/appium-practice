@@ -36,6 +36,10 @@ class CheckoutPaymentPage(BasePage):
         AppiumBy.ID,
         "com.saucelabs.mydemoapp.android:id/cardNumberErrorTV",
     )
+    CARD_NUMBER_ERROR_ICON: Locator = (
+        AppiumBy.ID,
+        "com.saucelabs.mydemoapp.android:id/cardNumberErrorIV",
+    )
     EXPIRATION_DATE_INPUT: Locator = (
         AppiumBy.ID,
         "com.saucelabs.mydemoapp.android:id/expirationDateET",
@@ -78,6 +82,11 @@ class CheckoutPaymentPage(BasePage):
     def enter_card_number(self, card_number: str) -> Self:
         """Fill Card Number field."""
         self.send_keys(self.CARD_NUMBER_INPUT, card_number)
+        return self
+
+    def clear_card_number(self) -> Self:
+        """Clear Card Number input field."""
+        self.find_element(self.CARD_NUMBER_INPUT).clear()
         return self
 
     def enter_expiration_date(self, exp_date: str) -> Self:
@@ -143,6 +152,10 @@ class CheckoutPaymentPage(BasePage):
     def is_card_number_displayed(self, timeout: float = 3.0) -> bool:
         """Check if Card Number input field is displayed."""
         return self.is_displayed(self.CARD_NUMBER_INPUT, timeout=timeout)
+
+    def is_card_number_error_icon_displayed(self, timeout: float = 3.0) -> bool:
+        """Check if Card Number warning/error icon is displayed."""
+        return self.is_displayed(self.CARD_NUMBER_ERROR_ICON, timeout=timeout)
 
     def is_expiration_date_displayed(self, timeout: float = 3.0) -> bool:
         """Check if Expiration Date input field is displayed."""
