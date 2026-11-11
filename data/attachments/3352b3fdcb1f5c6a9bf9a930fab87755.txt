@@ -1,0 +1,100 @@
+1794403605014 [ALL] 11-11 13:26:44.832  7198  7254 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/username2TV'
+1794403605014 [ALL] 11-11 13:26:44.832  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403605039 [ALL] 11-11 13:26:44.857  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":{"ELEMENT":"00000000-0000-0042-ffff-ffff0000018b","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0042-ffff-ffff0000018b"}}
+1794403605056 [ALL] 11-11 13:26:44.873  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff0000018b/attribute/displayed
+1794403605056 [ALL] 11-11 13:26:44.875  7198  7254 I appium  : GetElementAttribute command
+1794403605061 [ALL] 11-11 13:26:44.879  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403605069 [ALL] 11-11 13:26:44.887  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff0000018b/attribute/enabled
+1794403605071 [ALL] 11-11 13:26:44.889  7198  7254 I appium  : GetElementAttribute command
+1794403605075 [ALL] 11-11 13:26:44.893  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403605085 [ALL] 11-11 13:26:44.903  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff0000018b/click
+1794403605086 [ALL] 11-11 13:26:44.904  7198  7254 I appium  : Click command
+1794403605117 [ALL] 11-11 13:26:44.928  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=399.0, y[0]=1788.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=198261, downTime=198261, deviceId=-1, source=0x1002, displayId=0, eventId=-208088746 }
+1794403605121 [ALL] 11-11 13:26:44.939  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=399.0, y[0]=1788.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=198287, downTime=198261, deviceId=-1, source=0x1002, displayId=0, eventId=-514726890 }
+1794403605155 [ALL] 11-11 13:26:44.972  7198  7254 W GestureController: Gestures took longer than expected (64ms >> 16ms), device might be in a busy state.
+1794403605156 [ALL] 11-11 13:26:44.974   395   408 D audioserver: FGS Logger Transaction failed
+1794403605156 [ALL] 11-11 13:26:44.974   395   408 D audioserver: -129
+1794403605158 [ALL] 11-11 13:26:44.976  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403605161 [ALL] 11-11 13:26:44.978  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":null}
+1794403605174 [ALL] 11-11 13:26:44.985  1557  1557 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():82 initialize...
+1794403605184 [ALL] 11-11 13:26:44.985  1557  1557 I ShortcutsDataManager: ShortcutsDataManager.onContentChanged():70 onContentChanged()
+1794403605184 [ALL] 11-11 13:26:44.985  1557  1557 I ContactsDataManager: ContactsDataManager.onContentChanged():156 onContentChanged()
+1794403605184 [ALL] 11-11 13:26:44.986  1557  1557 W AndroidSpellCheckerService: AndroidSpellCheckerService.initialize():94 initialize...done
+1794403605337 [ALL] 11-11 13:26:45.155  6552  6552 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.gmscompliance.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentBoundBrokerService }
+1794403605378 [ALL] 11-11 13:26:45.194   395   502 D audioserver: FGS Logger Transaction failed
+1794403605378 [ALL] 11-11 13:26:45.195   395   502 D audioserver: -129
+1794403605385 [ALL] 11-11 13:26:45.203  1557  1557 I Environment: Environment.isPackageInstalled():237 com.bitstrips.imoji is not installed
+1794403605387 [ALL] 11-11 13:26:45.205  1557  1557 W PlayCore: UID: [10140]  PID: [1557] SplitInstallInfoProvider : No metadata found in AndroidManifest.
+1794403605441 [ALL] 11-11 13:26:45.259  1557  1557 I putmethod.latin: Explicit concurrent copying GC freed 150958(6343KB) AllocSpace objects, 15(1036KB) LOS objects, 49% free, 9880KB/19MB, paused 18us,13us total 19.970ms
+1794403605475 [ALL] 11-11 13:26:45.293  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element
+1794403605477 [ALL] 11-11 13:26:45.294  7198  7254 I appium  : FindElement command
+1794403605478 [ALL] 11-11 13:26:45.296  7198  7254 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/nameET'
+1794403605479 [ALL] 11-11 13:26:45.297  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403605816 [ALL] 11-11 13:26:45.634  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":{"ELEMENT":"00000000-0000-0042-ffff-ffff0000017c","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0042-ffff-ffff0000017c"}}
+1794403605826 [ALL] 11-11 13:26:45.644  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff0000017c/text
+1794403605830 [ALL] 11-11 13:26:45.646  7198  7254 I appium  : GetText command
+1794403605835 [ALL] 11-11 13:26:45.653  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"alice@example.com (locked out)"}
+1794403605886 [ALL] 11-11 13:26:45.704  1557  1557 I Environment: Environment.isPackageInstalled():237 com.bitstrips.imoji is not installed
+1794403605888 [ALL] 11-11 13:26:45.706  1557  1557 W PlayCore: UID: [10140]  PID: [1557] SplitInstallInfoProvider : No metadata found in AndroidManifest.
+1794403605940 [ALL] 11-11 13:26:45.758  1557  1557 I putmethod.latin: Explicit concurrent copying GC freed 146099(6036KB) AllocSpace objects, 15(1036KB) LOS objects, 49% free, 9867KB/19MB, paused 23us,18us total 24.103ms
+1794403605970 [ALL] 11-11 13:26:45.786  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element
+1794403605970 [ALL] 11-11 13:26:45.787  7198  7254 I appium  : FindElement command
+1794403605971 [ALL] 11-11 13:26:45.789  7198  7254 I appium  : method: 'accessibility id', selector: 'Tap to login with given credentials'
+1794403605971 [ALL] 11-11 13:26:45.789  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403606012 [ALL] 11-11 13:26:45.830  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":{"ELEMENT":"00000000-0000-0042-ffff-ffff00000186","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0042-ffff-ffff00000186"}}
+1794403606020 [ALL] 11-11 13:26:45.838  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000186/attribute/displayed
+1794403606021 [ALL] 11-11 13:26:45.839  7198  7254 I appium  : GetElementAttribute command
+1794403606026 [ALL] 11-11 13:26:45.845  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403606035 [ALL] 11-11 13:26:45.853  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000186/attribute/enabled
+1794403606037 [ALL] 11-11 13:26:45.854  7198  7254 I appium  : GetElementAttribute command
+1794403606041 [ALL] 11-11 13:26:45.859  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403606050 [ALL] 11-11 13:26:45.868  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000186/click
+1794403606052 [ALL] 11-11 13:26:45.870  7198  7254 I appium  : Click command
+1794403606084 [ALL] 11-11 13:26:45.900  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1412.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=199227, downTime=199227, deviceId=-1, source=0x1002, displayId=0, eventId=-169239552 }
+1794403606095 [ALL] 11-11 13:26:45.912  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1412.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=199263, downTime=199227, deviceId=-1, source=0x1002, displayId=0, eventId=-705829728 }
+1794403606134 [ALL] 11-11 13:26:45.946   395  1012 D audioserver: FGS Logger Transaction failed
+1794403606138 [ALL] 11-11 13:26:45.947  7198  7254 W GestureController: Gestures took longer than expected (72ms >> 16ms), device might be in a busy state.
+1794403606138 [ALL] 11-11 13:26:45.947  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403606138 [ALL] 11-11 13:26:45.948   395  1012 D audioserver: -129
+1794403606199 [ALL] 11-11 13:26:46.013  7266  7293 D EGL_emulation: app_time_stats: avg=297.25ms min=20.67ms max=801.34ms count=6
+1794403606329 [ALL] 11-11 13:26:46.147   395   502 D audioserver: FGS Logger Transaction failed
+1794403606329 [ALL] 11-11 13:26:46.147   395   502 D audioserver: -129
+1794403606625 [ALL] 11-11 13:26:46.443  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":null}
+1794403606633 [ALL] 11-11 13:26:46.451  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element
+1794403606634 [ALL] 11-11 13:26:46.452  7198  7254 I appium  : FindElement command
+1794403606635 [ALL] 11-11 13:26:46.454  7198  7254 I appium  : method: 'xpath', selector: '//*[@resource-id="com.saucelabs.mydemoapp.android:id/passwordErrorTV" or @resource-id="com.saucelabs.mydemoapp.android:id/nameErrorTV"]'
+1794403606636 [ALL] 11-11 13:26:46.454  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403606638 [ALL] 11-11 13:26:46.456  7198  7254 I appium  : The following attributes will be included to the page source: [resource-id]
+1794403606730 [ALL] 11-11 13:26:46.548  7198  7254 I appium  : Took 0ms to retrieve 1 matches for '//*[@resource-id="com.saucelabs.mydemoapp.android:id/passwordErrorTV" or @resource-id="com.saucelabs.mydemoapp.android:id/nameErrorTV"]' XPath2 query
+1794403606733 [ALL] 11-11 13:26:46.551  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":{"ELEMENT":"00000000-0000-0042-ffff-ffff00000183","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0042-ffff-ffff00000183"}}
+1794403606740 [ALL] 11-11 13:26:46.558  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000183/attribute/displayed
+1794403606741 [ALL] 11-11 13:26:46.559  7198  7254 I appium  : GetElementAttribute command
+1794403606747 [ALL] 11-11 13:26:46.565  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403606756 [ALL] 11-11 13:26:46.574  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000183/attribute/displayed
+1794403606757 [ALL] 11-11 13:26:46.575  7198  7254 I appium  : GetElementAttribute command
+1794403606762 [ALL] 11-11 13:26:46.580  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"true"}
+1794403606768 [ALL] 11-11 13:26:46.586  7198  7254 I appium  : channel read: POST /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element
+1794403606769 [ALL] 11-11 13:26:46.587  7198  7254 I appium  : FindElement command
+1794403606770 [ALL] 11-11 13:26:46.589  7198  7254 I appium  : method: 'xpath', selector: '//*[@resource-id="com.saucelabs.mydemoapp.android:id/passwordErrorTV" or @resource-id="com.saucelabs.mydemoapp.android:id/nameErrorTV"]'
+1794403606771 [ALL] 11-11 13:26:46.589  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403606773 [ALL] 11-11 13:26:46.591  7198  7254 I appium  : The following attributes will be included to the page source: [resource-id]
+1794403606820 [ALL] 11-11 13:26:46.638   515  3603 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+1794403606875 [ALL] 11-11 13:26:46.693  7198  7254 I appium  : Took 0ms to retrieve 1 matches for '//*[@resource-id="com.saucelabs.mydemoapp.android:id/passwordErrorTV" or @resource-id="com.saucelabs.mydemoapp.android:id/nameErrorTV"]' XPath2 query
+1794403606878 [ALL] 11-11 13:26:46.696  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":{"ELEMENT":"00000000-0000-0042-ffff-ffff00000183","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-0042-ffff-ffff00000183"}}
+1794403606886 [ALL] 11-11 13:26:46.704  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/element/00000000-0000-0042-ffff-ffff00000183/text
+1794403606888 [ALL] 11-11 13:26:46.706  7198  7254 I appium  : GetText command
+1794403606892 [ALL] 11-11 13:26:46.710  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"Sorry this user has been locked out."}
+1794403606901 [ALL] 11-11 13:26:46.719  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/screenshot
+1794403606903 [ALL] 11-11 13:26:46.721  7198  7254 I appium  : CaptureScreenshot command
+1794403606904 [ALL] 11-11 13:26:46.722  7198  7254 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794403606905 [ALL] 11-11 13:26:46.722  7198  7254 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794403606965 [ALL] 11-11 13:26:46.783  7423  7423 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794403606965 [ALL] 11-11 13:26:46.783  7423  7423 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794403606978 [ALL] 11-11 13:26:46.969     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794403606981 [ALL] 11-11 13:26:46.793   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794403606982 [ALL] 11-11 13:26:46.793  7423  7427 I Gralloc4: mapper 4.x is not supported
+1794403607226 [ALL] 11-11 13:26:47.044  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N13nJxVvT/w72zJ7qZtNpveIFQDREKvUlW6FJEmIqKowNUreLmKv6tXROWqXLmKilgAKVKUIiBgCU2KdAIIRko6IXUTNmU3W+b3R5LNbjKzdWZnn+T9fr14vWaecp6zyWyY5/Oc8z2pdDq…
+1794403607240 [ALL] 11-11 13:26:47.058  7198  7254 I appium  : channel read: GET /session/48d16c9b-092f-491b-896b-17ed1c9972dd/source
+1794403607241 [ALL] 11-11 13:26:47.059  7198  7254 I appium  : Source command
+1794403607242 [ALL] 11-11 13:26:47.060  7198  7254 I appium  : Waiting up to 10000ms for the device to idle
+1794403607358 [ALL] 11-11 13:26:47.175  7198  7254 I appium  : AppiumResponse: {"sessionId":"48d16c9b-092f-491b-896b-17ed1c9972dd","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

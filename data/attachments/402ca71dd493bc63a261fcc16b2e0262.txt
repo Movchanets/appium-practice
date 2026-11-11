@@ -1,0 +1,100 @@
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.peek(JsonReader.java:345)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.hasNext(JsonReader.java:321)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.k.c(PG:7)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.j.a(Unknown Source:2)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.search.core.i.r.run(PG:5)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.gsa.k.a.h.run(PG:2)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.k.run(PG:2)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.p.run(PG:4)
+1794403839032 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.lang.Thread.run(Thread.java:1012)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: Invalid input from icing corpus JSON flag.
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.syntaxError(JsonReader.java:1162)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.checkLenient(JsonReader.java:840)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.nextInArray(JsonReader.java:615)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.peek(JsonReader.java:345)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.hasNext(JsonReader.java:321)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.k.c(PG:7)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.j.a(Unknown Source:2)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.search.core.i.r.run(PG:5)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.gsa.k.a.h.run(PG:2)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.k.run(PG:2)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.p.run(PG:4)
+1794403839039 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.lang.Thread.run(Thread.java:1012)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: Invalid input from icing corpus JSON flag.
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: android.util.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 123 column 2
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.syntaxError(JsonReader.java:1162)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.checkLenient(JsonReader.java:840)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.nextInArray(JsonReader.java:615)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.peek(JsonReader.java:345)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at android.util.JsonReader.hasNext(JsonReader.java:321)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.k.c(PG:7)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.searchbox.c.b.b.j.a(Unknown Source:2)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.search.core.i.r.run(PG:5)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.gsa.k.a.h.run(PG:2)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.cf.b(PG:1)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.apps.gsa.shared.util.c.a.ci.run(PG:1)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.k.run(PG:2)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at com.google.android.libraries.i.p.run(PG:4)
+1794403839080 [ALL] 11-11 13:30:38.846  1757  2307 W CorpusConfigHelper: 	at java.lang.Thread.run(Thread.java:1012)
+1794403839080 [ALL] 11-11 13:30:38.851 10130 10164 I appium  : FindElement command
+1794403839080 [ALL] 11-11 13:30:38.858 10130 10164 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/loginTV'
+1794403839080 [ALL] 11-11 13:30:38.859 10130 10164 I appium  : Waiting up to 10000ms for the device to idle
+1794403839080 [ALL] 11-11 13:30:38.860  6615  6668 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=32
+1794403839080 [ALL] 11-11 13:30:38.861  6615  6662 I Icing   : IndexChimeraService.getServiceInterface callingPackage=com.google.android.googlequicksearchbox componentName=agsa_icing_connection serviceId=33
+1794403839080 [ALL] 11-11 13:30:38.870  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403839080 [ALL] 11-11 13:30:38.876 10130 10156 I appium  : Screenshot broadcast client opened a connection 127.0.0.1:34116
+1794403839080 [ALL] 11-11 13:30:38.877   515   530 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10195; state: DISABLED
+1794403839080 [ALL] 11-11 13:30:38.879   515   530 W JobScheduler: Job didn't exist in JobStore: 1af1645 #u0a131/-43 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+1794403839080 [ALL] 11-11 13:30:38.880  6615  6690 I Icing   : Usage reports ok 1, Failed Usage reports 0, indexed 0, rejected 0
+1794403839080 [ALL] 11-11 13:30:38.884  6615  6690 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+1794403839080 [ALL] 11-11 13:30:38.887  6615  6690 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+1794403839080 [ALL] 11-11 13:30:38.889  6615  6690 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+1794403839080 [ALL] 11-11 13:30:38.891  6615  6690 I Icing   : Usage reports ok 0, Failed Usage reports 0, indexed 0, rejected 0
+1794403839104 [ALL] 11-11 13:30:38.920 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":{"ELEMENT":"00000000-0000-00d6-ffff-ffff000003d1","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-00d6-ffff-ffff000003d1"}}
+1794403839111 [ALL] 11-11 13:30:38.928 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/element/00000000-0000-00d6-ffff-ffff000003d1/attribute/displayed
+1794403839113 [ALL] 11-11 13:30:38.929 10130 10164 I appium  : GetElementAttribute command
+1794403839118 [ALL] 11-11 13:30:38.934 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":"true"}
+1794403839124 [ALL] 11-11 13:30:38.941 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/element/00000000-0000-00d6-ffff-ffff000003d1/attribute/displayed
+1794403839126 [ALL] 11-11 13:30:38.942 10130 10164 I appium  : GetElementAttribute command
+1794403839130 [ALL] 11-11 13:30:38.946 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":"true"}
+1794403839137 [ALL] 11-11 13:30:38.953 10130 10164 I appium  : channel read: POST /session/1a232078-cd22-4f74-ad28-70fe3623c22b/element
+1794403839138 [ALL] 11-11 13:30:38.955 10130 10164 I appium  : FindElement command
+1794403839139 [ALL] 11-11 13:30:38.956 10130 10164 I appium  : method: 'id', selector: 'com.saucelabs.mydemoapp.android:id/nameET'
+1794403839140 [ALL] 11-11 13:30:38.956 10130 10164 I appium  : Waiting up to 10000ms for the device to idle
+1794403839159 [ALL] 11-11 13:30:38.976 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":{"ELEMENT":"00000000-0000-00d6-ffff-ffff000003d5","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-00d6-ffff-ffff000003d5"}}
+1794403839160 [ALL] 11-11 13:30:38.977 10130 10156 W appium  : Client socket connection not writable. Closing... java.net.SocketException: Broken pipe
+1794403839162 [ALL] 11-11 13:30:38.978   515   530 D WindowManager: captureDisplay
+1794403839186 [ALL] 11-11 13:30:38.994 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/element/00000000-0000-00d6-ffff-ffff000003d5/text
+1794403839186 [ALL] 11-11 13:30:38.995 10130 10164 I appium  : GetText command
+1794403839194 [ALL] 11-11 13:30:39.007 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":""}
+1794403839200 [ALL] 11-11 13:30:39.017 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/element/00000000-0000-00d6-ffff-ffff000003d5/attribute/content-desc
+1794403839205 [ALL] 11-11 13:30:39.021 10130 10164 I appium  : GetElementAttribute command
+1794403839212 [ALL] 11-11 13:30:39.027 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":null}
+1794403839227 [ALL] 11-11 13:30:39.043 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/screenshot
+1794403839228 [ALL] 11-11 13:30:39.044 10130 10164 I appium  : CaptureScreenshot command
+1794403839229 [ALL] 11-11 13:30:39.045 10130 10164 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794403839229 [ALL] 11-11 13:30:39.045 10130 10164 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794403839286 [ALL] 11-11 13:30:39.101 10296 10296 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794403839286 [ALL] 11-11 13:30:39.102 10296 10296 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794403839298 [ALL] 11-11 13:30:39.114   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794403839303 [ALL] 11-11 13:30:39.115 10296 10300 I Gralloc4: mapper 4.x is not supported
+1794403839303 [ALL] 11-11 13:30:39.291     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794403839538 [ALL] 11-11 13:30:39.354 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N13nJxVvT/w72zJ7qZtNpveIFQDREKvUlW6FJEmIqKowNUreLmKv6tXROWqXLmKilgAKVKUIiBgCU2KdAIIRko6IXUTNmU3W+b3R5LNbjKzdWZnn+T9fr14vWaecp6zyWyY5/Oc8z2pdDq…
+1794403839549 [ALL] 11-11 13:30:39.365 10130 10164 I appium  : channel read: GET /session/1a232078-cd22-4f74-ad28-70fe3623c22b/source
+1794403839550 [ALL] 11-11 13:30:39.366 10130 10164 I appium  : Source command
+1794403839550 [ALL] 11-11 13:30:39.367 10130 10164 I appium  : Waiting up to 10000ms for the device to idle
+1794403839660 [ALL] 11-11 13:30:39.476 10130 10164 I appium  : AppiumResponse: {"sessionId":"1a232078-cd22-4f74-ad28-70fe3623c22b","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

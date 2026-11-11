@@ -1,0 +1,100 @@
+1794405468885 [ALL] 11-11 13:57:48.688  7535  7570 W ByMatcher: Skipping null child (12 of 24)
+1794405468886 [ALL] 11-11 13:57:48.689  7535  7570 W ByMatcher: Skipping null child (13 of 24)
+1794405468886 [ALL] 11-11 13:57:48.690  7535  7570 W ByMatcher: Skipping null child (14 of 24)
+1794405468888 [ALL] 11-11 13:57:48.691  7535  7570 W ByMatcher: Skipping null child (15 of 24)
+1794405468888 [ALL] 11-11 13:57:48.691  7535  7570 W ByMatcher: Skipping null child (16 of 24)
+1794405468888 [ALL] 11-11 13:57:48.691  7535  7570 W ByMatcher: Skipping null child (17 of 24)
+1794405468888 [ALL] 11-11 13:57:48.692  7535  7570 W ByMatcher: Skipping null child (18 of 24)
+1794405468889 [ALL] 11-11 13:57:48.692  7535  7570 W ByMatcher: Skipping null child (19 of 24)
+1794405468890 [ALL] 11-11 13:57:48.693  7535  7570 W ByMatcher: Skipping null child (20 of 24)
+1794405468890 [ALL] 11-11 13:57:48.693  7535  7570 W ByMatcher: Skipping null child (21 of 24)
+1794405468890 [ALL] 11-11 13:57:48.694  7535  7570 W ByMatcher: Skipping null child (22 of 24)
+1794405468890 [ALL] 11-11 13:57:48.694  7535  7570 W ByMatcher: Skipping null child (23 of 24)
+1794405468891 [ALL] 11-11 13:57:48.695  7535  7570 W ByMatcher: Node returned null child: android.view.accessibility.AccessibilityNodeInfo@f26b; boundsInParent: Rect(0, 0 - 1018, 11452); boundsInScreen: Rect(31, 505 - 1049, 2337); boundsInWindow: Rect(31, 505 - 1049, 2337); packageName: com.saucelabs.mydemoapp.android; className: android.view.ViewGroup; text: null; error: null; maxTextLength: -1; stateDescription: null; contentDescription: null; tooltipText: null; containerTitle: null; viewIdResName: null; uniqueId: null; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; importantForAccessibility: false; visible: true; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_SHOW_ON_SCREEN - null]; isTextSelectable: false
+1794405468892 [ALL] 11-11 13:57:48.696  7535  7570 W ByMatcher: Skipping null child (2 of 3)
+1794405468896 [ALL] 11-11 13:57:48.700  7581  7589 I demoapp.android: Background young concurrent copying GC freed 35159(1728KB) AllocSpace objects, 0(0B) LOS objects, 1% free, 54MB/55MB, paused 43us,11us total 164.766ms
+1794405468902 [ALL] 11-11 13:57:48.706  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:63)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:269)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:263)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\n\tat io.netty.handler.codec.MessageToMessageDecoder.channelRead(MessageToMessageDecoder.java:107)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357)\n\tat io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:434)\n\tat io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:361)\n\tat io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:325)\n\tat io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:249)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)\n\tat io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:288)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:355)\n\tat io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1429)\n\tat io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:918)\n\tat io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:176)\n\tat io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.handle(AbstractNioChannel.java:445)\n\tat io.netty.channel.nio.NioIoHandler$DefaultNioRegistration.handle(NioIoHandler.java:388)\n\tat io.netty.channel.nio.NioIoHandler.processSelectedKey(NioIoHandler.java:596)\n\tat io.netty.channel.nio.NioIoHandler.processSelectedKeysOptimized(NioIoHandler.java:571)\n\tat io.netty.channel.nio.NioIoHandler.processSelectedKeys(NioIoHandler.java:512)\n\tat io.netty.channel.nio.NioIoHandler.run(NioIoHandler.java:484)\n\tat io.netty.channel.SingleThreadIoEventLoop.runIo(SingleThreadIoEventLoop.java:225)\n\tat io.netty.channel.SingleThreadIoEventLoop.run(SingleThreadIoEventLoop.java:196)\n\tat io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:1204)\n\tat io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)\n\tat io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)\n\tat java.lang.Thread.run(Thread.java:1012)\n"}}
+1794405469191 [ALL] 11-11 13:57:48.993   515  2210 I ImeTracker: com.saucelabs.mydemoapp.android:bbded74b: onRequestHide at ORIGIN_SERVER_HIDE_INPUT reason HIDE_UNSPECIFIED_WINDOW
+1794405469191 [ALL] 11-11 13:57:48.993   515  2210 I ImeTracker: com.saucelabs.mydemoapp.android:bbded74b: onCancelled at PHASE_SERVER_SHOULD_HIDE
+1794405469191 [ALL] 11-11 13:57:48.993  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():3227 
+1794405469195 [ALL] 11-11 13:57:48.994  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 0, unlocked = true
+1794405469195 [ALL] 11-11 13:57:48.994  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1877 onStartInput(EditorInfo{inputType=0x0(NULL) imeOptions=0x0 privateImeOptions=null actionName=UNSPECIFIED actionLabel=null actionId=0 initialSelStart=-1 initialSelEnd=-1 initialCapsMode=0x0 hintText=null label=null packageName=com.saucelabs.mydemoapp.android fieldId=0 fieldName=null extras=null}, false)
+1794405469195 [ALL] 11-11 13:57:48.994  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.shouldHideHeaderOnInitialState():4008 ShouldHideHeaderOnInitialState = false
+1794405469195 [ALL] 11-11 13:57:48.994  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.updateDeviceLockedStatus():2087 repeatCheckTimes = 2, unlocked = true
+1794405469415 [ALL] 11-11 13:57:49.219  7535  7570 I appium  : channel read: POST /session/eab50255-211b-4dc2-99fd-530ce8e55432/element
+1794405469416 [ALL] 11-11 13:57:49.220  7535  7570 I appium  : FindElement command
+1794405469417 [ALL] 11-11 13:57:49.221  7535  7570 I appium  : method: 'accessibility id', selector: 'Ascending order by name'
+1794405469418 [ALL] 11-11 13:57:49.222  7535  7570 I appium  : Waiting up to 10000ms for the device to idle
+1794405469706 [ALL] 11-11 13:57:49.510  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":{"ELEMENT":"00000000-0000-060d-ffff-ffff0000038e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-060d-ffff-ffff0000038e"}}
+1794405469713 [ALL] 11-11 13:57:49.517  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405469714 [ALL] 11-11 13:57:49.518  7535  7570 I appium  : GetElementAttribute command
+1794405469718 [ALL] 11-11 13:57:49.522  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405469725 [ALL] 11-11 13:57:49.529  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405469726 [ALL] 11-11 13:57:49.530  7535  7570 I appium  : GetElementAttribute command
+1794405469731 [ALL] 11-11 13:57:49.535  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405469737 [ALL] 11-11 13:57:49.541  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/window/current/size
+1794405469738 [ALL] 11-11 13:57:49.542  7535  7570 I appium  : GetDeviceSize command
+1794405469738 [ALL] 11-11 13:57:49.543  7535  7570 I appium  : Get window size of the device
+1794405469740 [ALL] 11-11 13:57:49.544  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":{"height":2400,"width":1080}}
+1794405469747 [ALL] 11-11 13:57:49.551  7535  7570 I appium  : channel read: POST /session/eab50255-211b-4dc2-99fd-530ce8e55432/actions
+1794405469749 [ALL] 11-11 13:57:49.553  7535  7570 I appium  : W3CActions command
+1794405469915 [ALL] 11-11 13:57:49.718   515   607 D ActivityManager: freezing 27825 com.android.chrome:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
+1794405469915 [ALL] 11-11 13:57:49.719   515   607 D ActivityManager: freezing 27866 com.android.chrome:privileged_process0
+1794405469922 [ALL] 11-11 13:57:49.726   515   607 D ActivityManager: freezing 3249 com.google.android.documentsui
+1794405469922 [ALL] 11-11 13:57:49.726   515   607 D ActivityManager: freezing 2708 com.android.chrome
+1794405470001 [ALL] 11-11 13:57:49.805   515   607 D ActivityManager: freezing 833 com.google.android.permissioncontroller
+1794405470044 [ALL] 11-11 13:57:49.843  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=480.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=2063172, downTime=2063171, deviceId=-1, source=0x1002, displayId=0, eventId=-546758295 }
+1794405470044 [ALL] 11-11 13:57:49.844  7535  7570 I appium  : [2063172 (success)] Synthesized: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=480.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=2063172, downTime=2063171, deviceId=0, source=0x1002, displayId=0, eventId=-546758295 }
+1794405470044 [ALL] 11-11 13:57:49.844  7535  7570 I appium  : The event has been delayed for 25ms
+1794405470077 [ALL] 11-11 13:57:50.058     0     0 I logd    : start watching /data/system/packages.list ...
+1794405470077 [ALL] 11-11 13:57:50.059     0     0 I logd    : ReadPackageList, total packages: 203
+1794405470116 [ALL] 11-11 13:57:49.920  3756  3756 D TaplEvents: TIS / TouchInteractionService.onInputEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=480.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=2063271, downTime=2063171, deviceId=-1, source=0x1002, displayId=0, eventId=-491407152 }
+1794405470146 [ALL] 11-11 13:57:49.944  7535  7570 I appium  : [2063271 (success)] Synthesized: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=480.0, toolType[0]=TOOL_TYPE_FINGER, buttonState=0, classification=NONE, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=2063271, downTime=2063171, deviceId=0, source=0x1002, displayId=0, eventId=-491407152 }
+1794405470149 [ALL] 11-11 13:57:49.945  7535  7570 I appium  : The event has been delayed for 26ms
+1794405470150 [ALL] 11-11 13:57:49.951  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":null}
+1794405470165 [ALL] 11-11 13:57:49.969  7535  7570 I appium  : channel read: POST /session/eab50255-211b-4dc2-99fd-530ce8e55432/element
+1794405470166 [ALL] 11-11 13:57:49.970  7535  7570 I appium  : FindElement command
+1794405470167 [ALL] 11-11 13:57:49.971  7535  7570 I appium  : method: 'accessibility id', selector: 'Ascending order by name'
+1794405470168 [ALL] 11-11 13:57:49.972  7535  7570 I appium  : Waiting up to 10000ms for the device to idle
+1794405470178 [ALL] 11-11 13:57:49.982  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":{"ELEMENT":"00000000-0000-060d-ffff-ffff0000038e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-060d-ffff-ffff0000038e"}}
+1794405470184 [ALL] 11-11 13:57:49.988  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405470186 [ALL] 11-11 13:57:49.990  7535  7570 I appium  : GetElementAttribute command
+1794405470190 [ALL] 11-11 13:57:49.994  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405470196 [ALL] 11-11 13:57:50.000  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405470197 [ALL] 11-11 13:57:50.001  7535  7570 I appium  : GetElementAttribute command
+1794405470202 [ALL] 11-11 13:57:50.006  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405470208 [ALL] 11-11 13:57:50.012  7535  7570 I appium  : channel read: POST /session/eab50255-211b-4dc2-99fd-530ce8e55432/back
+1794405470209 [ALL] 11-11 13:57:50.013  7535  7570 I appium  : PressBack command
+1794405470210 [ALL] 11-11 13:57:50.014  7535  7570 D UiDevice: Pressing back button.
+1794405470223 [ALL] 11-11 13:57:50.025  1557  1557 I GoogleInputMethodService: GoogleInputMethodService.onKeyDown():2444 Received KEYCODE_BACK. isAllViewsInvisible=false
+1794405470231 [ALL] 11-11 13:57:50.033   515   536 D AutofillManagerService: onBackKeyPressed()
+1794405470326 [ALL] 11-11 13:57:50.130   156  7449 I keystore2: system/security/keystore2/src/watchdog.rs:319 - Watchdog thread idle -> terminating. Have a great day.
+1794405471234 [ALL] 11-11 13:57:51.038  7535  7570 W InteractionController: Timed out waiting 1000ms for command and events.
+1794405471235 [ALL] 11-11 13:57:51.039  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":null}
+1794405471244 [ALL] 11-11 13:57:51.048  7535  7570 I appium  : channel read: POST /session/eab50255-211b-4dc2-99fd-530ce8e55432/element
+1794405471245 [ALL] 11-11 13:57:51.050  7535  7570 I appium  : FindElement command
+1794405471247 [ALL] 11-11 13:57:51.051  7535  7570 I appium  : method: 'accessibility id', selector: 'Ascending order by name'
+1794405471248 [ALL] 11-11 13:57:51.052  7535  7570 I appium  : Waiting up to 10000ms for the device to idle
+1794405471264 [ALL] 11-11 13:57:51.068  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":{"ELEMENT":"00000000-0000-060d-ffff-ffff0000038e","element-6066-11e4-a52e-4f735466cecf":"00000000-0000-060d-ffff-ffff0000038e"}}
+1794405471270 [ALL] 11-11 13:57:51.074  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405471271 [ALL] 11-11 13:57:51.075  7535  7570 I appium  : GetElementAttribute command
+1794405471275 [ALL] 11-11 13:57:51.079  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405471281 [ALL] 11-11 13:57:51.085  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/element/00000000-0000-060d-ffff-ffff0000038e/attribute/displayed
+1794405471282 [ALL] 11-11 13:57:51.086  7535  7570 I appium  : GetElementAttribute command
+1794405471286 [ALL] 11-11 13:57:51.090  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"true"}
+1794405471295 [ALL] 11-11 13:57:51.099  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/screenshot
+1794405471296 [ALL] 11-11 13:57:51.100  7535  7570 I appium  : CaptureScreenshot command
+1794405471297 [ALL] 11-11 13:57:51.101  7535  7570 W tomator2.server: Accessing hidden method Landroid/view/Display;->getAddress()Landroid/view/DisplayAddress; (blocked, reflection, allowed)
+1794405471298 [ALL] 11-11 13:57:51.102  7535  7570 W tomator2.server: Accessing hidden method Landroid/view/DisplayAddress$Physical;->getPhysicalDisplayId()J (blocked, reflection, allowed)
+1794405471349 [ALL] 11-11 13:57:51.153  7650  7650 W BpBinder: Linking to death on android.gui.ISurfaceComposer but there are no threads (yet?) listening to incoming transactions. See ProcessState::startThreadPool and ProcessState::setThreadPoolMaxThreadCount. Generally you should setup the binder threadpool before other initialization steps.
+1794405471350 [ALL] 11-11 13:57:51.154  7650  7650 W ProcessState: Extra binder thread started, but 0 threads requested. Do not use *startThreadPool when zero threads are requested.
+1794405471365 [ALL] 11-11 13:57:51.341     0     0 I servicemanager: Could not find android.hardware.graphics.allocator.IAllocator/default in the VINTF manifest.
+1794405471367 [ALL] 11-11 13:57:51.164   135   135 I hwservicemanager: getTransport: Cannot find entry android.hardware.graphics.mapper@4.0::IMapper/default in either framework or device VINTF manifest.
+1794405471367 [ALL] 11-11 13:57:51.164  7650  7655 I Gralloc4: mapper 4.x is not supported
+1794405471729 [ALL] 11-11 13:57:51.533  3488  3488 D LocationTracker: Got a location update from Play Services
+1794405471741 [ALL] 11-11 13:57:51.545   340  4622 D android.hardware.audio@7.1-impl.ranchu: threadLoop: entering standby, frames: 40716224
+1794405471762 [ALL] 11-11 13:57:51.566  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N1LbFz3ef//z5n7DIcURVIkxYsk6i7almRVVmzFbuXIdtz+k26CBl0U8aa1W3TXFN3UAQoU7c5Fs4kboAjkLLpwigQ/2Pjl18R25DS+xrIl2ZIsSqYuJEWK4k3kcO5zzn9BcThDzXDunDn…
+1794405471787 [ALL] 11-11 13:57:51.590  7535  7570 I appium  : channel read: GET /session/eab50255-211b-4dc2-99fd-530ce8e55432/source
+1794405471788 [ALL] 11-11 13:57:51.593  7535  7570 I appium  : Source command
+1794405471789 [ALL] 11-11 13:57:51.593  7535  7570 I appium  : Waiting up to 10000ms for the device to idle
+1794405471852 [ALL] 11-11 13:57:51.656  7535  7570 I appium  : AppiumResponse: {"sessionId":"eab50255-211b-4dc2-99fd-530ce8e55432","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …

@@ -1,0 +1,100 @@
+1794403504145 [ALL] 11-11 13:25:03.963  1423  1495 W AsyncOperation: 	at aced.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+1794403504145 [ALL] 11-11 13:25:03.963  1423  1495 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403504145 [ALL] 11-11 13:25:03.963  1423  1495 W AsyncOperation: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403504145 [ALL] 11-11 13:25:03.963  1423  1495 W AsyncOperation: 	at acjn.run(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+1794403504145 [ALL] 11-11 13:25:03.963  1423  1495 W AsyncOperation: 	at java.lang.Thread.run(Thread.java:1012)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: setAppSpecificProperties failed [CONTEXT service_id=301 ]
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: aard: 29503: 
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at abmc.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at aawv.b(:com.google.android.gms@231818047@23.18.18 (190800-535401451):2)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at aawv.a(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at bwen.o(:com.google.android.gms@231818047@23.18.18 (190800-535401451):0)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at bwen.ek(:com.google.android.gms@231818047@23.18.18 (190800-535401451):4)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at gzc.onTransact(:com.google.android.gms@231818047@23.18.18 (190800-535401451):8)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at android.os.Binder.execTransactInternal(Binder.java:1344)
+1794403504146 [ALL] 11-11 13:25:03.964  1472  1472 W NnApiDriverManager: 	at android.os.Binder.execTransact(Binder.java:1275)
+1794403504146 [ALL] 11-11 13:25:03.964  1757  2852 E A       : Failed to commit flags to Phenotype. Stale snapshot for com.google.android.googlequicksearchbox(change count changed - expected 2  but was 1) (29501)
+1794403504147 [ALL] 11-11 13:25:03.965  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403504147 [ALL] 11-11 13:25:03.965  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403504147 [ALL] 11-11 13:25:03.965  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403504147 [ALL] 11-11 13:25:03.966  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403504147 [ALL] 11-11 13:25:03.966  1757  2611 W SearchServiceCore: Abort, client detached.
+1794403504147 [ALL] 11-11 13:25:03.966  1757  3115 I BgTaskExecutorImpl: Starting EXCLUSIVE background task SEND_GSA_HOME_REQUEST.
+1794403504191 [ALL] 11-11 13:25:04.009  1423  4248 I HeterodyneSyncer: Removed 0 invalid users [CONTEXT service_id=51 ]
+1794403504191 [ALL] 11-11 13:25:04.010  1423  1495 I HeterodyneSyncScheduler: Scheduling Phenotype for a PhenotypeSyncImmediately(6, com.google.android.partnersetup) one off with window [1, 2] in seconds [CONTEXT service_id=51 ]
+1794403504195 [ALL] 11-11 13:25:04.013  2269  2269 E GooglePartnerSetup: Phenotype client.register: true
+1794403504210 [ALL] 11-11 13:25:04.028  1673  1941 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: Error when converting version: messages.android_20230529_03_RC01_alldpi.x86_64.phone
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: java.lang.NumberFormatException: For input string: "messages"
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at java.lang.Long.parseLong(Long.java:751)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at java.lang.Long.parseLong(Long.java:876)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.apps.gsa.staticplugins.ad.h.c(PG:3)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.apps.gsa.staticplugins.ad.h.g(PG:3)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.apps.gsa.staticplugins.ad.h.d(PG:267)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.apps.gsa.staticplugins.ad.h.a(PG:38)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.apps.gsa.staticplugins.ad.p.a(PG:1)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.libraries.gsa.k.a.f.a(PG:2)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.common.util.concurrent.dx.a(PG:1)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.common.util.concurrent.cv.run(PG:4)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.common.util.concurrent.dz.run(PG:1)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.libraries.i.k.run(PG:2)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at com.google.android.libraries.i.p.run(PG:4)
+1794403504228 [ALL] 11-11 13:25:04.046  1757  2319 E ApplicationPropertiesBu: 	at java.lang.Thread.run(Thread.java:1012)
+1794403504234 [ALL] 11-11 13:25:04.053  1757  2319 E ApplicationPropertiesBu: Date 2021-12-06T00:00:00Z is out of expected range.
+1794403504235 [ALL] 11-11 13:25:04.053  1757  2319 E ApplicationPropertiesBu: Date 2022-02-15T00:00:00Z is out of expected range.
+1794403504235 [ALL] 11-11 13:25:04.054  1757  2319 E ApplicationPropertiesBu: Date 2022-02-22T00:00:00Z is out of expected range.
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : Exception while fetching versionCode for package[com.google.android.apps.tv.dreamx].
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : android.content.pm.PackageManager$NameNotFoundException: com.google.android.apps.tv.dreamx
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:256)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:216)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:210)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.h.d(PG:372)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.h.a(PG:38)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.p.a(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.gsa.k.a.f.a(PG:2)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.dx.a(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.cv.run(PG:4)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.dz.run(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : Failed to fetch versionCode for package[com.google.android.apps.tv.dreamx].
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : Exception while fetching versionCode for package[com.google.android.apps.tv.launcherx].
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : android.content.pm.PackageManager$NameNotFoundException: com.google.android.apps.tv.launcherx
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfoAsUser(ApplicationPackageManager.java:256)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:216)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at android.app.ApplicationPackageManager.getPackageInfo(ApplicationPackageManager.java:210)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.h.d(PG:372)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.h.a(PG:38)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.apps.gsa.staticplugins.ad.p.a(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.gsa.k.a.f.a(PG:2)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.dx.a(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.cv.run(PG:4)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.common.util.concurrent.dz.run(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.ae.run(PG:1)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.k.run(PG:2)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at com.google.android.libraries.i.p.run(PG:4)
+1794403504238 [ALL] 11-11 13:25:04.057  1757  2319 W A       : 	at java.lang.Thread.run(Thread.java:1012)
+1794403504239 [ALL] 11-11 13:25:04.057  1757  2319 W A       : Failed to fetch versionCode for package[com.google.android.apps.tv.launcherx].
+1794403504241 [ALL] 11-11 13:25:04.060  1757  2635 I A       : getModuleProperties: device does not support SoundTrigger recognition
+1794403504253 [ALL] 11-11 13:25:04.072  1757  2852 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+1794403504254 [ALL] 11-11 13:25:04.072  1757  2638 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+1794403504267 [ALL] 11-11 13:25:04.085  2336  2957 W TimedProcessReaper: Scheduling killing of process to refresh configuration
+1794403504342 [ALL] 11-11 13:25:04.161  2336  2336 I PhenotypeBackgroundRecv: Skipping com.google.android.dialer.directboot#com.google.android.dialer which doesn't use ProcessStable flags.
+1794403504352 [ALL] 11-11 13:25:04.170   515  1624 W JobScheduler: Job didn't exist in JobStore: 176a394 #u0a131/-43 com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService
+1794403504367 [ALL] 11-11 13:25:04.186  1472  5004 I Authzen : [DeviceStateSyncManager] Device state updated successfully.
+1794403504382 [ALL] 11-11 13:25:04.201  3935  4281 I appium  : AppiumResponse: {"sessionId":"e84deaea-ce2f-4f7d-9d47-ad3b91217009","value":"iVBORw0KGgoAAAANSUhEUgAABDgAAAlgCAYAAABtGofVAAAAAXNSR0IArs4c6QAAAARzQklUCAgICHwIZIgAACAASURBVHic7N15fFTV/f/x98xkspE9ISQhrC7IIsqioFIXXEHFHdC6+7XVVq2127et3/7afmtbtdWvtVq1rfuKFhdUsKJiBcQNUBBEBckGZCdkzyz390dgyCQzSWYyk8kJr+fjweMxc+fec08mM2Hue87…
+1794403504417 [ALL] 11-11 13:25:04.236  3935  4281 I appium  : channel read: GET /session/e84deaea-ce2f-4f7d-9d47-ad3b91217009/source
+1794403504418 [ALL] 11-11 13:25:04.237  3935  4281 I appium  : Source command
+1794403504418 [ALL] 11-11 13:25:04.237  3935  4281 I appium  : Waiting up to 10000ms for the device to idle
+1794403504700 [ALL] 11-11 13:25:04.518   515   607 D ActivityManager: freezing 2058 com.android.providers.calendar
+1794403504744 [ALL] 11-11 13:25:04.562  3935  4281 I appium  : AppiumResponse: {"sessionId":"e84deaea-ce2f-4f7d-9d47-ad3b91217009","value":"<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>\r\n<hierarchy index=\"0\" class=\"hierarchy\" rotation=\"0\" width=\"1080\" height=\"2209\">\r\n  <android.widget.FrameLayout index=\"0\" package=\"com.saucelabs.mydemoapp.android\" …
+1794403504755 [ALL] 11-11 13:25:04.573  1524  1524 V ContactsProvider: Scheduled notifyChange started.
