@@ -1,1 +1,0 @@
-{"id":"f73471ae5d08dc15e2498c568d0d6106.d41d8cd98f00b204e9800998ecf8427e","fullName":"tests.auth.test_issue_044_automatic_session_cleanup_before_fresh_login#test_issue_044_automatic_session_cleanup_before_fresh_login","name":"TC-044: Automatic Session Cleanup Before Fresh Login","status":"failed","testResultsByEnv":{"android":"10c66f8a767ac1bf85b24e501d17c59a"}}
