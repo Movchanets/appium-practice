@@ -113,9 +113,8 @@ class CatalogPage(BasePage):
 
     def is_loaded(self, timeout: float = 10.0) -> bool:
         """Check if catalog is loaded, sort button is displayed, and drawer menu is closed."""
-        return (
-            self.is_displayed(self.SORT_BUTTON, timeout=timeout)
-            and not self.is_displayed(self.DRAWER_MENU, timeout=0.5)
+        return self.is_displayed(self.SORT_BUTTON, timeout=timeout) and not self.is_displayed(
+            self.DRAWER_MENU, timeout=0.5
         )
 
     def logout_if_logged_in(self) -> Self:
